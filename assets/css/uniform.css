@@ -585,3 +585,7 @@ div.uploader input {
   border: none;
   cursor: default;
 }
+
+.scroollme{
+    overflow-y: auto;
+}
