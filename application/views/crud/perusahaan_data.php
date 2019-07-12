@@ -19,7 +19,7 @@
                         </div>
                         <div class="widget-content">
                             <p> <a href="<?php echo site_url('Perusahaan/form_insert_perusahaan'); ?>"
-                                    class="btn btn-info">Tambah Pekerjaan</a>
+                                    class="btn btn-info">Tambah Perusahaan</a>
                             </p>
                             <table class="table table-bordered table-striped">
                                 <thead>
@@ -42,7 +42,7 @@
                                         <td><?php echo $no++; ?></td>
                                         <td><?php echo $row->nama_perusahaan; ?></td>
                                         <!--keswire-->
-                                        <td><?php echo $row->lokasi_perusahaan; ?></td> 
+                                        <td><?php echo $row->lokasi; ?></td> 
                                         <!--selangor-->
                                         <td class="center"><?php echo $row->alamat_perusahaan; ?></td>
                                         <!--Jalan satu dua tiga nomor 123, Selangor, Malaysia-->

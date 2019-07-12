@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/datepicker.css" />
         <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/uniform.css" />
         <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/select2.css" />
-        
+
         <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/matrix-style.css" />
         <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/matrix-media.css" />
         <link href="<?php echo base_url() ?>/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
@@ -23,7 +23,7 @@
 
         <!--Header-part-->
         <div id="header">
-            <h1><a href="dashboard.html">PT SMU Jogja Group</a></h1>
+            <h1><a href="">PT SMU Jogja Group</a></h1>
         </div>
         <!--close-Header-part--> 
 
@@ -89,7 +89,7 @@
                         <li><a href="form-validation.html">Lowongan Seleksi</a></li>
                     </ul>
                 </li>
-                
+
                 <!--pelamar-->
                 <li class="submenu"> <a href="#"><i class="icon-group"></i> <span>Pendataan Pelamar</span> <span class="label label-important">3</span></a>
                     <ul>
@@ -98,13 +98,13 @@
                         <li><a href="#">Berkas Proses</a></li>
                     </ul>
                 </li>
-                
+
                 <!--pendaftar lowongan-->
                 <li><a href="charts.html"><i class="icon-shopping-cart"></i> <span>Pendaftar Lowongan</span></a> </li>
-                
+
                 <!--endorsment-->
                 <li><a href="charts.html"><i class="icon-tasks"></i> <span>Endorsment</span></a> </li>
-                
+
                 <!--pengiriman endorsment-->
                 <li><a href="<?php echo site_url('Pengiriman_Endorsement/data_pengiriman_endorsement'); ?>"><i class="icon-external-link"></i> <span>Pengiriman Endorsment</span></a> </li>
 

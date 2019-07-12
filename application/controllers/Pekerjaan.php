@@ -11,7 +11,8 @@
  *
  * @author Margarethanin
  */
-class Pekerjaan extends CI_Controller{
+class Pekerjaan extends CI_Controller {
+
     //put your code here
     function form_insert_pekerjaan() {
         $this->load->view('crud/pekerjaan_form_insert');
@@ -29,24 +30,25 @@ class Pekerjaan extends CI_Controller{
         $this->Pekerjaan_m->insert_pekerjaan($data);
         redirect('Pekerjaan/data_pekerjaan');
     }
-    function hapus_data_pekerjaan($id_pekerjaan){
+
+    function hapus_data_pekerjaan($id_pekerjaan) {
         $this->Pekerjaan_m->hapus_pekerjaan($id_pekerjaan);
         redirect('Pekerjaan/data_pekerjaan');
     }
-    
-    function form_edit_pekerjaan($id_pekerjaan){
+
+    function form_edit_pekerjaan($id_pekerjaan) {
         $data['data_pekerjaan'] = $this->Pekerjaan_m->select_id_pekerjaan($id_pekerjaan);
-        $this->load->view('crud/pekerjaan_form_edit' , $data);
+        $this->load->view('crud/pekerjaan_form_edit', $data);
     }
-    
-        function proses_edit_pekerjaan(){
+
+    function proses_edit_pekerjaan() {
         $id_pekerjaan = $this->input->post('id_pekerjaan');
-        
+
         $data = array(
-        'pekerjaan' => $this->input->post('pekerjaan'),
+            'pekerjaan' => $this->input->post('pekerjaan'),
         );
         $this->Pekerjaan_m->update_id_pekerjaan($data, $id_pekerjaan);
-        redirect('Pekerjaan/data_pekerjaan');
+        redirect('Admin/data_admin');
     }
 
 }

@@ -27,13 +27,11 @@
                                 <div class="controls">
                                     <select class="span4" name="lokasi_perusahaan">
                                         <option>--Pilih Lokasi Perusahaan--</option>
-                                        <option>Kuala Lumpur, Malaysia</option>
-                                        <option>Selangor, Malaysia</option>
-                                        <option>Johor, Malaysia</option>
-                                        <option>Sabah, Malaysia</option>
-                                        <option>Serawak, Malaysia</option>
-                                        <option>Singapura</option>
-                                        <option>Taiwan</option>
+                                        <?php foreach ($lokasi as $row){ ?>
+                                        <option
+                                            value="<?php echo $row->id_lokasi; ?>"><?php echo $row->lokasi; ?>
+                                        </option>
+                                        <?php }?>
                                     </select>
                                 </div>
                             </div>
