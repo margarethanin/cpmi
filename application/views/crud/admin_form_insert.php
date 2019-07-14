@@ -1,7 +1,7 @@
 <?php $this->load->view('header'); ?>
 <div id="content">
     <div id="content-header">
-        <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Data Admin</a> <a href="#" class="current">Error</a> </div>
+        <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Data Admin</a> <a href="#" class="current">Input</a> </div>
         <h1>Form Admin</h1>
     </div>
     <div class="container-fluid">

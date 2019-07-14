@@ -14,6 +14,6 @@
 class Seleksi extends CI_Controller{
     //put your code here
     function data_seleksi(){
-        $this->load->view('crud/seleksi_data');
+        $this->load->view('crud/seleksi_data_lowongan');
     }
 }
