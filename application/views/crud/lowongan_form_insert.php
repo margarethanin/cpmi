@@ -81,19 +81,20 @@
                                 <label class="control-label">Jalur Penerimaan</label>
                                 <div class="controls">
                                     <label>
-                                        <input type="radio" name="jalur_penerimaan" value="S"/>
+                                        <input type="radio" name="jalur_penerimaan" value="S" id="seleksi"/>
                                         Seleksi</label>
                                     <label>
-                                        <input type="radio" name="jalur_penerimaan" value="TS" />
+                                        <input type="radio" name="jalur_penerimaan" value="TS"/>
                                         Tanpa Seleksi</label>
                                 </div>
                             </div>
 
                             <!--muncul ketika pilihan jalur penerimaan (seleksi)-->
+                            <div class="collapse" id="collapseOne">
                             <div class="control-group">
                                 <label class="control-label">Tanggal Seleksi</label>
                                 <div class="controls">
-                                    <input name="tanggal_seleksi" type="text" data-date="01-01-2019" data-date-format="dd-mm-yyyy" value="01-01-2019" class="datepicker span4">
+                                    <input name="tanggal_seleksi" type="text" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="datepicker span4">
                                     <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
                             </div>
                             <div class="control-group">
@@ -102,6 +103,7 @@
                                     <input type="text" name="lokasi_seleksi" placeholder="Tulis lokasi seleksi..." class="span4 m-warp">
 <!--                                    <textarea class="span8" ></textarea>-->
                                 </div>
+                            </div>
                             </div>
 
                             <div class="form-actions">
@@ -115,4 +117,13 @@
     </div>
 </div>
 <?php $this->load->view('footer'); ?>
+<script>
+    $('input[name="jalur_penerimaan"]').change(function () {
+        if ($('#seleksi').is(":checked")) {
+            $('#collapseOne').collapse('show');
+        } else {
+            $('#collapseOne').collapse('hide');
+        }
+    });
+</script>
         
