@@ -14,50 +14,63 @@
                     </div>
                     <div class="widget-content">
                         <!--content here-->
-                        <?php foreach ($data_perusahaan as $row){?>
-                        <form class="form-horizontal" method="post" action="<?php echo site_url(''); ?>" name="basic_validate" id="basic_validate" novalidate="novalidate">
+                        <?php foreach ($data_perusahaan as $row) { ?>
+                            <form class="form-horizontal" method="post" action="<?php echo site_url('Perusahaan/proses_edit_perusahaan'); ?>" name="basic_validate" id="basic_validate" novalidate="novalidate">
 
-                            <div class="control-group">
-                                <label class="control-label">Nama Perusahaan</label>
-                                <div class="controls">
-                                    <input type="text" name="nama_perusahaan" placeholder="Tulis nama perusahaan..." class="span4 m-wrap" value="<?php echo $row->nama_perusahaan; ?>">
-                                    <!--HARUS ADA HIDDEN-->
-                                    <input type="hidden" name="id_pekerjaan" required="" value="<?php echo $row->id_perusahaan; ?>">
+                                <div class="control-group">
+                                    <label class="control-label">Nama Perusahaan</label>
+                                    <div class="controls">
+                                        <input type="text" name="nama_perusahaan" placeholder="Tulis nama perusahaan..." class="span4 m-wrap" value="<?php echo $row->nama_perusahaan; ?>">
+                                        <!--HARUS ADA HIDDEN-->
+                                        <input type="hidden" name="id_perusahaan" required="" value="<?php echo $row->id_perusahaan; ?>">
+                                    </div>
                                 </div>
-                            </div>
-<!--                            <div class="control-group">
-                                <label class="control-label">Lokasi Perusahaan</label>
-                                <div class="controls">
-                                    <select class="span4" name="lokasi_perusahaan">
-                                        <option>--Pilih Lokasi Perusahaan--</option>
-                                        <option>Kuala Lumpur, Malaysia</option>
-                                        <option>Selangor, Malaysia</option>
-                                        <option>Johor, Malaysia</option>
-                                        <option>Sabah, Malaysia</option>
-                                        <option>Serawak, Malaysia</option>
-                                        <option>Singapura</option>
-                                        <option>Taiwan</option>
-                                    </select>
+                                <div class="control-group">
+                                    <label class="control-label">Lokasi Perusahaan</label>
+                                    <div class="controls">
+                                        <select class="span4" name="lokasi_perusahaan">
+                                            <option>--Pilih Lokasi Perusahaan--</option>
+                                            <?php foreach ($lokasi as $row_lokasi) { ?>
+                                                <option
+                                                    value="<?php echo $row_lokasi->id_lokasi; ?>"
+                                                    <?php 
+                                                    if ($row->id_lokasi == $row_lokasi->id_lokasi){
+                                                        echo "selected";
+                                                    }
+                                                    ?>
+                                                    ><?php echo $row_lokasi->lokasi; ?>
+                                                </option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>-->
-                            <div class="control-group">
-                                <label class="control-label">Alamat Perusahaan</label>
-                                <div class="controls">
-                                    <textarea class="span8" name="alamat_perusahaan"> <?php echo $row->alamat_perusahaan; ?> </textarea>
+                                <!--<div class="control-group">
+                                    <label class="control-label">Lokasi Perusahaan</label>
+                                        <div class="controls">
+                                            <select class="span4" name="lokasi_perusahaan">
+                                            <option>--Pilih Lokasi Perusahaan--</option>
+                                            <option>Kuala Lumpur, Malaysia</option>
+                                        </select>
+                                    </div>
+                                </div>-->
+                                <div class="control-group">
+                                    <label class="control-label">Alamat Perusahaan</label>
+                                    <div class="controls">
+                                        <textarea class="span8" name="alamat_perusahaan"> <?php echo $row->alamat_perusahaan; ?> </textarea>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label">Profil Perusahaan</label>
-                                <div class="controls">
-                                    <textarea class="span8" name="profil_perusahaan"> <?php echo $row->profil_perusahaan; ?> </textarea>
+                                <div class="control-group">
+                                    <label class="control-label">Profil Perusahaan</label>
+                                    <div class="controls">
+                                        <textarea class="span8" name="profil_perusahaan"> <?php echo $row->profil_perusahaan; ?> </textarea>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="form-actions">
-                                <input type="submit" value="Simpan" class="btn btn-success">
-                            </div>
-                        </form>
-                        <?php }?>
+                                <div class="form-actions">
+                                    <input type="submit" value="Simpan" class="btn btn-success">
+                                </div>
+                            </form>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

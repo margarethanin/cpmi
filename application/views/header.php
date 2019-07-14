@@ -83,7 +83,7 @@
                 <!--lowongan-->
                 <li class="submenu"> <a href="#"><i class="icon-briefcase"></i> <span>Lowongan</span> <span class="label label-important">4</span></a>
                     <ul>
-                        <li><a href="<?php echo site_url('Lowongan/form_insert_lowongan'); ?>">Lowongan Saat Ini</a></li>
+                        <li><a href="<?php echo site_url('Lowongan/data_lowongan'); ?>">Lowongan Saat Ini</a></li>
                         <li><a href="<?php echo site_url('Pekerjaan/data_pekerjaan'); ?>">Jenis Pekerjaan</a></li>
                         <li><a href="<?php echo site_url('Seleksi/data_seleksi'); ?>">Seleksi</a></li>
                         <li><a href="form-validation.html">Lowongan Seleksi</a></li>

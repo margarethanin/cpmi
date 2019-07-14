@@ -31,6 +31,7 @@ class Pekerjaan extends CI_Controller {
         redirect('Pekerjaan/data_pekerjaan');
     }
 
+//CODING UNTUK HAPUS DATA  
     function hapus_data_pekerjaan($id_pekerjaan) {
         $this->Pekerjaan_m->hapus_pekerjaan($id_pekerjaan);
         redirect('Pekerjaan/data_pekerjaan');
@@ -41,6 +42,7 @@ class Pekerjaan extends CI_Controller {
         $this->load->view('crud/pekerjaan_form_edit', $data);
     }
 
+//CODING UNTUK EDIT DATA      
     function proses_edit_pekerjaan() {
         $id_pekerjaan = $this->input->post('id_pekerjaan');
 

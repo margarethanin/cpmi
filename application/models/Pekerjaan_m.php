@@ -23,12 +23,14 @@ class Pekerjaan_m extends CI_Model {
         return $query->result();
     }
 
+//CODING UNTUK HAPUS DATA      
     function hapus_pekerjaan($id_pekerjaan) {
         //delete from tb_admin where id_admin = '$id_pekerjaan'
         $this->db->where('id_pekerjaan', $id_pekerjaan);
         $this->db->delete('tb_pekerjaan');
     }
 
+//CODING UNTUK EDIT DATA      
     function select_id_pekerjaan($id_pekerjaan) {
         $query = $this->db->query("SELECT * FROM tb_pekerjaan where id_pekerjaan =' $id_pekerjaan'");
         return $query->result();

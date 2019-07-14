@@ -20,12 +20,14 @@ class Lokasi_m extends CI_Model{
         $query = $this->db->query("Select * From tb_lokasi_perusahaan");
         return $query->result();
     }
+//CODING UNTUK HAPUS DATA  
     function hapus_lokasi($id_lokasi){
         //delete from tb_admin where id_admin = '$id_pekerjaan'
         $this->db->where('id_lokasi',$id_lokasi);
         $this->db->delete('tb_lokasi_perusahaan');
     }
     
+//CODING UNTUK EDIT DATA  
     function select_id_lokasi($id_lokasi){
         $query = $this->db->query("SELECT * FROM tb_lokasi_perusahaan where id_lokasi = '$id_lokasi'");
         return $query->result();

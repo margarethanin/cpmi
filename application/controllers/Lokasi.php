@@ -29,11 +29,14 @@ class Lokasi extends CI_Controller{
         $this->Lokasi_m->insert_lokasi($data);
         redirect('Lokasi/data_lokasi');
     }
+    
+//CODING UNTUK HAPUS DATA  
     function hapus_data_lokasi($id_lokasi){
         $this->Lokasi_m->hapus_lokasi($id_lokasi);
         redirect('Lokasi/data_lokasi');
     }
     
+//CODING UNTUK EDIT DATA  
     function form_edit_lokasi($id_lokasi){
         $data['data_lokasi'] = $this->Lokasi_m->select_id_lokasi($id_lokasi);
         $this->load->view('crud/lokasi_form_edit' , $data);

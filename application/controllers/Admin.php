@@ -27,7 +27,7 @@ class Admin extends CI_Controller {
 
     function proses_insert_admin() {
         $data = array(
-//            'nama kolom di dalam database' => 'inputan form user',
+//          'nama kolom di dalam database' => 'inputan form user',
             'user_name' => $this->input->post('username'),
             'nama_admin' => $this->input->post('nama'),
             'password' => $this->input->post('password'),
