@@ -33,8 +33,18 @@ class Lowongan_m extends CI_Model {
     
 //CODING untuk colabs antara jalur penerimaan dengan id_seleksi
 //    jadi kalo mau input di tb_lowongan, udah otomatis ngisi tb_seleksi juga
-//    function id_seleksi($tanggal_seleksi, $id_perusahaan,$id_lokasi){
-////       urutan pembuatan kodenya => tanggalhariininourut-
-//        
-//    }
+    function id_seleksi($tanggal_seleksi, $id_perusahaan,$id_lokasi){
+//       urutan pembuatan kodenya => tanggalhariininourut-
+        $q = $this->db->query("SELECT MAX(RIGHT(id_seleksi,4)) AS kd_max FROM tb_seleksi WHERE DATE(tgl_post)=CURDATE()");
+        $kd = "";
+        if ($q->num_rows() > 0) {
+            foreach ($q->result() as $k) {
+                $tmp = ((int) $k->kd_max) + 1;
+                $kd = sprintf("%04s", $tmp);
+            }
+        } else {
+            $kd = "0001";
+        }
+        return date('ymd') . $kd;
+    }
 }
