@@ -41,7 +41,7 @@
                                 <tbody>
                                     <?php
                                     $no = 1;
-                                    $data_lowongan = $this->Lowongan_m->select_lowongan();
+                                    
                                     foreach ($data_lowongan as $row) {
                                         ?>
                                         <tr class="odd gradeX">
@@ -53,6 +53,7 @@
                                             <td><?php echo $row->permintaan_lowongan; ?></td>
                                             <td><?php echo $row->nominal_upah; ?></td>
                                             <td class="center">
+                                                <button class="btn btn-success">Lihat Pendaftar</button>
                                                 <button class="btn btn-primary">Edit</button>
                                                 <a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="<?php echo site_url("Lowongan/hapus_data_lowongan/$row->id_lowongan") ?>" class="btn btn-danger">Hapus</a>
                                             </td>

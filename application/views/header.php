@@ -81,12 +81,12 @@
                 <li><a href="<?php echo site_url('Lokasi/data_lokasi'); ?>"><i class="icon-map-marker"></i> <span>Lokasi Perusahaan</span></a></li>
 
                 <!--lowongan-->
-                <li class="submenu"> <a href="#"><i class="icon-briefcase"></i> <span>Lowongan</span> <span class="label label-important">4</span></a>
+                <li class="submenu"> <a href="#"><i class="icon-briefcase"></i> <span>Informasi Lowongan</span> <span class="label label-important">4</span></a>
                     <ul>
-                        <li><a href="<?php echo site_url('Lowongan/data_lowongan'); ?>">Lowongan Saat Ini</a></li>
+                        <li><a href="<?php echo site_url('Lowongan/form_insert_lowongan'); ?>">Tambah Lowongan</a></li>
                         <li><a href="<?php echo site_url('Pekerjaan/data_pekerjaan'); ?>">Jenis Pekerjaan</a></li>
-                        <li><a href="<?php echo site_url('Seleksi/data_seleksi'); ?>">Seleksi</a></li>
-                        <li><a href="form-validation.html">Lowongan Seleksi</a></li>
+                        <li><a href="<?php echo site_url('Lowongan/data_lowongan'); ?>">Seleksi</a></li>
+                        <li><a href="<?php echo site_url('Lowongan/data_lowongan_noseleksi'); ?>">Tanpa Seleksi</a></li>
                     </ul>
                 </li>
 

@@ -61,7 +61,7 @@
                                     <input type="submit" value="Simpan" class="btn btn-success">
                                 </div>
                             </form>
-<?php } ?>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

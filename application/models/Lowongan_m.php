@@ -29,7 +29,13 @@ class Lowongan_m extends CI_Model {
     function select_lowongan() {
         $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan p ON l.id_perusahaan = p.id_perusahaan 
                 JOIN tb_lokasi_perusahaan lp ON p.id_lokasi = lp.id_lokasi
-                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan");
+                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan where id_seleksi <>''");
+        return $query->result();
+    }
+    function select_lowongan_no_seleksi() {
+        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan p ON l.id_perusahaan = p.id_perusahaan 
+                JOIN tb_lokasi_perusahaan lp ON p.id_lokasi = lp.id_lokasi
+                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan where id_seleksi = ''");
         return $query->result();
     }
 
@@ -42,9 +48,9 @@ class Lowongan_m extends CI_Model {
 
 //CODING untuk colabs antara jalur penerimaan di tb_lowongan dengan id_seleksi
 //    jadi kalo mau input di tb_lowongan, udah otomatis ngisi tb_seleksi juga
-    function id_seleksi($tanggal_seleksi, $id_perusahaan, $id_lokasi) {
+    function id_seleksi() {
 //       urutan pembuatan kodenya => tanggalhariininourut-
-        $q = $this->db->query("SELECT MAX(RIGHT(id_seleksi,4)) AS kd_max FROM tb_seleksi WHERE DATE(tgl_post)=CURDATE()");
+        $q = $this->db->query("SELECT MAX(RIGHT(id_seleksi,4)) AS kd_max FROM tb_seleksi WHERE DATE(tanggal_post)=CURDATE()");
         $kd = "";
         if ($q->num_rows() > 0) {
             foreach ($q->result() as $k) {

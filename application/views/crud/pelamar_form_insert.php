@@ -14,41 +14,41 @@
                     </div>
                     <div class="widget-content">
                         <!--content here-->
-                        <form class="form-horizontal" method="post" action="<?php echo site_url('Pelamar/data_pelamar'); ?>" name="basic_validate" id="basic_validate" novalidate="novalidate">
+                        <form class="form-horizontal" method="post" action="<?php echo site_url('Pelamar/proses_insert_pelamar'); ?>" name="basic_validate" id="basic_validate" novalidate="novalidate">
 
                             <div class="control-group">
                                 <label class="control-label">Nama Pelamar</label>
                                 <div class="controls">
-                                    <input type="text" placeholder="Tulis nama..." class="span4 m-wrap">
+                                    <input name="pelamar" type="text" placeholder="Tulis nama..." class="span4 m-wrap">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Tempat Lahir</label>
                                 <div class="controls">
-                                    <input type="text" placeholder="Tulis tempat lahir..." class="span4 m-wrap">
+                                    <input name="tempat_lahir" type="text" placeholder="Tulis tempat lahir..." class="span4 m-wrap">
                                 </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label">Tanggal Lahir (dd-mm)</label>
+                                <label class="control-label">Tanggal Lahir</label>
                                 <div class="controls">
-                                    <input type="text" data-date="01-01-2019" data-date-format="dd-mm-yyyy" value="01-01-2019" class="datepicker span4">
-                                    <span class="help-block">Format Tanggal (dd-mm-yy)</span> </div>
+                                    <input name="tanggal_lahir" type="text" data-date="2019-01-01" data-date-format="yyyy-mm-dd" value="2019-01-01" class="datepicker span4">
+                                    <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Jenis Kelamin</label>
                                 <div class="controls">
                                     <label>
-                                        <input type="radio" name="radios" />
+                                        <input type="radio" name="jenis_kelamin" value="Laki-laki" />
                                         Laki-Laki</label>
                                     <label>
-                                        <input type="radio" name="radios" />
+                                        <input type="radio" name="jenis_kelamin" value="Perempuan"/>
                                         Perempuan</label>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Agama</label>
                                 <div class="controls">
-                                    <select class="span4">
+                                    <select name="agama" class="span4">
                                         <option>Islam</option>
                                         <option>Katholik</option>
                                         <option>Kristen</option>
@@ -61,63 +61,63 @@
                             <div class="control-group">
                                 <label class="control-label">No. HP Pelamar</label>
                                 <div class="controls">
-                                    <input type="text" placeholder="Tulis nomor handphone..." class="span4 m-wrap">
+                                    <input name="nomor_hp" type="text" placeholder="Tulis nomor handphone..." class="span4 m-wrap">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Nama Orang Tua</label>
                                 <div class="controls">
-                                    <input type="text" placeholder="Tulis nama orang tua..." class="span4 m-wrap">
+                                    <input name="orang_tua" type="text" placeholder="Tulis nama orang tua..." class="span4 m-wrap">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Alamat Pelamar</label>
                                 <div class="controls">
-                                    <textarea placeholder="Tulis alamat..." class="span4" ></textarea>
+                                    <textarea name="alamat_pelamar" placeholder="Tulis alamat..." class="span4" ></textarea>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Kode Pos</label>
                                 <div class="controls">
-                                    <input type="text" placeholder="Tulis kode pos..." class="span2 m-wrap">
+                                    <input name="kode_pos" type="text" placeholder="Tulis kode pos..." class="span2 m-wrap">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Pendidikan Terakhir</label>
                                 <div class="controls">
-                                    <input type="text" placeholder="Tulis pendidikan terakhir..." class="span4 m-wrap">
+                                    <input name="pendidikan" type="text" placeholder="Tulis pendidikan terakhir..." class="span4 m-wrap">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Status</label>
                                 <div class="controls">
                                     <label>
-                                        <input type="radio" name="radios" />
+                                        <input type="radio" name="status" value="Belum Menikah" />
                                         Belum Menikah</label>
                                     <label>
-                                        <input type="radio" name="radios" />
+                                        <input type="radio" name="status" value="Menikah"/>
                                         Menikah</label>
                                     <label>
-                                        <input type="radio" name="radios" />
+                                        <input type="radio" name="status" value="Cerai"/>
                                         Cerai</label>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Nama Keluarga Lainnya</label>
                                 <div class="controls">
-                                    <input type="text" placeholder="Tulis nama keluarga lainnya..." class="span4 m-wrap">
+                                    <input name="keluarga" type="text" placeholder="Tulis nama keluarga lainnya..." class="span4 m-wrap">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Umur Keluarga Lainnya</label>
                                 <div class="controls">
-                                    <input type="text" placeholder="Tulis umur..." class="span1 m-wrap">
+                                    <input name="umur_keluarga" type="text" placeholder="Tulis umur..." class="span1 m-wrap">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Hubungan Keluarga</label>
                                 <div class="controls">
-                                    <select class="span4">
+                                    <select name="hubungan_keluarga" class="span4">
                                         <option>Ayah</option>
                                         <option>Ibu</option>
                                         <option>Kakak</option>
@@ -135,25 +135,25 @@
                             <div class="control-group">
                                 <label class="control-label">Alamat Keluarga Lainnya</label>
                                 <div class="controls">
-                                    <textarea placeholder="Tulis alamat..." class="span4" ></textarea>
+                                    <textarea name="alamat_keluarga" placeholder="Tulis alamat..." class="span4" ></textarea>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">No. HP Keluarga Lainnya</label>
                                 <div class="controls">
-                                    <input type="text" placeholder="Tulis nomor handphone..." class="span4 m-wrap">
+                                    <input name="nomor_hp_keluarga" type="text" placeholder="Tulis nomor handphone..." class="span4 m-wrap">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Minat Bekerja</label>
                                 <div class="controls">
-                                    <input type="text" placeholder="Tulis nama perusahaan yang diinginkan..." class="span4 m-wrap">
+                                    <input name="minat_bekerja" type="text" placeholder="Tulis nama perusahaan yang diinginkan..." class="span4 m-wrap">
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Minat Lokasi Bekerja</label>
                                 <div class="controls">
-                                    <input type="text" placeholder="Tulis lokasi perusahaan yang diinginkan..." class="span4 m-wrap">
+                                    <input name="minat_lokasi" type="text" placeholder="Tulis lokasi perusahaan yang diinginkan..." class="span4 m-wrap">
                                 </div>
                             </div>
 

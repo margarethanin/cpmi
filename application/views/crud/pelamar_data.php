@@ -2,7 +2,7 @@
 
 <div id="content">
     <div id="content-header">
-        <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Sample pages</a> <a href="#" class="current">Error</a> </div>
+        <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Data Pelamar</a> <a href="#" class="current">Pelamar</a> </div>
         <h1>Pelamar</h1>
     </div>
     <div class="container-fluid">
@@ -17,8 +17,11 @@
                         <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
                             <h5>Form Data Pelamar</h5>
                         </div>
-                        <div class="scroollme">
+                        <div class="widget-content">
                             <div class="table-responsive">
+                                <p> <a href="<?php echo site_url('Pelamar/form_insert_pelamar'); ?>"
+                                       class="btn btn-info">Tambah Pelamar</a>
+                                </p>
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
@@ -45,33 +48,40 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td class="center">Budi Setiawan</td>
-                                            <td class="center">Bantul</td>
-                                            <td class="center">23 Mei 1990</td>
-                                            <td class="center">Laki-Laki</td>
-                                            <td class="center">Islam</td>
-                                            <td class="center">081234567</td>
-                                            <td class="center">Sutrisno Joyo</td>
-                                            <td class="center">JL. Bantul, Srandakan RT02 RW01, Bantul</td>
-                                            <td class="center">55672</td>
-                                            <td class="center">SMK</td>
-                                            <td class="center">Belum Menikah</td>
-                                            <td class="center">Nurhayati</td>
-                                            <td class="center">57</td>
-                                            <td class="center">Ibu</td>
-                                            <td class="center">JL. Bantul, Srandakan RT02 RW01, Bantul</td>
-                                            <td class="center">085640326587</td>
-                                            <td class="center">Keswire</td>
-                                            <td class="center">Selangor</td>
-                                            <td class="center">
-                                                <button class="btn btn-primary">Edit</button>
-                                                <button class="btn btn-danger">Hapus</button>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                        <?php
+                                        $no = 1;
+                                        $data_pelamar = $this->Pelamar_m->select_pelamar();
+                                        foreach ($data_pelamar as $row) {
+                                            ?>
+                                            <tr>
+                                                <td><?php echo $no++; ?></td>
+                                                <td class="center"><?php echo $row->nama_pelamar; ?></td>
+                                                <td class="center"><?php echo $row->tempat_lahir_pelamar; ?></td>
+                                                <td class="center"><?php echo $row->tanggal_lahir_pelamar; ?></td>
+                                                <td class="center"><?php echo $row->jenis_kelamin; ?></td>
+                                                <td class="center"><?php echo $row->agama; ?></td>
+                                                <td class="center"><?php echo $row->nomor_hp_pelamar; ?></td>
+                                                <td class="center"><?php echo $row->nama_orang_tua; ?></td>
+                                                <td class="center"><?php echo $row->alamat_pelamar; ?></td>
+                                                <td class="center"><?php echo $row->kode_pos; ?></td>
+                                                <td class="center"><?php echo $row->pendidikan_terakhir_pelamar; ?></td>
+                                                <td class="center"><?php echo $row->status_diri; ?></td>
+                                                <td class="center"><?php echo $row->nama_keluarga_lain; ?></td>
+                                                <td class="center"><?php echo $row->umur_keluarga_lain; ?></td>
+                                                <td class="center"><?php echo $row->hubungan_keluarga_lain; ?></td>
+                                                <td class="center"><?php echo $row->alamat_keluarga_lain; ?></td>
+                                                <td class="center"><?php echo $row->nomor_hp_keluarga_lain; ?></td>
+                                                <td class="center"><?php echo $row->minat_bekerja; ?></td>
+                                                <td class="center"><?php echo $row->minat_lokasi_kerja; ?></td>
+                                                <td class="center">
+                                                    <a href="<?php echo site_url("Pelamar/form_edit_pelamar/$row->id_pelamar") ?>" class="btn btn-primary">Edit</a>
+                                                    <a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="<?php echo site_url("Pelamar/hapus_data_pelamar/$row->id_pelamar") ?>" class="btn btn-danger">Hapus</a>
+                                                </td>
+                                            </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -79,9 +89,8 @@
             </div>
         </div>
     </div>
-</div>
 
-<?php $this->load->view('footer'); ?>
+    <?php $this->load->view('footer'); ?>
 
-        
+
 

@@ -81,10 +81,10 @@
                                 <label class="control-label">Jalur Penerimaan</label>
                                 <div class="controls">
                                     <label>
-                                        <input type="radio" name="jalur_penerimaan" value="S" id="seleksi"/>
+                                        <input type="radio" name="jalur_penerimaan" value="S" onchange="cols()"/>
                                         Seleksi</label>
                                     <label>
-                                        <input type="radio" name="jalur_penerimaan" value="TS"/>
+                                        <input type="radio" name="jalur_penerimaan" value="TS" onchange="no_cols()" checked=""/>
                                         Tanpa Seleksi</label>
                                 </div>
                             </div>
@@ -118,12 +118,11 @@
 </div>
 <?php $this->load->view('footer'); ?>
 <script>
-    $('input[name="jalur_penerimaan"]').change(function () {
-        if ($('#seleksi').is(":checked")) {
-            $('#collapseOne').collapse('show');
-        } else {
-            $('#collapseOne').collapse('hide');
-        }
-    });
+    function cols(){
+        $('#collapseOne').collapse('show');
+    }
+    function no_cols(){
+        $('#collapseOne').collapse('hide');
+    }
 </script>
         
