@@ -81,7 +81,7 @@
                 <li><a href="<?php echo site_url('Lokasi/data_lokasi'); ?>"><i class="icon-map-marker"></i> <span>Lokasi Perusahaan</span></a></li>
 
                 <!--lowongan-->
-                <li class="submenu"> <a href="#"><i class="icon-briefcase"></i> <span>Informasi Lowongan</span> <span class="label label-important">4</span></a>
+                <li class="submenu"> <a href="#"><i class="icon-briefcase"></i> <span>Informasi Lowongan</span> <span class="label label-important">⌄</span></a>
                     <ul>
                         <li><a href="<?php echo site_url('Lowongan/form_insert_lowongan'); ?>">Tambah Lowongan</a></li>
                         <li><a href="<?php echo site_url('Pekerjaan/data_pekerjaan'); ?>">Jenis Pekerjaan</a></li>
@@ -91,11 +91,12 @@
                 </li>
 
                 <!--pelamar-->
-                <li class="submenu"> <a href="#"><i class="icon-group"></i> <span>Pendataan Pelamar</span> <span class="label label-important">3</span></a>
+                <li class="submenu"> <a href="#"><i class="icon-group"></i> <span>Pendataan Pelamar</span> <span class="label label-important">4</span></a>
                     <ul>
-                        <li><a href="<?php echo site_url('Pelamar/form_insert_pelamar'); ?>">Pelamar</a></li>
-                        <li><a href="#">Berkas Dasar</a></li>
-                        <li><a href="#">Berkas Proses</a></li>
+                        <li><a href="<?php echo site_url('Pelamar/form_insert_pelamar'); ?>">Tambah Pelamar</a></li>
+                        <li><a href="<?php echo site_url('Pelamar/data_pelamar'); ?>">Data Pelamar</a></li>
+                        <li><a href="<?php echo site_url('Berkas_Dasar/form_insert_berkas_dasar'); ?>">Berkas Dasar</a></li>
+                        <li><a href="<?php echo site_url('Berkas_Proses/form_insert_berkas_proses'); ?>">Berkas Proses</a></li>
                     </ul>
                 </li>
 

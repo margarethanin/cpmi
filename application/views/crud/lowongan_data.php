@@ -35,7 +35,7 @@
                                         <th>Jenis Pekerjaan</th>
                                         <th>Permintaan Lowongan</th>
                                         <th>Nominal Upah</th>
-                                        <th></th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -53,7 +53,7 @@
                                             <td><?php echo $row->permintaan_lowongan; ?></td>
                                             <td><?php echo $row->nominal_upah; ?></td>
                                             <td class="center">
-                                                <button class="btn btn-success">Lihat Pendaftar</button>
+                                                <a class="btn btn-success" href="<?php echo site_url("Seleksi/data_seleksi/$row->id_lowongan") ?>">Lihat Pendaftar</a>
                                                 <button class="btn btn-primary">Edit</button>
                                                 <a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="<?php echo site_url("Lowongan/hapus_data_lowongan/$row->id_lowongan") ?>" class="btn btn-danger">Hapus</a>
                                             </td>

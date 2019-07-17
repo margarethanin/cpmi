@@ -18,13 +18,13 @@ class Pelamar extends CI_Controller {
         $this->load->view('crud/pelamar_form_insert');
     }
 
-    function data_pelamar() {
+    function detail_pelamar() {
 //  bisa pake =  $data['data_admin'] = $this->Admin_m->select_admin();
 //               $this->load->view('crud/admin_data' , $data);
         
-        $this->load->view('crud/pelamar_data');
+        $this->load->view('crud/pelamar_detail');
     }
-
+    
     function proses_insert_pelamar() {
         $data = array(
 //          'nama kolom di dalam database' => 'inputan form user',
@@ -50,14 +50,29 @@ class Pelamar extends CI_Controller {
         $this->Pelamar_m->insert_pelamar($data);
         redirect('Pelamar/data_pelamar');
     }
-//CODING UNTUK HAPUS DATA
+    
+        function data_pelamar() {
+//  bisa pake =  $data['data_admin'] = $this->Admin_m->select_admin();
+//               $this->load->view('crud/admin_data' , $data);
+        
+        $this->load->view('crud/pelamar_data');
+    }
+  
+//CODING UNTUK HAPUS DATA PELAMAR
     function hapus_data_pelamar($id_pelamar) {
         $this->Pelamar_m->hapus_pelamar($id_pelamar);
         redirect('Pelamar/data_pelamar');
     }
+    
+//CODING UNTUK HAPUS DETAIL PELAMAR
+    function hapus_detail_pelamar($id_pelamar) {
+        $this->Pelamar_m->hapus_pelamar($id_pelamar);
+        redirect('Pelamar/detail_pelamar');
+    }
+    
 //CODING UNTUK EDIT DATA    
     function form_edit_pelamar($id_pelamar){
-        $data['data_pelamar'] = $this->Pelamar_m->select_id_pelamar($id_pelamar);
+        $data['detail_pelamar'] = $this->Pelamar_m->select_id_pelamar($id_pelamar);
         $this->load->view('crud/pelamar_form_edit' , $data);
     }
     
@@ -85,7 +100,7 @@ class Pelamar extends CI_Controller {
             'minat_lokasi_kerja' => $this->input->post('minat_lokasi'),
         );
         $this->Pelamar_m->update_id_pelamar($data, $id_pelamar);
-        redirect('Pelamar/data_pelamar');
+        redirect('Pelamar/detail_pelamar');
     }
 
 }

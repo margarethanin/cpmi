@@ -14,7 +14,7 @@
                     </div>
                     <div class="widget-content">
                         <!--content here-->
-                        <?php foreach ($data_pelamar as $row) { ?>
+                        <?php foreach ($detail_pelamar as $row) { ?>
                             <form class="form-horizontal" method="post" action="<?php echo site_url('Pelamar/proses_edit_pelamar'); ?>" name="basic_validate" id="basic_validate" novalidate="novalidate">
 
                                 <div class="control-group">
