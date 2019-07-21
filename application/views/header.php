@@ -83,15 +83,14 @@
                 <!--lowongan-->
                 <li class="submenu"> <a href="#"><i class="icon-briefcase"></i> <span>Informasi Lowongan</span> <span class="label label-important">⌄</span></a>
                     <ul>
-                        <li><a href="<?php echo site_url('Lowongan/form_insert_lowongan'); ?>">Tambah Lowongan</a></li>
                         <li><a href="<?php echo site_url('Pekerjaan/data_pekerjaan'); ?>">Jenis Pekerjaan</a></li>
-                        <li><a href="<?php echo site_url('Lowongan/data_lowongan'); ?>">Seleksi</a></li>
-                        <li><a href="<?php echo site_url('Lowongan/data_lowongan_noseleksi'); ?>">Tanpa Seleksi</a></li>
+                        <li><a href="<?php echo site_url('Lowongan/form_insert_lowongan'); ?>">Tambah Lowongan</a></li>
+                        <li><a href="<?php echo site_url('Lowongan/data_lowongan'); ?>">Data Lowongan</a></li>
                     </ul>
                 </li>
 
                 <!--pelamar-->
-                <li class="submenu"> <a href="#"><i class="icon-group"></i> <span>Pendataan Pelamar</span> <span class="label label-important">4</span></a>
+                <li class="submenu"> <a href="#"><i class="icon-group"></i> <span>Pendataan Pelamar</span> <span class="label label-important">⌄</span></a>
                     <ul>
                         <li><a href="<?php echo site_url('Pelamar/form_insert_pelamar'); ?>">Tambah Pelamar</a></li>
                         <li><a href="<?php echo site_url('Pelamar/data_pelamar'); ?>">Data Pelamar</a></li>

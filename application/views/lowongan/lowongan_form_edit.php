@@ -72,6 +72,7 @@
                                         </select>
                                     </div>
                                 </div>
+                                
                                 <div class="control-group">
                                     <label class="control-label">Permintaan Lowongan (L/P)</label>
                                     <div class="controls">
@@ -105,11 +106,21 @@
                                     <div class="controls">
                                         <label>
     <!--                                        <input type="radio" name="jalur_penerimaan" value="S" onchange="cols()"/>-->
-                                            <input type="radio" name="jalur_penerimaan" value="1"/>
+                                            <input type="radio" name="jalur_penerimaan" value="1"
+                                                   <?php
+                                            if ($row->status_seleksi == "1") {
+                                                echo "checked";
+                                            }
+                                            ?>/>
                                             Seleksi</label>
                                         <label>
     <!--                                        <input type="radio" name="jalur_penerimaan" value="TS" onchange="no_cols()" checked=""/>-->
-                                            <input type="radio" name="jalur_penerimaan" value="0"/>
+                                            <input type="radio" name="jalur_penerimaan" value="0"
+                                                   <?php
+                                            if ($row->status_seleksi == "0") {
+                                                echo "checked";
+                                            }
+                                            ?>/>
                                             Tanpa Seleksi</label>
                                     </div>
                                 </div>

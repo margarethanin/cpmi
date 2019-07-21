@@ -38,4 +38,27 @@ class Pelamar_m extends CI_Model {
         $this->db->where('id_pelamar', $id_pelamar);
         $this->db->update('tb_pelamar', $data);
     }
+    
+    // UNTUK BERKAS
+    function id_pelamar(){
+        $q = $this->db->query("SELECT MAX(RIGHT(id_pelamar,4)) AS kd_max FROM tb_pelamar WHERE DATE(tanggal_input)=CURDATE()");
+        $kd = "";
+        if ($q->num_rows() > 0) {
+            foreach ($q->result() as $k) {
+                $tmp = ((int) $k->kd_max) + 1;
+                $kd = sprintf("%04s", $tmp);
+            }
+        } else {
+            $kd = "0001";
+        }
+        return "TKI-" .date('ymd') . $kd;
+    }
+    
+    function insert_berkas_dasar($data){
+        $this->db->insert('tb_berkas_dasar', $data);
+    }
+    
+     function insert_berkas_proses($data){
+        $this->db->insert('tb_berkas_proses', $data);
+    }
 }

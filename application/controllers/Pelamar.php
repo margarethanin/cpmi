@@ -26,8 +26,10 @@ class Pelamar extends CI_Controller {
     }
     
     function proses_insert_pelamar() {
+        $id_pelamar = $this->Pelamar_m->id_pelamar();
         $data = array(
 //          'nama kolom di dalam database' => 'inputan form user',
+            'id_pelamar' => $id_pelamar,
             'nama_pelamar' => $this->input->post('pelamar'),
             'tempat_lahir_pelamar' => $this->input->post('tempat_lahir'),
             'tanggal_lahir_pelamar' => $this->input->post('tanggal_lahir'),
@@ -48,6 +50,17 @@ class Pelamar extends CI_Controller {
             'minat_lokasi_kerja' => $this->input->post('minat_lokasi'),
         );
         $this->Pelamar_m->insert_pelamar($data);
+        
+        $berkas_dasar = array(
+            'id_pelamar' => $id_pelamar
+        );
+        $this->Pelamar_m->insert_berkas_dasar($berkas_dasar);
+        
+        $berkas_proses = array(
+            'id_pelamar' => $id_pelamar
+        );
+        $this->Pelamar_m->insert_berkas_proses($berkas_proses);
+                
         redirect('Pelamar/data_pelamar');
     }
     

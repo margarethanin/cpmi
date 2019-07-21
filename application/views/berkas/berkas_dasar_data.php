@@ -18,7 +18,7 @@
                             <h5>Form Data Lokasi Perusahaan</h5>
                         </div>
                         <div class="widget-content">
-                            <p> <a href="<?php echo site_url('Lokasi/form_insert_berkas_dasar'); ?>"
+                            <p> <a href="<?php echo site_url('berkas/berkas_proses_form_insert'); ?>"
                                     class="btn btn-info">Tambah Berkas Dasar</a>
                             </p>
                             <table class="table table-bordered table-striped">
@@ -69,5 +69,3 @@
     </div>
 </div>
 <?php $this->load->view('footer'); ?>
-        
-
