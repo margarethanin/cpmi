@@ -15,13 +15,13 @@
                     <div class="widget-content">
                         <!--content here-->
                         
-                        <form class="form-horizontal" method="post" action="<?php echo site_url('Berkas/proses_update_berkas')?>" name="basic_validate" id="basic_validate" novalidate="novalidate">
+                        <form class="form-horizontal" method="post" enctype="multipart/form-data" action="<?php echo site_url("Berkas/update_berkas_$jenis"); ?>" name="basic_validate" id="basic_validate" novalidate="novalidate">
                             <input type="hidden" name="id_pelamar" value="<?php echo $id_pelamar?>">
                             <input type="hidden" name="tipe_berkas" value="<?php echo $berkas?>">
                             <div class="control-group">
                                 <label class="control-label">File Berkas</label>
                                 <div class="controls">
-                                    <input type="file" />
+                                    <input type="file" name="<?php echo $berkas; ?>"/>
                                 </div>
                             </div>
 

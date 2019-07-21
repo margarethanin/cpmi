@@ -96,11 +96,12 @@ foreach ($detail_pelamar as $row) {
                                         </thead>
                                         <tbody>
 
+                                            <!--FOTO-->
                                             <tr class="odd gradeX">
                                                 <td><strong>Foto</strong></td>
                                                 <td></td>
                                                 <td>
-                                                    <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas_dasar/$row->id_pelamar/foto"); ?>">Edit</a>
+                                                    <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/foto/dasar"); ?>">Edit</a>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
                                             </tr>
@@ -118,7 +119,7 @@ foreach ($detail_pelamar as $row) {
                                                     <p></p>
                                                 </td>
                                                 <td>
-                                                    <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas_dasar/$row->id_pelamar/ktp"); ?>">Edit</a>
+                                                    <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/ktp/dasar"); ?>">Edit</a>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
 
@@ -135,24 +136,7 @@ foreach ($detail_pelamar as $row) {
                                                     <p></p>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-primary">Edit</button>
-                                                    <button class="btn btn-danger">Hapus</button>
-                                                </td>
-
-                                                <!--Kartu Keluarga-->
-                                            <tr class="odd gradeX">
-                                                <td>        
-                                                    <p><strong>Kartu Keluarga</strong></p>
-                                                    <p>Tanggal Masuk</p>
-                                                    <p>Tanggal Keluar</p>
-                                                </td>
-                                                <td>
-                                                    <p></p>
-                                                    <p></p>
-                                                    <p></p>
-                                                </td>
-                                                <td>
-                                                    <button class="btn btn-primary">Edit</button>
+                                                    <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/kartu_keluarga/dasar"); ?>">Edit</a>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
 
@@ -169,7 +153,7 @@ foreach ($detail_pelamar as $row) {
                                                     <p></p>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-primary">Edit</button>
+                                                    <button class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/ijazah/dasar/dasar"); ?>">Edit</button>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
 
@@ -186,7 +170,7 @@ foreach ($detail_pelamar as $row) {
                                                     <p></p>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-primary">Edit</button>
+                                                    <button class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/akta_lahir/dasar"); ?>">Edit</button>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
 
@@ -203,7 +187,7 @@ foreach ($detail_pelamar as $row) {
                                                     <p></p>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-primary">Edit</button>
+                                                    <button class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/surat_izin/dasar"); ?>">Edit</button>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
 
@@ -220,7 +204,7 @@ foreach ($detail_pelamar as $row) {
                                                     <p></p>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-primary">Edit</button>
+                                                    <button class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/buku_nikah/dasar"); ?>">Edit</button>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
 
@@ -237,7 +221,7 @@ foreach ($detail_pelamar as $row) {
                                                     <p></p>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-primary">Edit</button>
+                                                    <button class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/akta_cerai/dasar"); ?>">Edit</button>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
 
@@ -273,7 +257,7 @@ foreach ($detail_pelamar as $row) {
                                                     <p></p>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-primary">Edit</button>
+                                                    <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/medical/proses"); ?>">Edit</a>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
 
@@ -300,14 +284,14 @@ foreach ($detail_pelamar as $row) {
                                                     <p></p>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-primary">Edit</button>
+                                                    <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/paspor/proses"); ?>">Edit</a>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
 
-                                                <!--Kartu Keluarga-->
+                                                <!--ISC-->
                                             <tr class="odd gradeX">
                                                 <td>        
-                                                    <p><strong>Kartu Keluarga</strong></p>
+                                                    <p><strong>ISC</strong></p>
                                                     <p>Tanggal Pembuatan</p>
                                                     <p>Tanggal Kadaluwarsa</p>
                                                 </td>
@@ -317,14 +301,14 @@ foreach ($detail_pelamar as $row) {
                                                     <p></p>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-primary">Edit</button>
+                                                    <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/isc/proses"); ?>">Edit</a>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
 
-                                                <!--Ijazah-->
+                                                <!--FWCMS-->
                                             <tr class="odd gradeX">
                                                 <td>        
-                                                    <p><strong>Ijazah</strong></p>
+                                                    <p><strong>FWCMS</strong></p>
                                                     <p>Tanggal Pembuatan</p>
                                                     <p>Tanggal Kadaluwarsa</p>
                                                 </td>
@@ -334,77 +318,40 @@ foreach ($detail_pelamar as $row) {
                                                     <p></p>
                                                 </td>
                                                 <td>
-                                                    <button class="btn btn-primary">Edit</button>
+                                                    <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/fwcms/proses"); ?>">Edit</a>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
-
-                                                <!--Akta Lahir-->
+                                                
+                                                <!--ASURANSI PRA-->
                                             <tr class="odd gradeX">
-                                                <td>        
-                                                    <p><strong>Akta Lahir</strong></p>
-                                                    <p>Tanggal Pembuatan</p>
-                                                    <p>Tanggal Kadaluwarsa</p>
-                                                </td>
-                                                <td>
-                                                    <p></p>
-                                                    <p></p>
-                                                    <p></p>
-                                                </td>
+                                                <td><strong>Asuransi Pra Kerja</strong></td>
+                                                <td></td>
                                                 <td>
                                                     <button class="btn btn-primary">Edit</button>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
-
-                                                <!--Surat Izin-->
+                                            </tr>
+                                            
+                                                <!--NOMOR KTKLN-->
                                             <tr class="odd gradeX">
-                                                <td>        
-                                                    <p><strong>Surat Izin</strong></p>
-                                                    <p>Tanggal Pembuatan</p>
-                                                    <p>Tanggal Kadaluwarsa</p>
-                                                </td>
-                                                <td>
-                                                    <p></p>
-                                                    <p></p>
-                                                    <p></p>
-                                                </td>
+                                                <td><strong>Nomor KTKLN</strong></td>
+                                                <td></td>
                                                 <td>
                                                     <button class="btn btn-primary">Edit</button>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
-
-                                                <!--Buku Nikah-->
+                                            </tr>
+                                            
+                                            <!--ASURANSI PURNA-->
                                             <tr class="odd gradeX">
-                                                <td>        
-                                                    <p><strong>Buku Nikah</strong></p>
-                                                    <p>Tanggal Pembuatan</p>
-                                                    <p>Tanggal Kadaluwarsa</p>
-                                                </td>
-                                                <td>
-                                                    <p></p>
-                                                    <p></p>
-                                                    <p></p>
-                                                </td>
+                                                <td><strong>Asuransi Purna Kerja</strong></td>
+                                                <td></td>
                                                 <td>
                                                     <button class="btn btn-primary">Edit</button>
                                                     <button class="btn btn-danger">Hapus</button>
                                                 </td>
-
-                                                <!--Akta Cerai-->
-                                            <tr class="odd gradeX">
-                                                <td>        
-                                                    <p><strong>Akta Cerai</strong></p>
-                                                    <p>Tanggal Pembuatan</p>
-                                                    <p>Tanggal Kadaluwarsa</p>
-                                                </td>
-                                                <td>
-                                                    <p></p>
-                                                    <p></p>
-                                                    <p></p>
-                                                </td>
-                                                <td>
-                                                    <button class="btn btn-primary">Edit</button>
-                                                    <button class="btn btn-danger">Hapus</button>
-                                                </td>
+                                            </tr>
+                                                
 
                                         </tbody>
                                     </table>

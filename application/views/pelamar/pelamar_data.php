@@ -35,7 +35,6 @@
                                         <th>Nomor HP</th>
                                         <th>Minat Bekerja</th>
                                         <th>Minat Lokasi Bekerja</th>
-                                        <th>Upload Berkas</th>
                                         <th>Aksi</th>
                                         <th></th>
                                     </tr>
@@ -55,11 +54,7 @@
                                             <td><?php echo $row->minat_bekerja; ?></td>
                                             <td><?php echo $row->minat_lokasi_kerja; ?></td>
                                             <td class="center">
-                                                <a href="<?php echo site_url("Berkas/data_berkas_dasar/") ?>" class="btn btn-success">Berkas Dasar</a>
-                                                <a href="<?php echo site_url("Berkas/data_berkas_proses/") ?>" class="btn btn-warning">Berkas Proses</a>
-                                            </td>
-                                            <td class="center">
-                                                <a href="<?php echo site_url("Pelamar/detail_pelamar/$row->id_pelamar") ?>" class="btn">Lihat Detail Pelamar</a>
+                                                <a href="<?php echo site_url("Pelamar/detail_pelamar/$row->id_pelamar") ?>" class="btn btn-warning">Lihat Detail Pelamar</a>
                                                 <a href="<?php echo site_url("Pelamar/form_edit_pelamar/$row->id_pelamar") ?>" class="btn btn-primary">Edit</a>
                                                 <a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="<?php echo site_url("Pelamar/hapus_data_pelamar/$row->id_pelamar") ?>" class="btn btn-danger">Hapus</a>
                                             </td>
