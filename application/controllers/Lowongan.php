@@ -73,5 +73,28 @@ class Lowongan extends CI_Controller {
         $data['data_lowongan'] = $this->Lowongan_m->select_lowongan_no_seleksi();
         $this->load->view('crud/lowongan_data',$data);
     }
+    
+    //CODING UNTUK EDIT DATA    
+    function form_edit_lowongan($id_lowongan){
+        $data['data_lowongan'] = $this->Lowongan_m->select_id_lowongan($id_lowongan);
+        $data['perusahaan'] = $this->Perusahaan_m->select_perusahaan();
+        $data['pekerjaan'] = $this->Pekerjaan_m->select_pekerjaan();
+        $this->load->view('crud/lowongan_form_edit' , $data);
+    }
+    
+    function proses_edit_lowongan(){
+        $id_lowongan = $this->input->post('id_lowongan');
+        
+        $data = array(
+            'tanggal_kontrak' => $this->input->post('tanggal_kontrak'),
+            'id_perusahaan' => $this->input->post('nama_perusahaan'),
+            'id_pekerjaan' => $this->input->post('pekerjaan'),
+            'permintaan_lowongan' => $this->input->post('permintaan_lowongan'),
+            'nominal_upah' => $this->input->post('nominal_upah'),
+            'id_seleksi' => $id_seleksi
+        );
+        $this->Lowongan_m->update_id_lowongan($data, $id_lowongan);
+        redirect('Lowongan/data_lowongan');
+    }
 
 }

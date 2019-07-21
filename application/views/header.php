@@ -95,8 +95,6 @@
                     <ul>
                         <li><a href="<?php echo site_url('Pelamar/form_insert_pelamar'); ?>">Tambah Pelamar</a></li>
                         <li><a href="<?php echo site_url('Pelamar/data_pelamar'); ?>">Data Pelamar</a></li>
-                        <li><a href="<?php echo site_url('Berkas_Dasar/form_insert_berkas_dasar'); ?>">Berkas Dasar</a></li>
-                        <li><a href="<?php echo site_url('Berkas_Proses/form_insert_berkas_proses'); ?>">Berkas Proses</a></li>
                     </ul>
                 </li>
 

@@ -62,5 +62,16 @@ class Lowongan_m extends CI_Model {
         }
         return date('ymd') . $kd;
     }
+    
+//CODING UNTUK EDIT DATA    
+    function select_id_lowongan($id_lowongan){
+        $query = $this->db->query("SELECT * FROM tb_lowongan where id_lowongan='$id_lowongan'");
+        return $query->result();
+    }
+    
+    function update_id_lowongan($data, $id_lowongan){
+        $this->db->where('id_lowongan', $id_lowongan);
+        $this->db->update('tb_lowongan', $data);
+    }
 
 }

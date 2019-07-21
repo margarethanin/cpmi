@@ -7,13 +7,10 @@
  */
 
 /**
- * Description of Seleksi
+ * Description of Berkas_Dasar_m
  *
  * @author Margarethanin
  */
-class Seleksi extends CI_Controller{
+class Berkas_Dasar_m {
     //put your code here
-    function data_seleksi(){
-        $this->load->view('berkas/seleksi_data');
-    }
 }

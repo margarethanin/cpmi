@@ -11,13 +11,6 @@
  *
  * @author Margarethanin
  */
-class Berkas_Proses extends CI_Controller {
+class Berkas_Proses {
     //put your code here
-    function form_insert_berkas_proses() {
-        $this->load->view('berkas/berkas_proses_form_insert');
-    }
-    function data_berkas_proses() {
-        $this->load->view('berkas/berkas_proses_data');
-    }
-    
 }

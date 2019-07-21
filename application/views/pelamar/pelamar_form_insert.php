@@ -49,12 +49,12 @@
                                 <label class="control-label">Agama</label>
                                 <div class="controls">
                                     <select name="agama" class="span4">
-                                        <option>Islam</option>
-                                        <option>Katholik</option>
-                                        <option>Kristen</option>
-                                        <option>Hindu</option>
-                                        <option>Budha</option>
-                                        <option>Konghucu</option>
+                                        <option value="Islam">Islam</option>
+                                        <option value="Katholik">Katholik</option>
+                                        <option value="Kristen">Kristen</option>
+                                        <option value="Hindu">Hindu</option>
+                                        <option value="Budha">Budha</option>
+                                        <option value="Konghucu">Konghucu</option>
                                     </select>
                                 </div>
                             </div>
@@ -118,17 +118,17 @@
                                 <label class="control-label">Hubungan Keluarga</label>
                                 <div class="controls">
                                     <select name="hubungan_keluarga" class="span4">
-                                        <option>Ayah</option>
-                                        <option>Ibu</option>
-                                        <option>Kakak</option>
-                                        <option>Adik</option>
-                                        <option>Suami</option>
-                                        <option>Istri</option>
-                                        <option>Anak</option>
-                                        <option>Sepupu</option>
-                                        <option>Keponakan</option>
-                                        <option>Kakek</option>
-                                        <option>Nenek</option>
+                                        <option value="Ayah">Ayah</option>
+                                        <option value="Ibu">Ibu</option>
+                                        <option value="Kakak">Kakak</option>
+                                        <option value="Adik">Adik</option>
+                                        <option value="Suami">Suami</option>
+                                        <option value="Istri">Istri</option>
+                                        <option value="Anak">Anak</option>
+                                        <option value="Sepupu">Sepupu</option>
+                                        <option value="Keponakan">Keponakan</option>
+                                        <option value="Kakek">Kakek</option>
+                                        <option value="Nenek">Nenek</option>
                                     </select>
                                 </div>
                             </div>

@@ -36,9 +36,11 @@
                                     <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
                             </div>
                             <div class="control-group">
-                                <label class="control-label">ID Pekerja Migran Indonesia</label>
+                                <label class="control-label">ID Pekerja Migran Indonesia
+</label>
                                 <div class="controls">
-                                    <input type="file" />
+                                    <input type="text" name="no_id" placeholder="Tulis ID pekerja..." class="span3 m-warp">
+<!--                                    <textarea class="span8" ></textarea>-->
                                 </div>
                             </div>
                             <div class="control-group">
@@ -109,7 +111,7 @@
                             <div class="control-group">
                                 <label class="control-label">Nomor KTKLN</label>
                                 <div class="controls">
-                                    <input type="text" name="no_ktp" placeholder="Tulis nomor KTKLN..." class="span3 m-warp">
+                                    <input type="text" name="no_ktkln" placeholder="Tulis nomor KTKLN..." class="span3 m-warp">
 <!--                                    <textarea class="span8" ></textarea>-->
                                 </div>
                             </div>
