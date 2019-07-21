@@ -33,8 +33,8 @@
                                             <?php foreach ($perusahaan as $row_perusahaan) { ?>
                                                 <option
                                                     value="<?php echo $row_perusahaan->id_perusahaan; ?>"
-                                                    <?php 
-                                                    if ($row->id_perusahaan == $row_perusahaan->id_perusahaan){
+                                                    <?php
+                                                    if ($row->id_perusahaan == $row_perusahaan->id_perusahaan) {
                                                         echo "selected";
                                                     }
                                                     ?>
@@ -61,8 +61,8 @@
                                             <?php foreach ($pekerjaan as $row_pekerjaan) { ?>
                                                 <option
                                                     value="<?php echo $row_pekerjaan->id_pekerjaan; ?>"
-                                                    <?php 
-                                                    if ($row->id_pekerjaan == $row_pekerjaan->id_pekerjaan){
+                                                    <?php
+                                                    if ($row->id_pekerjaan == $row_pekerjaan->id_pekerjaan) {
                                                         echo "selected";
                                                     }
                                                     ?>
@@ -77,7 +77,7 @@
                                     <div class="controls">
                                         <label>
                                             <input type="radio" name="permintaan_lowongan" value="Laki-laki" 
-                                                   <?php
+                                            <?php
                                             if ($row->permintaan_lowongan == "Laki-laki") {
                                                 echo "checked";
                                             }
@@ -85,7 +85,7 @@
                                             Laki-laki</label>
                                         <label>
                                             <input type="radio" name="permintaan_lowongan" value="Perempuan" 
-                                                   <?php
+                                            <?php
                                             if ($row->permintaan_lowongan == "Perempuan") {
                                                 echo "checked";
                                             }
@@ -104,16 +104,18 @@
                                     <label class="control-label">Jalur Penerimaan</label>
                                     <div class="controls">
                                         <label>
-                                            <input type="radio" name="jalur_penerimaan" value="S" onchange="cols()"/>
+    <!--                                        <input type="radio" name="jalur_penerimaan" value="S" onchange="cols()"/>-->
+                                            <input type="radio" name="jalur_penerimaan" value="1"/>
                                             Seleksi</label>
                                         <label>
-                                            <input type="radio" name="jalur_penerimaan" value="TS" onchange="no_cols()" checked=""/>
+    <!--                                        <input type="radio" name="jalur_penerimaan" value="TS" onchange="no_cols()" checked=""/>-->
+                                            <input type="radio" name="jalur_penerimaan" value="0"/>
                                             Tanpa Seleksi</label>
                                     </div>
                                 </div>
 
                                 <!--muncul ketika pilihan jalur penerimaan (seleksi)-->
-                                <div class="collapse" id="collapseOne">
+<!--                                <div class="collapse" id="collapseOne">
                                     <div class="control-group">
                                         <label class="control-label">Tanggal Seleksi</label>
                                         <div class="controls">
@@ -124,22 +126,22 @@
                                         <label class="control-label">Lokasi Seleksi</label>
                                         <div class="controls">
                                             <input type="text" name="lokasi_seleksi" placeholder="Tulis lokasi seleksi..." class="span4 m-warp">
-        <!--                                    <textarea class="span8" ></textarea>-->
+                                            <textarea class="span8" ></textarea>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
 
                                 <div class="form-actions">
                                     <input type="submit" value="Simpan" class="btn btn-success">
                                 </div>
                             </form>
-                        <?php }?>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <?php $this->load->view('footer'); ?>
+</div>
+<?php $this->load->view('footer'); ?>
 
 

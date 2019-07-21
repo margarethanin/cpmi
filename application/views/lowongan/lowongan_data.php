@@ -34,6 +34,7 @@
                                         <th>Lokasi Perusahaan</th>
                                         <th>Jenis Pekerjaan</th>
                                         <th>Permintaan Lowongan</th>
+                                        <th>Jalur Penerimaan</th>
                                         <th>Nominal Upah</th>
                                         <th>Aksi</th>
                                     </tr>
@@ -51,9 +52,19 @@
                                             <td><?php echo $row->lokasi; ?></td>
                                             <td><?php echo $row->pekerjaan; ?></td>
                                             <td><?php echo $row->permintaan_lowongan; ?></td>
+                                            <td>
+                                                <?php 
+                                                if($row->status_seleksi == 0){
+                                                    echo "Tanpa Seleksi";
+                                                  } else { ?>
+                                                <a class="btn btn-success"
+                                                   href="<?php echo site_url("Lowongan/jadwal_seleksi/$row->id_lowongan") ?>">Jadwal Seleksi</a>
+                                                  <?php }
+                                                ?>
+                                            </td>
                                             <td><?php echo $row->nominal_upah; ?></td>
                                             <td class="center">
-                                                <a class="btn btn-success" href="<?php echo site_url("Seleksi/data_seleksi/$row->id_lowongan") ?>">Lihat Pendaftar</a>
+                                                <a class="btn" href="<?php echo site_url("Seleksi/data_seleksi/$row->id_lowongan") ?>">Lihat Pendaftar</a>
                                                 <a href="<?php echo site_url("Lowongan/form_edit_lowongan/$row->id_lowongan") ?>" class="btn btn-primary">Edit</a>
                                                 <a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="<?php echo site_url("Lowongan/hapus_data_lowongan/$row->id_lowongan") ?>" class="btn btn-danger">Hapus</a>
                                             </td>

@@ -92,21 +92,21 @@
                             </div>
 
                             <!--muncul ketika pilihan jalur penerimaan (seleksi)-->
-<!--                            <div class="collapse" id="collapseOne">
-                            <div class="control-group">
-                                <label class="control-label">Tanggal Seleksi</label>
-                                <div class="controls">
-                                    <input name="tanggal_seleksi" type="text" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="datepicker span4">
-                                    <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
-                            </div>
-                            <div class="control-group">
-                                <label class="control-label">Lokasi Seleksi</label>
-                                <div class="controls">
-                                    <input type="text" name="lokasi_seleksi" placeholder="Tulis lokasi seleksi..." class="span4 m-warp">
-                                    <textarea class="span8" ></textarea>
-                                </div>
-                            </div>
-                            </div>-->
+                            <!--                            <div class="collapse" id="collapseOne">
+                                                        <div class="control-group">
+                                                            <label class="control-label">Tanggal Seleksi</label>
+                                                            <div class="controls">
+                                                                <input name="tanggal_seleksi" type="text" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="datepicker span4">
+                                                                <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
+                                                        </div>
+                                                        <div class="control-group">
+                                                            <label class="control-label">Lokasi Seleksi</label>
+                                                            <div class="controls">
+                                                                <input type="text" name="lokasi_seleksi" placeholder="Tulis lokasi seleksi..." class="span4 m-warp">
+                                                                <textarea class="span8" ></textarea>
+                                                            </div>
+                                                        </div>
+                                                        </div>-->
 
                             <div class="form-actions">
                                 <input type="submit" value="Simpan" class="btn btn-success">
@@ -120,11 +120,11 @@
 </div>
 <?php $this->load->view('footer'); ?>
 <script>
-    function cols(){
+    function cols() {
         $('#collapseOne').collapse('show');
     }
-    function no_cols(){
+    function no_cols() {
         $('#collapseOne').collapse('hide');
     }
 </script>
-        
+
