@@ -11,25 +11,30 @@
  *
  * @author Margarethanin
  */
-class Pendaftar_m extends CI_Model{
+class Pendaftar_m extends CI_Model {
+
     //put your code here
     function insert_pendaftar($data) {
         $this->db->insert('tb_pendaftar_lowongan', $data);
     }
-        // <------------------------menampilkan data tb_pelamar berdasarkan nomor telfon yang di input
-    function search_pelamar ($notelp){
+
+    // <------------------------menampilkan data tb_pelamar berdasarkan nomor telfon yang di input
+    function search_pelamar($notelp) {
         $query = $this->db->query("SELECT * FROM tb_pelamar where nomor_hp_pelamar='$notelp'");
         return $query->result();
     }
-    function data_lowongan (){
-        $query = $this->db->query("SELECT * FROM tb_lowongan where masa_berlaku >= curdate()");
+
+    //masa berlaku lowongan
+    function data_lowongan() {
+        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan
+                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan where masa_berlaku >= curdate()");
         return $query->result();
     }
-    
-    //Untuk insert data ke dalam database
-    function select_pendaftar() {
-        $query = $this->db->query("SELECT * FROM tb_pendaftar_lowongan p JOIN tb_pelamar pl ON p.id_pelamar = pl.id_pelamar
-                JOIN tb_lowongan l ON p.id_lowongan = l.id_lowongan");
-        return $query->result();
+
+    // Update pendaftar masuk di data lowongan
+    function update_pendaftar($data, $id_pendaftar) {
+        $this->db->where('id_pendaftar', $id_pendaftar);
+        $this->db->ipdate('tb_pendaftar_lowongan', $data);
     }
+
 }

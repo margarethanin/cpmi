@@ -66,7 +66,7 @@
                                             </td>
                                             <td><?php echo $row->nominal_upah; ?></td>
                                             <td class="center">
-                                                <a class="btn" href="<?php echo site_url("Seleksi/data_seleksi/$row->id_lowongan") ?>">Lihat Pendaftar</a>
+                                                <a class="btn" href="<?php echo site_url("Lowongan/pendaftar/$row->id_lowongan") ?>">Lihat Pendaftar</a>
                                                 <a href="<?php echo site_url("Lowongan/form_edit_lowongan/$row->id_lowongan") ?>" class="btn btn-primary">Edit</a>
                                                 <a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="<?php echo site_url("Lowongan/hapus_data_lowongan/$row->id_lowongan") ?>" class="btn btn-danger">Hapus</a>
                                             </td>

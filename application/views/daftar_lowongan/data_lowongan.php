@@ -2,8 +2,8 @@
 
 <div id="content">
     <div id="content-header">
-        <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Sample pages</a> <a href="#" class="current">Error</a> </div>
-        <h1>Blank</h1>
+        <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Data Lowongan</a> <a href="#" class="current">Lowongan</a> </div>
+        <h1>Data Lowongan ditawarkan</h1>
     </div>
     <div class="container-fluid">
         <div class="row-fluid">
@@ -20,7 +20,7 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Perusahaan</th>
-                                        <th>Posisi</th>
+                                        <th>Jenis Pekerjaan</th>
                                         <th>Permintaan Lowongan</th>
                                         <th>Aksi</th>
                                     </tr>
@@ -32,8 +32,8 @@
                                         ?>
                                         <tr class="odd gradeX">
                                             <td><?php echo $no++; ?></td>
-                                            <td>2</td>
-                                            <td>2</td>
+                                            <td><?php echo $row->nama_perusahaan; ?></td>
+                                            <td><?php echo $row->pekerjaan; ?></td>
                                             <td class="center"><?php echo $row->permintaan_lowongan; ?></td>
                                             <td class="center">
                                                 <a class="btn btn-primary" onclick="showModal('<?php echo $row->id_lowongan; ?>', '<?php echo $id_pelamar; ?>')">Pilih</a>

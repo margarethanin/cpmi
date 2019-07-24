@@ -28,13 +28,22 @@ class Pendaftar extends CI_Controller{
     }
     
     function proses_insert_pendaftar() {
+        $id_pelamar = $this->input->post('id_pelamar');
         $data = array(
 //          'nama kolom di dalam database' => 'inputan form user',
-            'id_pelamar' => $this->input->post('id_pelamar'),
+            'id_pelamar' => $id_pelamar,
             'id_lowongan' => $this->input->post('id_lowongan'),
             'lokasi_kantor_cabang' => $this->input->post('cabang'),
         );
         $this->Pendaftar_m->insert_pendaftar($data);
-        redirect('Pendaftar/data_lowongan');
+        redirect("Pendaftar/data_lowongan/$id_pelamar");
+    }
+    
+    function update_status_pendaftar(){
+        $id_pendaftar = $this->input->post('id_pendaftar');
+        $data = array(
+            'status_penerimaan' => $this->input->post('status_penerimaan')
+        );
+        $this->Pendaftar_m->update_pendaftar($data, $id_pendaftar);
     }
 }

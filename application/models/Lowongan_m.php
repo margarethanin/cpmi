@@ -14,7 +14,6 @@
 class Lowongan_m extends CI_Model {
 
     //put your code here
-    
 //Untuk insert data
     function insert_lowongan($data) {
         $this->db->insert('tb_lowongan', $data);
@@ -24,7 +23,7 @@ class Lowongan_m extends CI_Model {
     function insert_seleksi($data) {
         $this->db->insert('tb_seleksi', $data);
     }
-    
+
 //Untuk insert data ke dalam database
     function select_lowongan() {
         $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan p ON l.id_perusahaan = p.id_perusahaan 
@@ -32,6 +31,7 @@ class Lowongan_m extends CI_Model {
                 JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan");
         return $query->result();
     }
+
     function select_lowongan_no_seleksi() {
         $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan p ON l.id_perusahaan = p.id_perusahaan 
                 JOIN tb_lokasi_perusahaan lp ON p.id_lokasi = lp.id_lokasi
@@ -62,31 +62,46 @@ class Lowongan_m extends CI_Model {
         }
         return date('ymd') . $kd;
     }
-    
+
 //CODING UNTUK EDIT DATA    
-    function select_id_lowongan($id_lowongan){
+    function select_id_lowongan($id_lowongan) {
         $query = $this->db->query("SELECT * FROM tb_lowongan where id_lowongan='$id_lowongan'");
         return $query->result();
     }
-    
-    function update_id_lowongan($data, $id_lowongan){
+
+    function update_id_lowongan($data, $id_lowongan) {
         $this->db->where('id_lowongan', $id_lowongan);
         $this->db->update('tb_lowongan', $data);
     }
-    
+
     // JADWAL SELEKSI
-    function jadwal_seleksi_db($id_lowongan){
+    function jadwal_seleksi_db($id_lowongan) {
         $query = $this->db->query("SELECT * FROM tb_seleksi where id_lowongan='$id_lowongan'");
         return $query->result();
     }
-    function simpan_jadwal_seleksi_db($data){
+
+    function simpan_jadwal_seleksi_db($data) {
         $this->db->insert('tb_seleksi', $data);
     }
+
     //CODING UNTUK HAPUS DATA ((SELEKSI))
     function hapus_seleksi($id_seleksi) {
         //delete from tb_admin where id_admin = '$id_perusahaan'
         $this->db->where('id_seleksi', $id_seleksi);
         $this->db->delete('tb_seleksi');
+    }
+
+    ///// MEMASUKKAN DATA PENDAFTAR LOWONGAN
+    function pendaftar_db($id_lowongan) {
+        $query = $this->db->query("SELECT * FROM tb_pendaftar_lowongan pl JOIN tb_pelamar p ON pl.id_pelamar = p.id_pelamar where id_lowongan='$id_lowongan'");
+        return $query->result();
+    }
+
+    //CODING UNTUK HAPUS DATA ((SELEKSI))
+    function hapus_pendaftar($id_pendaftar) {
+        //delete from tb_admin where id_admin = '$id_perusahaan'
+        $this->db->where('id_pendaftar', $id_pendaftar);
+        $this->db->delete('tb_pendaftar_lowongan');
     }
 
 }

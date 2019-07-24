@@ -131,4 +131,17 @@ class Lowongan extends CI_Controller {
         redirect("Lowongan/jadwal_seleksi/$id_lowongan");
     }
 
+    ///// MEMASUKKAN DATA PENDAFTAR LOWONGAN
+    function pendaftar($id_lowongan) {
+        $data['pendaftar'] = $this->Lowongan_m->pendaftar_db($id_lowongan);
+        $data['id_lowongan'] = $id_lowongan;
+        $this->load->view('lowongan/pendaftar', $data);
+    }
+
+//CODING UNTUK HAPUS DATA ((SELEKSI))
+    function hapus_data_pendaftar($id_pendaftar, $id_lowongan) {
+        $this->Lowongan_m->hapus_pendaftar($id_pendaftar);
+        redirect("Lowongan/pendaftar/$id_lowongan");
+    }
+
 }

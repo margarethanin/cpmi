@@ -18,13 +18,16 @@
                         <?php foreach ($data_lowongan as $row) { ?>
                             <form class="form-horizontal" method="post" action="<?php echo site_url('Lowongan/proses_edit_lowongan'); ?>" name="basic_validate" id="basic_validate" novalidate="novalidate">
 
+                                <!--HARUS ADA HIDDEN-->
+                                <input type="hidden" name="id_lowongan" required="" value="<?php echo $row->id_lowongan; ?>">
+                                
                                 <div class="control-group">
                                     <label class="control-label">Tanggal Kontrak</label>
                                     <div class="controls">
-                                        <input name="tanggal_lahir" type="text" data-date="2019-01-01" data-date-format="yyyy-mm-dd" value="<?php echo $row->tanggal_kontrak; ?>" class="datepicker span4">
+                                        <input name="tanggal_kontrak" type="text" data-date="2019-01-01" data-date-format="yyyy-mm-dd" value="<?php echo $row->tanggal_kontrak; ?>" class="datepicker span4">
                                         <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
                                 </div>
-                                
+
                                 <div class="control-group">
                                     <label class="control-label">Masa Berlaku</label>
                                     <div class="controls">
@@ -79,7 +82,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                
+
                                 <div class="control-group">
                                     <label class="control-label">Permintaan Lowongan (L/P)</label>
                                     <div class="controls">
@@ -114,7 +117,7 @@
                                         <label>
     <!--                                        <input type="radio" name="jalur_penerimaan" value="S" onchange="cols()"/>-->
                                             <input type="radio" name="jalur_penerimaan" value="1"
-                                                   <?php
+                                            <?php
                                             if ($row->status_seleksi == "1") {
                                                 echo "checked";
                                             }
@@ -123,7 +126,7 @@
                                         <label>
     <!--                                        <input type="radio" name="jalur_penerimaan" value="TS" onchange="no_cols()" checked=""/>-->
                                             <input type="radio" name="jalur_penerimaan" value="0"
-                                                   <?php
+                                            <?php
                                             if ($row->status_seleksi == "0") {
                                                 echo "checked";
                                             }
@@ -133,21 +136,21 @@
                                 </div>
 
                                 <!--muncul ketika pilihan jalur penerimaan (seleksi)-->
-<!--                                <div class="collapse" id="collapseOne">
-                                    <div class="control-group">
-                                        <label class="control-label">Tanggal Seleksi</label>
-                                        <div class="controls">
-                                            <input name="tanggal_seleksi" type="text" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="datepicker span4">
-                                            <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label">Lokasi Seleksi</label>
-                                        <div class="controls">
-                                            <input type="text" name="lokasi_seleksi" placeholder="Tulis lokasi seleksi..." class="span4 m-warp">
-                                            <textarea class="span8" ></textarea>
-                                        </div>
-                                    </div>
-                                </div>-->
+                                <!--                                <div class="collapse" id="collapseOne">
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Tanggal Seleksi</label>
+                                                                        <div class="controls">
+                                                                            <input name="tanggal_seleksi" type="text" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="datepicker span4">
+                                                                            <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
+                                                                    </div>
+                                                                    <div class="control-group">
+                                                                        <label class="control-label">Lokasi Seleksi</label>
+                                                                        <div class="controls">
+                                                                            <input type="text" name="lokasi_seleksi" placeholder="Tulis lokasi seleksi..." class="span4 m-warp">
+                                                                            <textarea class="span8" ></textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>-->
 
                                 <div class="form-actions">
                                     <input type="submit" value="Simpan" class="btn btn-success">
