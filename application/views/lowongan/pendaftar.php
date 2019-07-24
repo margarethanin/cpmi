@@ -43,14 +43,35 @@
                                             <td><?php echo $row->keterangan; ?></td>
                                             <td class="center">
                                                 <label>
-                                                    <input type="radio" name="status_penerimaan" value="HIRED" />
-                                                    HIRED</label>
+                                                    <input type="radio" name="status_penerimaan" 
+                                                           onclick="updateStatus('<?php echo $row->id_pendaftar; ?>', 'HIRED')"
+                                                           <?php
+                                                           if ($row->status_penerimaan == "HIRED") {
+                                                               echo "checked";
+                                                           }
+                                                           ?>
+                                                           />HIRED
+                                                </label>
                                                 <label>
-                                                    <input type="radio" name="status_penerimaan" value="KIV" />
-                                                    KIV</label>
+                                                    <input type="radio" name="status_penerimaan" 
+                                                           onclick="updateStatus('<?php echo $row->id_pendaftar; ?>', 'KIV')"
+                                                           <?php
+                                                           if ($row->status_penerimaan == "KIV") {
+                                                               echo "checked";
+                                                           }
+                                                           ?>
+                                                           />KIV
+                                                </label>
                                                 <label>
-                                                    <input type="radio" name="status_penerimaan" value="REJECT" />
-                                                    REJECT</label>
+                                                    <input type="radio" name="status_penerimaan" 
+                                                           onclick="updateStatus('<?php echo $row->id_pendaftar; ?>', 'REJECT')"
+                                                           <?php
+                                                           if ($row->status_penerimaan == "REJECT") {
+                                                               echo "checked";
+                                                           }
+                                                           ?>
+                                                           />REJECT
+                                                </label>
                                             </td>
                                             <td class="center">
                                                 <a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="<?php echo site_url("Lowongan/hapus_data_pendaftar/$row->id_pendaftar/$id_lowongan") ?>" class="btn btn-danger">Hapus</a>
@@ -67,5 +88,20 @@
     </div>
 </div>
 <?php $this->load->view('footer'); ?>
-        
+<script>
+    function updateStatus(id, status) {
+        $.ajax({
+            url: "<?php echo site_url('Pendaftar/update_status_pendaftar') ?>",
+            data: {id_pendaftar: id, status_penerimaan: status},
+            type: "POST",
+            success: function (data) {
+                location.reload(); //untuk refresh halaman
+            },
+            error: function (t, e, s) {
+                alert("Update error!")
+            }
+        })
+    }
+</script>
+
 

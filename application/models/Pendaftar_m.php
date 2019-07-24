@@ -34,7 +34,7 @@ class Pendaftar_m extends CI_Model {
     // Update pendaftar masuk di data lowongan
     function update_pendaftar($data, $id_pendaftar) {
         $this->db->where('id_pendaftar', $id_pendaftar);
-        $this->db->ipdate('tb_pendaftar_lowongan', $data);
+        $this->db->update('tb_pendaftar_lowongan', $data);
     }
 
 }
