@@ -34,6 +34,12 @@ class Pelamar_m extends CI_Model {
         return $query->result();
     }
     
+    ///
+    function select_berkas_dasar($id_pelamar){
+        $query = $this->db->query("SELECT * FROM tb_berkas_dasar where id_pelamar='$id_pelamar'");
+        return $query->result();
+    }
+    
     function update_id_pelamar($data, $id_pelamar){
         $this->db->where('id_pelamar', $id_pelamar);
         $this->db->update('tb_pelamar', $data);
@@ -61,4 +67,5 @@ class Pelamar_m extends CI_Model {
      function insert_berkas_proses($data){
         $this->db->insert('tb_berkas_proses', $data);
     }
+    
 }

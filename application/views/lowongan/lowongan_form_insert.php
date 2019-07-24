@@ -23,6 +23,13 @@
                                     <input name="tanggal_kontrak" type="text" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="datepicker span4">
                                     <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
                             </div>
+                            
+                            <div class="control-group">
+                                <label class="control-label">Masa Berlaku</label>
+                                <div class="controls">
+                                    <input name="masa_berlaku" type="text" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="datepicker span4">
+                                    <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
+                            </div>
 
                             <div class="control-group">
                                 <label class="control-label">Nama Perusahaan</label>

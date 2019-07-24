@@ -46,6 +46,7 @@ class Lowongan extends CI_Controller {
         $data = array(
 //            'nama kolom di dalam database' => 'inputan form user',
             'tanggal_kontrak' => $this->input->post('tanggal_kontrak'),
+            'masa_berlaku' => $this->input->post('masa_berlaku'),
             'id_perusahaan' => $this->input->post('nama_perusahaan'),
             'id_pekerjaan' => $this->input->post('pekerjaan'),
             'permintaan_lowongan' => $this->input->post('permintaan_lowongan'),
@@ -87,6 +88,7 @@ class Lowongan extends CI_Controller {
 
         $data = array(
             'tanggal_kontrak' => $this->input->post('tanggal_kontrak'),
+            'masa_berlaku' => $this->input->post('masa_berlaku'),
             'id_perusahaan' => $this->input->post('nama_perusahaan'),
             'id_pekerjaan' => $this->input->post('pekerjaan'),
             'permintaan_lowongan' => $this->input->post('permintaan_lowongan'),
@@ -97,20 +99,20 @@ class Lowongan extends CI_Controller {
         $this->Lowongan_m->update_id_lowongan($data, $id_lowongan);
         redirect('Lowongan/data_lowongan');
     }
-    
+
     // JADWAL SELEKSI
-    function jadwal_seleksi($id_lowongan){
+    function jadwal_seleksi($id_lowongan) {
         $data['jadwal'] = $this->Lowongan_m->jadwal_seleksi_db($id_lowongan);
         $data['id_lowongan'] = $id_lowongan;
         $this->load->view('lowongan/seleksi_data', $data);
     }
-    
-    function input_jadwal_seleksi($id_lowongan){
+
+    function input_jadwal_seleksi($id_lowongan) {
         $data['id_lowongan'] = $id_lowongan;
         $this->load->view('lowongan/seleksi_form_insert', $data);
     }
-    
-    function simpan_jadwal_seleksi(){
+
+    function simpan_jadwal_seleksi() {
         $id_lowongan = $this->input->post('id_lowongan');
         $data = array(
             "id_seleksi" => $this->Lowongan_m->id_seleksi(),
@@ -122,7 +124,7 @@ class Lowongan extends CI_Controller {
         $this->Lowongan_m->simpan_jadwal_seleksi_db($data);
         redirect("Lowongan/jadwal_seleksi/$id_lowongan");
     }
-    
+
     //CODING UNTUK HAPUS DATA ((SELEKSI))
     function hapus_data_seleksi($id_seleksi, $id_lowongan) {
         $this->Lowongan_m->hapus_seleksi($id_seleksi);

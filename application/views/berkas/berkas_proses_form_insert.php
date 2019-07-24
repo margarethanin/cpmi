@@ -48,6 +48,13 @@
                                 <div class="controls">
                                     <input type="file" />
                                 </div>
+                            </div>                            
+                            <div class="control-group">
+                                <label class="control-label">Nomor Paspor</label>
+                                <div class="controls">
+                                    <input type="text" name="no_paspor" placeholder="Tulis nomor Paspor..." class="span3 m-warp">
+<!--                                    <textarea class="span8" ></textarea>-->
+                                </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Tanggal Pembuatan</label>

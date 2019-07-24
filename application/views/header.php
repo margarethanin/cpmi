@@ -77,9 +77,15 @@
                 <li><a href="<?php echo site_url('Welcome/index'); ?>"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
 
                 <!--perusahaan-->
-                <li><a href="<?php echo site_url('Perusahaan/data_perusahaan'); ?>"><i class="icon-money"></i> <span>Perusahaan</span></a></li>
-                <li><a href="<?php echo site_url('Lokasi/data_lokasi'); ?>"><i class="icon-map-marker"></i> <span>Lokasi Perusahaan</span></a></li>
-
+<!--                <li><a href=""><i class="icon-money"></i> <span>Perusahaan</span></a></li>
+                <li><a href=""><i class="icon-map-marker"></i> <span>Lokasi Perusahaan</span></a></li>-->
+                <li class="submenu"> <a href="#"><i class="icon-money"></i> <span>Perusahaan</span> <span class="label label-important">⌄</span></a>
+                    <ul>
+                        <li><a href="<?php echo site_url('Perusahaan/data_perusahaan'); ?>">Data Perusahaan</a></li>
+                        <li><a href="<?php echo site_url('Lokasi/data_lokasi'); ?>">Lokasi Perusahaan</a></li>
+                    </ul>
+                </li>
+                
                 <!--lowongan-->
                 <li class="submenu"> <a href="#"><i class="icon-briefcase"></i> <span>Informasi Lowongan</span> <span class="label label-important">⌄</span></a>
                     <ul>
@@ -98,7 +104,7 @@
                 </li>
 
                 <!--pendaftar lowongan-->
-                <li><a href="charts.html"><i class="icon-shopping-cart"></i> <span>Pendaftar Lowongan</span></a> </li>
+                <li><a href="<?php echo site_url('Pendaftar/data_pelamar'); ?>"><i class="icon-shopping-cart"></i> <span>Pendaftar Lowongan</span></a> </li>
 
                 <!--endorsment-->
                 <li><a href="charts.html"><i class="icon-tasks"></i> <span>Endorsment</span></a> </li>

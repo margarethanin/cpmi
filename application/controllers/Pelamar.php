@@ -22,7 +22,9 @@ class Pelamar extends CI_Controller {
 //  bisa pake =  $data['data_admin'] = $this->Admin_m->select_admin();
 //               $this->load->view('crud/admin_data' , $data);
         $data['detail_pelamar'] = $this->Pelamar_m->select_id_pelamar($id_pelamar); 
-        $this->load->view('pelamar/pelamar_detail', $data);
+        ///////////////////////////
+        $data['dasar'] = $this->Pelamar_m->select_berkas_dasar($id_pelamar); 
+        $this->load->view('pelamar/pelamar_detail', $data, $data);
     }
     
     function proses_insert_pelamar() {
