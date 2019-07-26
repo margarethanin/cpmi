@@ -107,7 +107,7 @@
                 <li><a href="<?php echo site_url('Pendaftar/data_pelamar'); ?>"><i class="icon-shopping-cart"></i> <span>Pendaftar Lowongan</span></a> </li>
 
                 <!--endorsment-->
-                <li><a href="charts.html"><i class="icon-tasks"></i> <span>Endorsment</span></a> </li>
+                <li><a href="<?php echo site_url('Endorsement/data_lowongan'); ?>"><i class="icon-tasks"></i> <span>Endorsment</span></a> </li>
 
                 <!--pengiriman endorsment-->
                 <li><a href="<?php echo site_url('Pengiriman_Endorsement/data_pengiriman_endorsement'); ?>"><i class="icon-external-link"></i> <span>Pengiriman Endorsment</span></a> </li>

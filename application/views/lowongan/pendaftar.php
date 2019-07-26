@@ -43,7 +43,7 @@
                                             <td><?php echo $row->keterangan; ?></td>
                                             <td class="center">
                                                 <label>
-                                                    <input type="radio" name="status_penerimaan" 
+                                                    <input type="radio" name="status_penerimaan<?php echo $row->id_pendaftar; ?>" 
                                                            onclick="updateStatus('<?php echo $row->id_pendaftar; ?>', 'HIRED')"
                                                            <?php
                                                            if ($row->status_penerimaan == "HIRED") {
@@ -53,7 +53,7 @@
                                                            />HIRED
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="status_penerimaan" 
+                                                    <input type="radio" name="status_penerimaan<?php echo $row->id_pendaftar; ?>" 
                                                            onclick="updateStatus('<?php echo $row->id_pendaftar; ?>', 'KIV')"
                                                            <?php
                                                            if ($row->status_penerimaan == "KIV") {
@@ -63,7 +63,7 @@
                                                            />KIV
                                                 </label>
                                                 <label>
-                                                    <input type="radio" name="status_penerimaan" 
+                                                    <input type="radio" name="status_penerimaan<?php echo $row->id_pendaftar; ?>" 
                                                            onclick="updateStatus('<?php echo $row->id_pendaftar; ?>', 'REJECT')"
                                                            <?php
                                                            if ($row->status_penerimaan == "REJECT") {
