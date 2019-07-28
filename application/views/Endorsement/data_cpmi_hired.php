@@ -26,7 +26,7 @@
                                         <th>Nomor Paspor</th>
                                         <th>Nomor Telefon</th>
                                         <th>Alamat</th>
-                                        <th>Aksi</th>
+                                        <th>Nomor Visa</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -41,7 +41,15 @@
                                             <td><?php echo $row->nomor_hp_pelamar; ?></td>
                                             <td class="center"><?php echo $row->alamat_pelamar; ?></td>
                                             <td class="center">
-                                                <a class="btn btn-primary" href="<?php echo '' ?>"> Input Nomor Visa </a>
+                                                <?php 
+                                                $visa = $this->Endorsement_m->visa($row->id_pendaftar);
+                                                if (empty($visa->nomor_calling_visa)) { ?>
+                                                    <a class="btn btn-primary" onclick="showModal('<?php echo $row->id_pendaftar; ?>', '<?php echo $id_lowongan; ?>')"> Input Nomor Visa </a>
+                                                    <?php
+                                                } else {
+                                                    echo $visa->nomor_calling_visa;
+                                                }
+                                                ?>
                                             </td>
                                         </tr>
                                     <?php } ?>
@@ -55,3 +63,48 @@
         </div>
     </div>
 </div>
+<!--///////////////////modal-->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Konfirmasi Nomor Visa</h4>
+            </div>
+            <form method="post" action="<?php echo site_url('Endorsement/proses_insert_visa'); ?>">
+                <div class="modal-body">
+
+                    <div class="control-group">
+                        <label class="control-label">ID Pendaftar</label>
+                        <div class="controls">
+                            <input type="text" name="id_pendaftar" readonly="">
+                        </div>
+                    </div>
+                    <input type="hidden" name="id_lowongan" readonly="">
+                    <div class="control-group">
+                        <label class="control-label">Nomor Visa</label>
+                        <div class="controls">
+                            <input type="text" name="visa" required="">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default" >Simpan</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<?php $this->load->view('footer'); ?>
+<script>
+    function showModal(id_pendaftar, id_lowongan) {
+        $('[name="id_pendaftar"]').val(id_pendaftar);
+        $('[name="id_lowongan"]').val(id_lowongan);
+        $("#myModal").modal('show');
+    }
+</script>

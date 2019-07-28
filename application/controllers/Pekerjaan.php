@@ -50,7 +50,7 @@ class Pekerjaan extends CI_Controller {
             'pekerjaan' => $this->input->post('pekerjaan'),
         );
         $this->Pekerjaan_m->update_id_pekerjaan($data, $id_pekerjaan);
-        redirect('Admin/data_admin');
+        redirect('Pekerjaan/data_pekerjaan');
     }
 
 }

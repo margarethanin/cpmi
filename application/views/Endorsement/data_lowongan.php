@@ -3,7 +3,7 @@
 <div id="content">
     <div id="content-header">
         <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Data Lowongan</a> <a href="#" class="current">Lowongan</a> </div>
-        <h1>Data Lowongan ditawarkan</h1>
+        <h1>Lowongan Tawaran</h1>
     </div>
     <div class="container-fluid">
         <div class="row-fluid">
@@ -36,7 +36,7 @@
                                             <td><?php echo $row->pekerjaan; ?></td>
                                             <td class="center"><?php echo $row->permintaan_lowongan; ?></td>
                                             <td class="center">
-                                                <a class="btn btn-primary" href="<?php echo site_url("Endorsement/data_cpmi_hired/$row->id_lowongan")?>"> Data Harus Endosh </a>
+                                                <a class="btn btn-primary" href="<?php echo site_url("Endorsement/data_cpmi_hired/$row->id_lowongan") ?>"> Data Harus Endosh </a>
                                             </td>
                                         </tr>
                                     <?php } ?>
@@ -50,3 +50,4 @@
         </div>
     </div>
 </div>
+<?php $this->load->view('footer'); ?>

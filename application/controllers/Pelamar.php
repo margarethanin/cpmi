@@ -22,6 +22,7 @@ class Pelamar extends CI_Controller {
 //  bisa pake =  $data['data_admin'] = $this->Admin_m->select_admin();
 //               $this->load->view('crud/admin_data' , $data);
         $data['detail_pelamar'] = $this->Pelamar_m->select_id_pelamar($id_pelamar); 
+        $data['berkas_nomor'] = $this->Berkas_m->select_nomor($id_pelamar); 
         ///////////////////////////
         $data['dasar'] = $this->Pelamar_m->select_berkas_dasar($id_pelamar); 
         $this->load->view('pelamar/pelamar_detail', $data, $data);
@@ -73,11 +74,12 @@ class Pelamar extends CI_Controller {
         $this->load->view('pelamar/pelamar_data');
     }
   
-//CODING UNTUK HAPUS DATA PELAMAR
+//CODING UNTUK HAPUS DATA
     function hapus_data_pelamar($id_pelamar) {
         $this->Pelamar_m->hapus_pelamar($id_pelamar);
         redirect('Pelamar/data_pelamar');
     }
+    
     
 //CODING UNTUK HAPUS DETAIL PELAMAR
     function hapus_detail_pelamar($id_pelamar) {
