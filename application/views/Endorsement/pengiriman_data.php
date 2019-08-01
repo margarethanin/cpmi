@@ -13,8 +13,13 @@
                         <h5>Data Pengiriman Endorsement</h5>
                     </div>
                     <div class="widget-content">
+
                         <!--content here-->
                         <div class="widget-content nopadding">
+                            <form action="<?php echo site_url('Endorsement/simpan_lowongan');?>" method="post">
+                                <p> <button type="submit" class="btn btn-info">Simpan Data Pengiriman</button> </p>
+                                <input type="hidden" name="id_pengiriman" value="<?php echo $id_pengiriman?>">
+                                
                             <table class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
@@ -37,14 +42,15 @@
                                             <td><?php echo $row->nama_perusahaan; ?></td>
                                             <td><?php echo $row->pekerjaan; ?></td>
                                             <td class="center"><?php echo $row->permintaan_lowongan; ?></td>
-                                            <td class="center">
-                                                <button class="btn btn-primary">Edit</button>
-                                                <button class="btn btn-danger">Hapus</button>
-                                            </td>
-                                        </tr>
-                                        <?php } ?>
+                                    <td class="center">
+                                        <button class="btn btn-primary">Edit</button>
+                                        <button class="btn btn-danger">Hapus</button>
+                                    </td>
+                                    </tr>
+                                <?php } ?>
                                 </tbody>
                             </table>
+                        </form>
                         </div>
 
                     </div>

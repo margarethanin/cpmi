@@ -110,7 +110,7 @@
                 <li><a href="<?php echo site_url('Endorsement/data_lowongan'); ?>"><i class="icon-tasks"></i> <span>Endorsment</span></a> </li>
 
                 <!--pengiriman endorsment-->
-                <li><a href="<?php echo site_url('Endorsement/data_pengiriman'); ?>"><i class="icon-external-link"></i> <span>Pengiriman Endorsment</span></a> </li>
+                <li><a href="<?php echo site_url('Endorsement/pengiriman'); ?>"><i class="icon-external-link"></i> <span>Pengiriman Endorsment</span></a> </li>
 
                 <!--keberangkatan-->
                 <li><a href="charts.html"><i class="icon-plane"></i> <span>Keberangkatan</span></a> </li>
