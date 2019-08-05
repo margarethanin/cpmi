@@ -23,7 +23,8 @@ class Endorsement_m extends CI_Model {
                 . "JOIN tb_berkas_proses bp ON p.id_pelamar=bp.id_pelamar where id_lowongan='$id_lowongan' and status_penerimaan='HIRED'");
         return $query->result();
     }
-    
+
+
     // Update pendaftar masuk di data lowongan
     function update_endos($data, $id_lowongan) {
         $this->db->where('id_endorsement', $id_endorsement);

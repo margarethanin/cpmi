@@ -23,6 +23,8 @@
                             <p>
                                 <a href="<?php echo site_url('Pelamar/form_insert_pelamar'); ?>"
                                    class="btn btn-info">Tambah Pelamar</a>
+                                <a href="<?php echo site_url('Pelamar/detail_pelamar_e'); ?>"
+                                   class="btn btn-success">Detail Seluruh Pelamar</a>
                             </p>
                             <table class="table table-bordered table-striped">
                                 <thead>

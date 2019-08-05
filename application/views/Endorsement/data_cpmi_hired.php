@@ -26,6 +26,7 @@
                                         <th>Nomor Paspor</th>
                                         <th>Nomor Telefon</th>
                                         <th>Alamat</th>
+                                        <th>Tanggal Keluar Visa</th>
                                         <th>Nomor Visa</th>
                                     </tr>
                                 </thead>
@@ -41,9 +42,21 @@
                                             <td><?php echo $row->nomor_hp_pelamar; ?></td>
                                             <td class="center"><?php echo $row->alamat_pelamar; ?></td>
                                             <td class="center">
-                                                <?php 
+                                                <?php
                                                 $visa = $this->Endorsement_m->visa($row->id_pendaftar);
-                                                if (empty($visa->nomor_calling_visa)) { ?>
+                                                if (empty($visa->tanggal_visa)) {
+                                                    ?>
+                                                    <?php
+                                                } else {
+                                                    echo $visa->tanggal_visa;
+                                                }
+                                                ?>
+                                            </td>
+                                            <td class="center">
+                                                <?php
+                                                $visa = $this->Endorsement_m->visa($row->id_pendaftar);
+                                                if (empty($visa->nomor_calling_visa)) {
+                                                    ?>
                                                     <a class="btn btn-primary" onclick="showModal('<?php echo $row->id_pendaftar; ?>', '<?php echo $id_lowongan; ?>')"> Input Nomor Visa </a>
                                                     <?php
                                                 } else {
@@ -83,6 +96,12 @@
                         </div>
                     </div>
                     <input type="hidden" name="id_lowongan" readonly="">
+                    <div class="control-group">
+                        <label class="control-label">Tanggal Keluar Visa</label>
+                        <div class="controls">
+                            <input name="tanggal_visa" type="date" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="datepicker span4">
+                            <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
+                    </div>
                     <div class="control-group">
                         <label class="control-label">Nomor Visa</label>
                         <div class="controls">

@@ -25,7 +25,6 @@
                                         <th>Nama Pelamar</th>
                                         <th>Tanggal Pendaftaran</th>
                                         <th>Lokasi Kantor Cabang</th>
-                                        <th>Keterangan</th>
                                         <th>Status Penerimaan</th>
                                         <th>Aksi</th>
                                     </tr>
@@ -40,7 +39,6 @@
                                             <td><?php echo $row->nama_pelamar; ?></td>
                                             <td><?php echo $row->tanggal_pendaftaran; ?></td>
                                             <td><?php echo $row->lokasi_kantor_cabang; ?></td>
-                                            <td><?php echo $row->keterangan; ?></td>
                                             <td class="center">
                                                 <label>
                                                     <input type="radio" name="status_penerimaan<?php echo $row->id_pendaftar; ?>" 
@@ -103,5 +101,3 @@
         })
     }
 </script>
-
-

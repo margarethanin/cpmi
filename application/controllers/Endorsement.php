@@ -37,6 +37,7 @@ class Endorsement extends CI_Controller {
         $data = array(
 //          'nama kolom di dalam database' => 'inputan form user',
             'id_pendaftar' => $id_pendaftar,
+            'tanggal_visa' => $this->input->post('tanggal_visa'),
             'nomor_calling_visa' => $this->input->post('visa'),
         );
         $this->Endorsement_m->insert_endorsement($data);
@@ -81,9 +82,13 @@ class Endorsement extends CI_Controller {
         }
         redirect("Endorsement/data_pengiriman_e/$id_pengiriman");
     }
-    function data_pengiriman_e(){
+    function data_pengiriman_e($id_pengiriman){
+        $data['id_pengiriman'] = $id_pengiriman;
         $data['data'] = $this->Endorsement_m->data_pengiriman_e($id_pengiriman);
         $this->load->view('endorsement/data_pengiriman_e', $data);
     }
-   
+   function data_pengiriman_excel($id_pengiriman) {
+        $data['data'] = $this->Endorsement_m->data_pengiriman_e($id_pengiriman);
+        $this->load->view('Endorsement/data_pengiriman_excel', $data);
+    }
 }
