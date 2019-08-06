@@ -35,4 +35,5 @@ class Berkas_m extends CI_Model{
         $this->db->where('id_berkas_dasar', $id_pelamar);
         $this->db->delete('tb_berkas_dasar');
     }
+    
 }

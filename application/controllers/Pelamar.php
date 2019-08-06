@@ -120,18 +120,7 @@ class Pelamar extends CI_Controller {
         redirect("Pelamar/detail_pelamar/$id_pelamar");
     }
     
-    ////CETAK EXCEL SELEKSI
     
-    function detail_pelamar_e ($id_pelamar) {
-        $data['id_pelamar'] = $id_pelamar;
-        $data['data'] = $this->Pelamar_m->detail_data_pelamar($id_pelamar);
-        $this->load->view('Pelamar/detail_pelamar_e', $data);
-    }
-    
-    function detail_pelamar_excel($id_pelamar) {
-        $data['data'] = $this->Pelamar_m->detail_data_pelamar($id_pelamar);
-        $this->load->view('Pelamar/detail_pelamar_excel', $data);
-    }
     
 ////    function data_cpmi_hired($id_lowongan) {
 //        $data['id_lowongan'] = $id_lowongan;

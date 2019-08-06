@@ -103,5 +103,12 @@ class Lowongan_m extends CI_Model {
         $this->db->where('id_pendaftar', $id_pendaftar);
         $this->db->delete('tb_pendaftar_lowongan');
     }
+    
+        // CETAK EXCEL SELEKSI
+    function detail_data_pelamar($id_lowongan) {
+        $query = $this->db->query("SELECT * FROM tb_pendaftar_lowongan pl JOIN tb_pelamar p ON pl.id_pelamar = p.id_pelamar
+                        JOIN tb_berkas_proses bp ON bp.id_pelamar = p.id_pelamar where id_lowongan='$id_lowongan'");
+        return $query->result();
+    }
 
 }

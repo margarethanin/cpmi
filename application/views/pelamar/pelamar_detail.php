@@ -50,6 +50,7 @@ foreach ($detail_pelamar as $row) {
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
+
                                     <tbody>
                                         <tr>
                                             <td><?php echo $no++; ?></td>
@@ -81,6 +82,10 @@ foreach ($detail_pelamar as $row) {
                             </div>
                         </div>
                         <div class="widget-content">
+                            <p>
+                                <a href="<?php echo site_url("Berkas/pengembalian/$row->id_pelamar"); ?>"
+                                   class="btn btn-warning">Pengambilan Berkas</a>
+                            </p>
                             <div class="row-fluid">
     <!--                            <p> <a href="?php echo site_url('Berkas/form_insert_berkas_dasar'); ?>"
                                    class="btn btn-success">Tambah Berkas Dasar</a>

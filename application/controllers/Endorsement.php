@@ -91,4 +91,15 @@ class Endorsement extends CI_Controller {
         $data['data'] = $this->Endorsement_m->data_pengiriman_e($id_pengiriman);
         $this->load->view('Endorsement/data_pengiriman_excel', $data);
     }
+    
+    ///---> UNTUK KEBERANGKATAN<-----///
+    function data_keberangkatan_lowongan(){
+        $data['lowongan'] = $this->Endorsement_m->data_keberangkatan_l();
+        $this->load->view('keberangkatan/data_keberangkatan_lowongan', $data);
+    }
+    function data_keberangkatan_pelamar($id_lowongan) {
+        $data['data'] = $this->Endorsement_m->data_keberangkatan_p($id_lowongan);
+        $this->load->view('keberangkatan/data_keberangkatan_pelamar', $data);
+    }
+    
 }

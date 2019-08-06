@@ -13,7 +13,7 @@
                         <h5>Data Detail</h5>
                     </div>
                     <div class="widget-content">
-                        <p> <a href="<?php echo site_url("Pelamar/detail_pelamar_excel/$id_pelamar"); ?>"
+                        <p> <a href="<?php echo site_url("Lowongan/detail_pelamar_excel/$id_lowongan"); ?>"
                                class="btn btn-info">Cetak Excel</a>
                         </p>
                         <!--content here-->
@@ -26,9 +26,7 @@
                                     <thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>Nama Perusahaan</th>
                                             <th>Lokasi Kantor Cabang</th>
-                                            <th>Lokasi Seleksi</th>
                                             <th>Status Seleksi</th>
                                             <th>Nama Pelamar</th>
                                             <th>Tempat Lahir</th>
@@ -61,31 +59,29 @@
                                             ?>
                                             <tr>
                                                 <td>1</td>
-                                                <td><?php echo $row->nama_perusahaan; ?></td>
                                                 <td><?php echo $row->lokasi_kantor_cabang; ?></td>
-                                                <td><?php echo $row->lokasi_seleksi; ?></td>
                                                 <td class="center"><?php echo $row->status_penerimaan; ?></td>
-                                                <td class="center">Budi Setiawan</td>
-                                                <td class="center">Bantul</td>
-                                                <td class="center">23 Mei 1990</td>
-                                                <td class="center">Laki-Laki</td>
-                                                <td class="center">081234567</td>
-                                                <td class="center">SMK</td>
-                                                <td class="center">Belum Menikah</td>
-                                                <td class="center">Islam</td>
-                                                <td class="center">13 Mei 2019</td>
-                                                <td class="center">13 Juli 2019</td>
-                                                <td class="center">AT 8935</td>
-                                                <td class="center">15 Mei 2019</td>
-                                                <td class="center">15 Mei 2023</td>
-                                                <td class="center">Sulistyo</td>
-                                                <td class="center">JL. Bantul, Srandakan RT02 RW01, Bantul</td>
-                                                <td class="center">57116</td>
-                                                <td class="center">Sulistyo</td>
-                                                <td class="center">62</td>
-                                                <td class="center">Ayah</td>
-                                                <td class="center">0864521356</td>
-                                                <td class="center">JL. Bantul, Srandakan RT02 RW01, Bantul</td>
+                                                <td class="center"><?php echo $row->nama_pelamar; ?></td>
+                                                <td class="center"><?php echo $row->alamat_pelamar; ?></td>
+                                                <td class="center"><?php echo $row->tanggal_lahir_pelamar; ?></td>
+                                                <td class="center"><?php echo $row->jenis_kelamin; ?></td>
+                                                <td class="center"><?php echo $row->nomor_hp_pelamar; ?></td>
+                                                <td class="center"><?php echo $row->pendidikan_terakhir_pelamar; ?></td>
+                                                <td class="center"><?php echo $row->status_diri; ?></td>
+                                                <td class="center"><?php echo $row->agama; ?></td>
+                                                <td class="center"><?php echo $row->tanggal_pembuatan_medical; ?></td>
+                                                <td class="center"><?php echo $row->tanggal_kadaluwarsa_medical; ?></td>
+                                                <td class="center"><?php echo $row->nomor_paspor; ?></td>
+                                                <td class="center"><?php echo $row->tanggal_pembuatan_paspor; ?></td>
+                                                <td class="center"><?php echo $row->tanggal_kadaluwarsa_paspor; ?></td>
+                                                <td class="center"><?php echo $row->nama_orang_tua; ?></td>
+                                                <td class="center"><?php echo $row->alamat_pelamar; ?></td>
+                                                <td class="center"><?php echo $row->kode_pos; ?></td>
+                                                <td class="center"><?php echo $row->nama_keluarga_lain; ?></td>
+                                                <td class="center"><?php echo $row->umur_keluarga_lain; ?></td>
+                                                <td class="center"><?php echo $row->hubungan_keluarga_lain; ?></td>
+                                                <td class="center"><?php echo $row->nomor_hp_keluarga_lain; ?></td>
+                                                <td class="center"><?php echo $row->alamat_keluarga_lain; ?></td>
                                                 <td class="center">
                                                     <button class="btn btn-primary">Edit</button>
                                                     <button class="btn btn-danger">Hapus</button>

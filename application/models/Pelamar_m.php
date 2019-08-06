@@ -74,13 +74,7 @@ class Pelamar_m extends CI_Model {
         $this->db->insert('tb_berkas_proses', $data);
     }
     
-    // CETAK EXCEL SELEKSI
-    function detail_data_pelamar($id_pelamar) {
-        $query = $this->db->query("SELECT * FROM tb_pelamar p JOIN tb_pendaftar_lowongan pl ON p.id_pelamar = pl.id_pelamar
-                   JOIN tb_lowongan l ON pl.id_lowongan = l.id_lowongan
-                   JOIN tb_berkas_proses bp ON bp.id_pelamar = p.id_pelamar
-                   JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan where p.id_pelamar = '$id_pelamar'");
-        return $query->result();
-    }
+
+    
     
 }

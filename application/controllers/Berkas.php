@@ -154,5 +154,23 @@ class Berkas extends CI_Controller {
             // echo $this->upload->display_error();
         }
     }
+    
+    ////PENGEMBALIAN BERKAS-------------------->/////////
+    function pengembalian ($id_pelamar){
+        $data['id_pelamar'] = $id_pelamar;
+        $this->load->view('pelamar/pengembalian_berkas', $data);
+    }
+    
+    function update_pengembalian() {
+        $id_pelamar = $this->input->post('id_pelamar');
+        $berkas = $this->input->post('dasar[]');
+        foreach ($berkas as $b) {
+            $data = array(
+                "tanggal_keluar_$b" => date('Y-m-d')
+            );
+            $this->Berkas_m->update_berkas_dasar_db($data, $id_pelamar);
+        }
+        redirect("Pelamar/detail_pelamar/$id_pelamar");
+    }
 
 }

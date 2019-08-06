@@ -144,4 +144,17 @@ class Lowongan extends CI_Controller {
         redirect("Lowongan/pendaftar/$id_lowongan");
     }
 
+    ////CETAK EXCEL SELEKSI
+    
+    function detail_pelamar_e ($id_lowongan) {
+        $data['id_lowongan'] = $id_lowongan;
+        $data['data'] = $this->Lowongan_m->detail_data_pelamar($id_lowongan);
+        $this->load->view('lowongan/detail_pelamar_e', $data);
+    }
+    
+    function detail_pelamar_excel($id_lowongan) {
+        $data['data'] = $this->Lowongan_m->detail_data_pelamar($id_lowongan);
+        $this->load->view('Lowongan/detail_pelamar_excel', $data);
+    }
+    
 }
