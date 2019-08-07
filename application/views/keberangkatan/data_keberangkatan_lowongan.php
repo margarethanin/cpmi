@@ -3,7 +3,7 @@
 <div id="content">
     <div id="content-header">
         <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Data Keberangkatan</a> <a href="#" class="current">Lowongan</a> </div>
-        <h1>Data Keberangkatan</h1>
+        <h1>Data Keberangkatan Lowongan</h1>
     </div>
     <div class="container-fluid">
         <div class="row-fluid">
@@ -13,10 +13,6 @@
                         <h5>Keberangkatan Lowongan</h5>
                     </div>
                     <div class="widget-content">
-                        
-                        <p> <a href="<?php echo site_url('Endorsement/data_keberangkatan_pelamar'); ?>"
-                               class="btn btn-info">Daftar Pelamar Berangkat</a>
-                        </p>
 
                         <!--content here-->
                         <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
@@ -33,7 +29,7 @@
                                         <th>Lokasi Perusahaan</th>
                                         <th>Jenis Pekerjaan</th>
                                         <th>Permintaan Lowongan</th>
-                                        <th>Aksi</th>
+                                        <th>Daftar Pendaftar</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -48,8 +44,10 @@
                                             <td><?php echo $row->lokasi; ?></td>
                                             <td><?php echo $row->pekerjaan; ?></td>
                                             <td><?php echo $row->permintaan_lowongan; ?></td>
-                                            <td class="center">
-                                                <a class="btn" href="<?php echo site_url("Lowongan/pendaftar/$row->id_lowongan") ?>">Lihat Pendaftar</a>
+                                            <td>
+                                                <p> <a href="<?php echo site_url("Endorsement/data_keberangkatan_pelamar/$row->id_lowongan"); ?>"
+                                                       class="btn btn-success">Daftar Pelamar Berangkat</a>
+                                                </p>
                                             </td>
                                         </tr>
                                     <?php } ?>

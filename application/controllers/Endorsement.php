@@ -97,9 +97,33 @@ class Endorsement extends CI_Controller {
         $data['lowongan'] = $this->Endorsement_m->data_keberangkatan_l();
         $this->load->view('keberangkatan/data_keberangkatan_lowongan', $data);
     }
-    function data_keberangkatan_pelamar($id_lowongan) {
+    function data_keberangkatan_pelamar ($id_lowongan) {
         $data['data'] = $this->Endorsement_m->data_keberangkatan_p($id_lowongan);
         $this->load->view('keberangkatan/data_keberangkatan_pelamar', $data);
+    }
+    
+//    function detail_pelamar_e ($id_lowongan) {
+//        $data['id_lowongan'] = $id_lowongan;
+//        $data['data'] = $this->Lowongan_m->detail_data_pelamar($id_lowongan);
+//        $this->load->view('lowongan/detail_pelamar_e', $data);
+//    }
+    
+    //-> MASUKKAN UNTUK KEBERANGKATAN STATUS & KETERANGAN
+    function form_insert_keberangkatan($id_endorsement) {
+        $data['data'] = $this->Endorsement_m->keberangkatan($id_endorsement);
+        $this->load->view('keberangkatan/konfirmasi_keberangkatan', $data);
+    }
+    
+    function proses_insert_keberangkatan() {
+        $id_endorsement = $this->input->post('id_endorsement');
+        $id_lowongan = $this->input->post('id_lowongan');
+        $data = array(
+//            'nama kolom di dalam database' => 'inputan form user',
+            'tanggal_keberangkatan' => $this->input->post('tanggal'),
+            'keterangan' => $this->input->post('keterangan'),
+        );
+        $this->Endorsement_m->update_keberangkatan($data, $id_endorsement);
+        redirect("Endorsement/data_keberangkatan_pelamar/$id_lowongan");
     }
     
 }

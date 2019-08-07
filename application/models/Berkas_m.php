@@ -36,4 +36,10 @@ class Berkas_m extends CI_Model{
         $this->db->delete('tb_berkas_dasar');
     }
     
+    //-->PENGEMBALIAN BERKAS
+    function berkas_dasar($id_pelamar){
+        $query = $this->db->query("SELECT * FROM tb_berkas_dasar where id_pelamar = '$id_pelamar'");
+        return $query->row();
+    }
+    
 }

@@ -17,7 +17,9 @@
                         <!--content here-->
                         <form class="form-horizontal" method="post"
                               action="<?php echo site_url("Berkas/update_pengembalian"); ?>">
-                            <input type="hidden" name="id_pelamar" value="<?php echo $id_pelamar ?>"> 
+                            
+                            <input type="hidden" name="id_pelamar" value="<?php echo $berkas_dasar->id_pelamar ?>">
+                            
                             <div class="control-group">
                                 <label class="control-label">Berkas Dasar</label>
                                 <div class="controls">
@@ -33,10 +35,15 @@
                                         "Surat Izin" => "surat_izin",
                                     );
                                     foreach ($berkas as $key => $value) {
+                                        $tgl = "tanggal_keluar_$value";
                                         ?>
 
                                         <label>
-                                            <input type="checkbox" name="dasar[]" value="<?php echo $value ?>" />
+                                            <input type="checkbox" name="dasar[]" value="<?php echo $value ?>" 
+                                                   <?php
+                                                   if ($berkas_dasar->$tgl <> "0000-00-00") {
+                                                       echo "disabled";
+                                                   } ?> />
                                             <?php echo $key ?>
                                         </label>
 

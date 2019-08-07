@@ -157,7 +157,7 @@ class Berkas extends CI_Controller {
     
     ////PENGEMBALIAN BERKAS-------------------->/////////
     function pengembalian ($id_pelamar){
-        $data['id_pelamar'] = $id_pelamar;
+        $data['berkas_dasar'] = $this->Berkas_m->berkas_dasar($id_pelamar);
         $this->load->view('pelamar/pengembalian_berkas', $data);
     }
     

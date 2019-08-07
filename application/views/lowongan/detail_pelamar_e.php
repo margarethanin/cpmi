@@ -58,7 +58,7 @@
                                         foreach ($data as $row) {
                                             ?>
                                             <tr>
-                                                <td>1</td>
+                                                <td><?php echo $no++; ?></td>
                                                 <td><?php echo $row->lokasi_kantor_cabang; ?></td>
                                                 <td class="center"><?php echo $row->status_penerimaan; ?></td>
                                                 <td class="center"><?php echo $row->nama_pelamar; ?></td>

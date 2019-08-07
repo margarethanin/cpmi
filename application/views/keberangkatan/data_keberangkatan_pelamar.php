@@ -3,7 +3,7 @@
 <div id="content">
     <div id="content-header">
         <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Data Keberangkatan</a> <a href="#" class="current">Pelamar</a> </div>
-        <h1>Data Keberangkatan</h1>
+        <h1>Data Keberangkatan Pelamar</h1>
     </div>
     <div class="container-fluid">
         <div class="row-fluid">
@@ -27,29 +27,26 @@
                                         <th>Tempat Lahir</th>
                                         <th>Tanggal Lahir</th>
                                         <th>Nomor Visa</th>
-                                        <th>Status</th>
                                         <th>Tanggal Keberangkatan</th>
+                                        <th>Keterangan</th>
                                         <th>Aksi</th>
-                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    $no = 1;
-                                    $detail_pelamar = $this->Pelamar_m->select_pelamar();
-                                    foreach ($detail_pelamar as $row) {
-                                        ?>
+                                    <?php 
+                                    $no=1;
+                                    foreach ($data as $row){
+                                    ?>
                                         <tr class="odd gradeX">
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $row->nama_pelamar; ?></td>
                                             <td><?php echo $row->tempat_lahir_pelamar; ?></td>
                                             <td><?php echo $row->tanggal_lahir_pelamar; ?></td>
                                             <td><?php echo $row->nomor_calling_visa; ?></td>
-                                            <td><?php echo $row->status; ?></td>
                                             <td><?php echo $row->tanggal_keberangkatan; ?></td>
+                                            <td><?php echo $row->keterangan; ?></td>
                                             <td class="center">
-                                                <a href="<?php echo site_url("") ?>" class="btn btn-primary">Edit</a>
-                                                <a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="<?php echo site_url("") ?>" class="btn btn-danger">Hapus</a>
+                                                <a href="<?php echo site_url("Endorsement/form_insert_keberangkatan/$row->id_endorsement") ?>" class="btn btn-primary">Konfirmasi Keberangkatan</a>
                                             </td>
                                         </tr>
                                     <?php } ?>
@@ -62,6 +59,8 @@
         </div>
     </div>
 </div>
+
+
 <?php $this->load->view('footer'); ?>
         
 
