@@ -10,6 +10,14 @@
  * @author Margarethanin
  */
 class Pendaftar extends CI_Controller{
+    
+    public function __construct() {
+        parent::__construct();
+        if (!$this->session->has_userdata('id_admin_ptsmu')){
+            redirect('Login');
+        }
+    }
+    
     //put your code here
     function data_pelamar(){
         $this->load->view('daftar_lowongan/data_pelamar');

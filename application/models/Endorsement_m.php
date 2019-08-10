@@ -58,9 +58,11 @@ class Endorsement_m extends CI_Model {
         return $tgl_code . $kd;
     }
 
-    function update_endorsement($data) {
-        $this->db->where('nomor_calling_visa <>', "");
-        $this->db->update('tb_endorsement', $data);
+    function update_endorsement($id_pengiriman,$id_lowongan) {
+//        $this->db->where('nomor_calling_visa <>', "");
+//        $this->db->update('tb_endorsement', $data);
+        $this->db->query("update tb_endorsement e JOIN tb_pendaftar_lowongan p
+                 ON e.id_pendaftar=p.id_pendaftar set id_pengiriman='$id_pengiriman' where id_lowongan='$id_lowongan'");
     }
 
     //Tabel Excel Turun Visa
@@ -99,6 +101,30 @@ class Endorsement_m extends CI_Model {
     function update_keberangkatan($data, $id_endorsement){
         $this->db->where('id_endorsement', $id_endorsement);
         $this->db->update('tb_endorsement', $data);
+    }
+    
+    //__-->TAMPILAN AWAL DATA PENGIRIMAN
+    function pengiriman(){
+        $query= $this->db->query("SELECT * FROM tb_pengiriman_endorsement");
+        return $query->result();
+    }
+    
+    //Tabel Excel Pengiriman
+    function pengiriman_e_check($id_endorsement) {
+        $query = $this->db->query("SELECT * FROM tb_endorsement e JOIN tb_pengiriman_endorsement pe ON e.id_pengiriman = pe.id_pengiriman
+            JOIN tb_pendaftar_lowongan pl ON e.id_pendaftar = pl.id_pendaftar 
+            JOIN tb_pelamar p ON pl.id_pelamar = p.id_pelamar 
+            JOIN tb_lowongan l ON pl.id_lowongan = l.id_lowongan 
+            JOIN tb_berkas_proses bp ON p.id_pelamar = bp.id_pelamar 
+            JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan where e.id_endorsement = '$id_endorsement'");
+        return $query->row();
+    }
+    
+    //CODING UNTUK HAPUS DATA      
+    function hapus_pengiriman($id_pengiriman) {
+        //delete from tb_admin where id_admin = '$id_pekerjaan'
+        $this->db->where('$id_pengiriman',$id_pengiriman);
+        $this->db->delete('tb_pengiriman_endorsement');
     }
 
 //    function detail_data_pelamar($id_lowongan) {

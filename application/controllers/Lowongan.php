@@ -13,6 +13,13 @@
  */
 class Lowongan extends CI_Controller {
 
+    public function __construct() {
+        parent::__construct();
+        if (!$this->session->has_userdata('id_admin_ptsmu')){
+            redirect('Login');
+        }
+    }
+    
     //put your code here
     function form_insert_lowongan() {
 
@@ -155,6 +162,11 @@ class Lowongan extends CI_Controller {
     function detail_pelamar_excel($id_lowongan) {
         $data['data'] = $this->Lowongan_m->detail_data_pelamar($id_lowongan);
         $this->load->view('Lowongan/detail_pelamar_excel', $data);
+    }
+    
+    function detail_data_excel(){
+        $data['data'] = $this->input->post('id_pendaftar[]'); //name checkbox
+        $this->load->view("lowongan/detail_excel", $data);
     }
     
 }

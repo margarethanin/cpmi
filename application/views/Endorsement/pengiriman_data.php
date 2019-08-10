@@ -28,7 +28,7 @@
                                         <th>Perusahaan</th>
                                         <th>Jenis Pekerjaan</th>
                                         <th>Permintaan Lowongan</th>
-                                        <th>Aksi</th>
+<!--                                        <th>Aksi</th>-->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -42,10 +42,7 @@
                                             <td><?php echo $row->nama_perusahaan; ?></td>
                                             <td><?php echo $row->pekerjaan; ?></td>
                                             <td class="center"><?php echo $row->permintaan_lowongan; ?></td>
-                                    <td class="center">
-                                        <button class="btn btn-primary">Edit</button>
-                                        <button class="btn btn-danger">Hapus</button>
-                                    </td>
+                                    
                                     </tr>
                                 <?php } ?>
                                 </tbody>

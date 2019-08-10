@@ -16,7 +16,7 @@
                         <!--content here-->
                         <form id="formSearchPelamar" class="form-horizontal">
                             <div class="control-group">
-                                <label class="control-label">Nomor Telepon :</label>
+                                <label class="control-label">Nama Pelamar :</label>
                                 <div class="controls">
                                     <input type="text" id="telpPelamar" class="span11" placeholder="Cari berdasarkan nomor telepon" required=""/>
                                 </div>

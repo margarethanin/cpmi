@@ -13,6 +13,13 @@
  */
 class Endorsement extends CI_Controller {
 
+    public function __construct() {
+        parent::__construct();
+        if (!$this->session->has_userdata('id_admin_ptsmu')){
+            redirect('Login');
+        }
+    }
+    
     //put your code here
     function data_lowongan() {
         $data['lowongan'] = $this->Pendaftar_m->data_lowongan();
@@ -75,10 +82,7 @@ class Endorsement extends CI_Controller {
         $id_lowongan = $this->input->post('id_lowongan[]');
         $id_pengiriman = $this->input->post('id_pengiriman');
         foreach ($id_lowongan as $d) {
-            $data = array(
-                'id_pengiriman' => $id_pengiriman
-            );
-            $this->Endorsement_m->update_endorsement($data);
+            $this->Endorsement_m->update_endorsement($id_pengiriman,$d);
         }
         redirect("Endorsement/data_pengiriman_e/$id_pengiriman");
     }
@@ -124,6 +128,23 @@ class Endorsement extends CI_Controller {
         );
         $this->Endorsement_m->update_keberangkatan($data, $id_endorsement);
         redirect("Endorsement/data_keberangkatan_pelamar/$id_lowongan");
+    }
+    
+    //__-->TAMPILAN AWAL DATA PENGIRIMAN
+    function tampilan_pengiriman(){
+        $this->load->view('Endorsement/pengiriman');
+    }
+    
+    function pengiriman_e_check(){
+        $data['id_endors'] = $this->input->post('id_endors[]'); //name checkbox
+        $this->load->view("Endorsement/pengiriman_check", $data);
+    }
+
+
+    //CODING UNTUK HAPUS DATA  
+    function hapus_data_pengiriman($id_pengiriman){
+        $this->Endorsement_m->hapus_pengiriman($id_pengiriman);
+        redirect('Endorsement/pengiriman');
     }
     
 }
