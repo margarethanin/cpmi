@@ -32,7 +32,6 @@ header("Expires: 0");
             <th>Hubungan Keluarga Lain</th>
             <th>Nomor HP Keluarga Lain</th>
             <th>Alamat Keluarga Lain</th>
-            <th>Aksi</th>
         </tr>
     </thead>
     <tbody>
@@ -66,10 +65,6 @@ header("Expires: 0");
                 <td class="center"><?php echo $row->hubungan_keluarga_lain; ?></td>
                 <td class="center"><?php echo $row->nomor_hp_keluarga_lain; ?></td>
                 <td class="center"><?php echo $row->alamat_keluarga_lain; ?></td>
-                <td class="center">
-                    <button class="btn btn-primary">Edit</button>
-                    <button class="btn btn-danger">Hapus</button>
-                </td>
             </tr>
         <?php } ?>
     </tbody>

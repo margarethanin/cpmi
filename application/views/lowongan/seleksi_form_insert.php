@@ -10,7 +10,7 @@
             <div class="span12">
                 <div class="widget-box">
                     <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
-                        <h5>Data Jadwal Seleksi</h5>
+                        <h5>Input Jadwal Seleksi</h5>
                     </div>
                     <div class="widget-content">
                         <!--content here-->
@@ -22,8 +22,8 @@
                             <div class="control-group">
                                 <label class="control-label">Tanggal Seleksi</label>
                                 <div class="controls">
-                                    <!--<input name="tanggal_seleksi" type="text" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="datepicker span4">-->
-                                    <input name="tanggal_seleksi" type="datetime-local">
+                                    <input name="tanggal_seleksi" type="text" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="span4 form_date">
+                                    <!--<input name="tanggal_seleksi" type="datetime-local">-->
                                     <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
                             </div>
                             <div class="control-group">

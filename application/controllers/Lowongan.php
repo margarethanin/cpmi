@@ -169,4 +169,10 @@ class Lowongan extends CI_Controller {
         $this->load->view("lowongan/detail_excel", $data);
     }
     
+    //CODING UNTUK HAPUS DATA ((PELAMAR))
+    function hapus_pelamar($id_pendaftar, $id_lowongan) {
+        $this->Lowongan_m->hapus_pendaftar($id_pendaftar);
+        redirect("Lowongan/detail_pelamar_e/$id_lowongan");
+    }
+    
 }

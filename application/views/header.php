@@ -18,6 +18,9 @@
         <link rel="stylesheet" href="<?php echo base_url() ?>/assets/css/jquery.gritter.css" />
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
 
+        <link href="<?php echo base_url() ?>/assets/date_picker_bootstrap/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+        
     </head>
     <body>
 
@@ -32,7 +35,7 @@
         <div id="user-nav" class="navbar navbar-inverse">
             <div class="scrollmenu">
                 <ul class="nav">
-                    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome User</span><b class="caret"></b></a>
+<!--                    <li  class="dropdown" id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text">Welcome User</span><b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
                             <li class="divider"></li>
@@ -52,16 +55,17 @@
                             <li><a class="sTrash" title="" href="#"><i class="icon-trash"></i> trash</a></li>
                         </ul>
                     </li>
-                    <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
-                    <li class=""><a title="" href="<?php echo site_url('Logout');?>"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+                    <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>-->
+                    <!--<li class=""><a title="" href="<?php echo site_url('Logout');?>"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>-->
                 </ul>
             </div>
         </div>
 
         <!--start-top-serch-->
         <div id="search">
-            <input type="text" placeholder="Search here..."/>
-            <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
+            <!--<input type="text" placeholder="Search here..."/>-->
+            <!--<button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>-->
+            <a title="" href="<?php echo site_url('Logout');?>"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a>
         </div>
         <!--close-top-serch--> 
 
@@ -70,11 +74,11 @@
         <div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-info-sign"></i> Error</a>
             <ul>
 
-                <!--admin-->
-                <li><a href="<?php echo site_url('Admin/data_admin'); ?>"><i class="icon icon-home"></i> <span>Admin</span></a> </li>
-
                 <!--dashboard-->
-                <li><a href="<?php echo site_url('Welcome/index'); ?>"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
+                <li><a href="<?php echo site_url('Welcome/index'); ?>"><i class="icon icon-home"></i> <span>Halaman Awal</span></a> </li>
+
+                <!--admin-->
+                <li><a href="<?php echo site_url('Admin/data_admin'); ?>"><i class="icon icon-user"></i> <span>Admin</span></a> </li>
 
                 <!--perusahaan-->
 <!--                <li><a href=""><i class="icon-money"></i> <span>Perusahaan</span></a></li>

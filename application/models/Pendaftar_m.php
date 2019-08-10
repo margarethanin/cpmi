@@ -16,8 +16,8 @@ class Pendaftar_m extends CI_Model {
     }
     // <------------------------menampilkan data tb_pelamar berdasarkan nomor telfon yang di input
     function search_pelamar($notelp) {
-        $query = $this->db->query("SELECT * FROM tb_pelamar where nama_pelamar='$notelp'");
-//        $query = $this->db->query("SELECT * FROM tb_pelamar where nama_pelamar like '%$notelp%'");
+//        $query = $this->db->query("SELECT * FROM tb_pelamar where nama_pelamar='$notelp'");
+        $query = $this->db->query("SELECT * FROM tb_pelamar where nama_pelamar like '%$notelp%'");
         return $query->result();
     }
     //masa berlaku lowongan dan menampilkan data dari database lain

@@ -120,10 +120,19 @@ class Endorsement_m extends CI_Model {
         return $query->row();
     }
     
+    function excel_hired($id_pendaftar) {
+        //menampilkan data dari tb_pendaftar_lowongan yang id_lowongan=$id_lowongan dan status=HIRED
+        $query = $this->db->query("SELECT * FROM tb_pendaftar_lowongan pl JOIN tb_pelamar p ON pl.id_pelamar=p.id_pelamar
+                 JOIN tb_berkas_proses bp ON p.id_pelamar=bp.id_pelamar where pl.id_pendaftar='$id_pendaftar' and status_penerimaan='HIRED'");
+        return $query->row();
+    }
+    
+    
+    
     //CODING UNTUK HAPUS DATA      
     function hapus_pengiriman($id_pengiriman) {
         //delete from tb_admin where id_admin = '$id_pekerjaan'
-        $this->db->where('$id_pengiriman',$id_pengiriman);
+        $this->db->where('id_pengiriman', $id_pengiriman);
         $this->db->delete('tb_pengiriman_endorsement');
     }
 

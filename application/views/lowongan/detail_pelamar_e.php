@@ -19,11 +19,11 @@
                         </div>
                         <div class="scroollme">
                             <div class="widget-content">
-                                
+
                                 <form id="formCetak" action="<?php echo site_url('Lowongan/detail_data_excel/'); ?>" method="post">
 
                                     <p> <button type="submit" class="btn btn-info">Cetak Excel</button> </p>
-                                    
+
                                     <table class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
@@ -87,8 +87,7 @@
                                                     <td class="center"><?php echo $row->nomor_hp_keluarga_lain; ?></td>
                                                     <td class="center"><?php echo $row->alamat_keluarga_lain; ?></td>
                                                     <td class="center">
-                                                        <button class="btn btn-primary">Edit</button>
-                                                        <button class="btn btn-danger">Hapus</button>
+                                                        <a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="<?php echo site_url("Lowongan/hapus_pelamar/$row->id_pendaftar/$id_lowongan") ?>" class="btn btn-danger">Hapus</a>
                                                     </td>
                                                 </tr>
                                             <?php } ?>

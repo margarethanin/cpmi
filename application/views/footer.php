@@ -9,7 +9,11 @@
 <script src="<?php echo base_url() ?>/assets/js/excanvas.min.js"></script>
 
 <script src="<?php echo base_url() ?>/assets/js/jquery.validate.js"></script> 
+
+<script src="<?php echo base_url() ?>/assets/js/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url() ?>/assets/js/matrix.js"></script> 
+<script src="<?php echo base_url() ?>/assets/js/matrix.tables.js"></script>
+
 <script src="<?php echo base_url() ?>/assets/js/matrix.form_validation.js"></script> 
 <script src="<?php echo base_url() ?>/assets/js/matrix.form_common.js"></script>
 
@@ -25,9 +29,20 @@
 
 <script src="<?php echo base_url() ?>/assets/js/jquery.wizard.js"></script> 
 
-<script src="<?php echo base_url() ?>/assets/js/matrix.popover.js"></script> 
-<script src="<?php echo base_url() ?>/assets/js/jquery.dataTables.min.js"></script> 
-<script src="<?php echo base_url() ?>/assets/js/matrix.tables.js"></script> 
+<script src="<?php echo base_url() ?>/assets/js/matrix.popover.js"></script>
+
+
+<script type="text/javascript" src="<?php echo base_url('assets/date_picker_bootstrap/js/bootstrap-datetimepicker.js') ?>" charset="UTF-8"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/date_picker_bootstrap/js/locales/bootstrap-datetimepicker.id.js') ?>" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_date').datetimepicker({
+        format: "yyyy-mm-dd hh:ii",
+        autoclose: true,
+        todayBtn: true,
+        pickerPosition:"top-left"
+    });
+</script>
+
 
 <script type="text/javascript">
     // This function is called from the pop-up menus to transfer to

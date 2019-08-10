@@ -9,10 +9,10 @@
         <div class="row-fluid">
             <div class="span12">
                 <div class="widget-box">
-                    <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
+<!--                    <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
                         <h5>Data Pengiriman Endorsement</h5>
                     </div>
-                    <div class="widget-content">
+                    <div class="widget-content">-->
 
                         <!--content here-->
                         <div class="widget-content nopadding">
@@ -50,7 +50,7 @@
                         </form>
                         </div>
 
-                    </div>
+                    <!--</div>-->
                 </div>
             </div>
         </div>

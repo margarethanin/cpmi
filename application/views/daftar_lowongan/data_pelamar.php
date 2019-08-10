@@ -18,7 +18,7 @@
                             <div class="control-group">
                                 <label class="control-label">Nama Pelamar :</label>
                                 <div class="controls">
-                                    <input type="text" id="telpPelamar" class="span11" placeholder="Cari berdasarkan nomor telepon" required=""/>
+                                    <input type="text" id="telpPelamar" class="span11" placeholder="Cari berdasarkan nama pelamar" required=""/>
                                 </div>
                             </div>
                         </form>

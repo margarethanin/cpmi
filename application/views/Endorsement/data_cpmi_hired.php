@@ -13,15 +13,19 @@
                         <h5>Data Lowongan</h5>
                     </div>
                     <div class="widget-content">
-                        <p> <a href="<?php echo site_url("Endorsement/data_cpmi_hired_excel/$id_lowongan"); ?>"
-                               class="btn btn-info">Cetak Excel</a>
-                        </p>
+                        
                         <!--content here-->
                         <div class="widget-content nopadding">
+                            
+                            <form id="formCetak" action="<?php echo site_url('Endorsement/excel_hired/'); ?>" method="post">
+                                    
+                                    <p> <button type="submit" class="btn btn-info">Cetak Excel</button></p>
+                            
                             <table class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
                                         <th>No</th>
+                                        <th>Pilih</th>
                                         <th>Nama Pelamar</th>
                                         <th>Nomor Paspor</th>
                                         <th>Nomor Telefon</th>
@@ -37,6 +41,7 @@
                                         ?>
                                         <tr class="odd gradeX">
                                             <td><?php echo $no++; ?></td>
+                                            <td><input type="checkbox" name="id_daftar[]" value="<?php echo $row->id_pendaftar; ?>"</td>
                                             <td><?php echo $row->nama_pelamar; ?></td>
                                             <td><?php echo $row->nomor_paspor; ?></td>
                                             <td><?php echo $row->nomor_hp_pelamar; ?></td>
@@ -68,6 +73,7 @@
                                     <?php } ?>
                                 </tbody>
                             </table>
+                            </form>
                         </div>
 
                     </div>

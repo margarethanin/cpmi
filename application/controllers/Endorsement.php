@@ -139,12 +139,17 @@ class Endorsement extends CI_Controller {
         $data['id_endors'] = $this->input->post('id_endors[]'); //name checkbox
         $this->load->view("Endorsement/pengiriman_check", $data);
     }
+    
+    function excel_hired(){
+        $data['data'] = $this->input->post('id_daftar[]'); //name checkbox
+        $this->load->view("Endorsement/cpmi_hired_excel", $data);
+    }
 
 
     //CODING UNTUK HAPUS DATA  
     function hapus_data_pengiriman($id_pengiriman){
         $this->Endorsement_m->hapus_pengiriman($id_pengiriman);
-        redirect('Endorsement/pengiriman');
+        redirect('Endorsement/tampilan_pengiriman');
     }
     
 }
