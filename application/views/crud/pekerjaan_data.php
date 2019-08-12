@@ -9,10 +9,10 @@
         <div class="row-fluid">
             <div class="span12">
                 <div class="widget-box">
-                    <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
+<!--                    <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
                         <h5>Data Pekerjaan</h5>
                     </div>
-                    <div class="widget-content">
+                    <div class="widget-content">-->
                         <!--content here-->
                         <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
                             <h5>Form Data Pekerjaan</h5>
@@ -21,7 +21,7 @@
                             <p> <a href="<?php echo site_url('Pekerjaan/form_insert_pekerjaan'); ?>"
                                     class="btn btn-info">Tambah Pekerjaan</a>
                             </p>
-                            <table class="table table-bordered table-striped">
+                            <table class="table table-bordered table-striped data-table">
                                 <thead>
                                     <tr>
                                         <th>No</th>

@@ -15,7 +15,7 @@
                     <div class="widget-content">
                         <!--content here-->
                         <div class="widget-content nopadding">
-                            <table class="table table-bordered table-striped">
+                            <table class="table table-bordered table-striped data-table">
                                 <thead>
                                     <tr>
                                         <th>No</th>

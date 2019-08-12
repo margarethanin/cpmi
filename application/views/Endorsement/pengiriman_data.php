@@ -20,7 +20,7 @@
                                 <p> <button type="submit" class="btn btn-info">Simpan Data Pengiriman</button> </p>
                                 <input type="hidden" name="id_pengiriman" value="<?php echo $id_pengiriman?>">
                                 
-                            <table class="table table-bordered table-striped">
+                            <table class="table table-bordered table-striped data-table">
                                 <thead>
                                     <tr>
                                         <th>No</th>

@@ -2,16 +2,16 @@
 
 <div id="content">
     <div id="content-header">
-        <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Halaman Kalender</a> <a href="#" class="current">Informasi</a> </div>
-        <h1>Kalender Info</h1>
+        <div id="breadcrumb"> <a href="#" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a> <a href="#">Halaman Awal</a> <a href="#" class="current">Selamat Datang</a> </div>
+        <h1>SELAMAT DATANG</h1>
     </div>
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="span12">
                 <div class="widget-box widget-calendar">
-                    <div class="widget-title"> <span class="icon"><i class="icon-calendar"></i></span>
-                        <h5>Kalender</h5>
-                        <div class="buttons"> <a id="add-event" data-toggle="modal" href="#modal-add-event" class="btn btn-inverse btn-mini"><i class="icon-plus icon-white"></i> Tambah Acara Baru</a>
+                    <div class="widget-title"> <span class="icon"><i class="icon-flag"></i></span>
+                        <h5>SELAMAT DATANG!</h5>
+<!--                        <div class="buttons"> <a id="add-event" data-toggle="modal" href="#modal-add-event" class="btn btn-inverse btn-mini"><i class="icon-plus icon-white"></i> Tambah Acara Baru</a>
                             <div class="modal hide" id="modal-add-event">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">×</button>
@@ -42,7 +42,7 @@
                                 <div class="external-event ui-draggable label label-inverse">Sosialisasi Muh.2 Playen</div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>

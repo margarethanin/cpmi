@@ -21,7 +21,7 @@
                                     
                                     <p> <button type="submit" class="btn btn-info">Cetak Excel</button></p>
                             
-                            <table class="table table-bordered table-striped">
+                            <table class="table table-bordered table-striped data-table">
                                 <thead>
                                     <tr>
                                         <th>No</th>
