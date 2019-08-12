@@ -22,7 +22,7 @@
 
                                 <form id="formCetak" action="<?php echo site_url('Endorsement/pengiriman_e_check/'); ?>" method="post">
                                     
-                                    <p> <button type="submit" class="btn btn-info">Cetak Excel</button></p>
+                                    <p> <button type="submit" class="btn btn-info">Cetak Excel PAP</button></p>
                                 
                                     <table class="table table-bordered table-striped data-table">
                                         <thead>

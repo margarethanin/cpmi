@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 07, 2019 at 09:25 AM
+-- Generation Time: Aug 12, 2019 at 04:49 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.40
 
@@ -41,7 +41,8 @@ CREATE TABLE `tb_admin` (
 --
 
 INSERT INTO `tb_admin` (`id_admin`, `user_name`, `nama_admin`, `password`, `level`) VALUES
-(4, 'budi1', 'Budi', '12345', 1);
+(4, 'budi1', 'Budi', '12345', 1),
+(5, 'anin', 'Anin', '12345', 0);
 
 -- --------------------------------------------------------
 
@@ -83,7 +84,7 @@ CREATE TABLE `tb_berkas_dasar` (
 --
 
 INSERT INTO `tb_berkas_dasar` (`id_berkas_dasar`, `id_pelamar`, `foto`, `tanggal_masuk_foto`, `tanggal_keluar_foto`, `ktp`, `tanggal_masuk_ktp`, `tanggal_keluar_ktp`, `kartu_keluarga`, `tanggal_masuk_kartu_keluarga`, `tanggal_keluar_kartu_keluarga`, `ijazah`, `tanggal_masuk_ijazah`, `tanggal_keluar_ijazah`, `akta_lahir`, `tanggal_masuk_akta_lahir`, `tanggal_keluar_akta_lahir`, `surat_izin`, `tanggal_masuk_surat_izin`, `tanggal_keluar_surat_izin`, `buku_nikah`, `tanggal_masuk_buku_nikah`, `tanggal_keluar_buku_nikah`, `akta_cerai`, `tanggal_masuk_akta_cerai`, `tanggal_keluar_akta_cerai`) VALUES
-(4, 'TKI-1907210001', 'TKI-1907210001-foto.jpg', '2019-07-28', '0000-00-00', 'TKI-1907210001-ktp.jpg', '2019-07-28', '2019-08-06', 'TKI-1907210001-kartu_keluarga.jpg', '2019-07-28', '2019-08-07', 'TKI-1907210001-ijazah.jpg', '2019-07-23', '2019-08-07', 'TKI-1907210001-akta_lahir.jpg', '2019-07-23', '2019-08-07', 'TKI-1907210001-surat_izin.jpg', '2019-07-23', '2019-08-06', 'TKI-1907210001-buku_nikah.jpg', '2019-07-23', '0000-00-00', 'TKI-1907210001-akta_cerai.jpg', '2019-07-23', '0000-00-00'),
+(4, 'TKI-1907210001', 'TKI-1907210001-foto.jpg', '2019-07-28', '0000-00-00', 'TKI-1907210001-ktp.jpg', '2019-07-28', '2019-08-06', 'TKI-1907210001-kartu_keluarga.jpg', '2019-07-28', '2019-08-07', 'TKI-1907210001-ijazah.jpg', '2019-07-23', '2019-08-07', 'TKI-1907210001-akta_lahir.jpg', '2019-07-23', '2019-08-07', 'TKI-1907210001-surat_izin.jpg', '2019-07-23', '2019-08-06', 'TKI-1907210001-buku_nikah.jpg', '2019-07-23', '0000-00-00', 'TKI-1907210001-akta_cerai.jpg', '2019-07-23', '2019-08-12'),
 (8, 'TKI-1907210002', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00'),
 (9, 'TKI-1907250001', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00'),
 (10, 'TKI-1907270001', 'TKI-1907270001-foto.jpg', '2019-07-27', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00'),
@@ -149,19 +150,19 @@ CREATE TABLE `tb_endorsement` (
 --
 
 INSERT INTO `tb_endorsement` (`id_endorsement`, `id_pendaftar`, `id_pengiriman`, `tanggal_visa`, `nomor_calling_visa`, `tanggal_keberangkatan`, `keterangan`) VALUES
-(22, 5, '201901010005', '2019-08-08', '34125123333', '2019-10-05', 'berangkat dengan travel yunika, masih kurang pembayaran'),
-(23, 4, '201901010005', '2019-01-01', '341251254555555', '0000-00-00', ''),
-(24, 7, '201901010005', '2019-01-01', '777777777777777777777', '0000-00-00', ''),
+(22, 5, '201901010003', '2019-08-08', '34125123333', '2019-10-05', 'berangkat dengan travel yunika, masih kurang pembayaran'),
+(23, 4, '201901010003', '2019-01-01', '341251254555555', '2019-10-11', 'gghjhgj'),
 (25, 0, '', '0000-00-00', '', '2019-01-18', 'Berangkat dengan travel pak usman'),
 (26, 0, '', '0000-00-00', '', '2019-09-09', 'Batal berangkat karena hamil'),
 (27, 0, '', '0000-00-00', '', '2019-09-09', 'Batal berangkat karena hamil'),
-(28, 8, '201901010005', '2019-01-01', '34125125888888888888', '2019-09-21', 'berangkat dengan travel yunika, masih kurang pembayaran'),
 (29, 0, '', '0000-00-00', '', '2019-01-01', 'Berangkat dengan travel pak usman'),
 (30, 0, '', '0000-00-00', '', '2019-01-01', 'Berangkat dengan travel pak usman'),
 (31, 0, '', '0000-00-00', '', '2019-09-21', 'Berangkat dengan travel pak usman'),
 (32, 0, '', '0000-00-00', '', '2019-09-30', 'Berangkat dengan travel yunika dengan kekurangan pembayaran medical'),
 (33, 0, '', '0000-00-00', '', '2019-01-01', 'Berangkat dengan travel yunika dengan kekurangan pembayaran medical'),
-(34, 0, '', '0000-00-00', '', '2019-01-01', 'Berangkat dengan travel yunika dengan kekurangan pembayaran medical');
+(34, 0, '', '0000-00-00', '', '2019-01-01', 'Berangkat dengan travel yunika dengan kekurangan pembayaran medical'),
+(36, 7, '201901010003', '2019-01-01', '777777777777777777777', '0000-00-00', ''),
+(37, 8, '201901010003', '2019-01-01', '34125123333', '2019-08-12', '');
 
 -- --------------------------------------------------------
 
@@ -219,7 +220,6 @@ CREATE TABLE `tb_lowongan` (
 --
 
 INSERT INTO `tb_lowongan` (`id_lowongan`, `id_perusahaan`, `id_pekerjaan`, `status_seleksi`, `tanggal_kontrak`, `masa_berlaku`, `permintaan_lowongan`, `nominal_upah`) VALUES
-(27, 3, 3, 1, '2019-05-05', '2019-07-07', 'Laki-laki', 'RM 1100'),
 (28, 1, 1, 0, '2019-03-03', '2019-07-30', 'Perempuan', 'RM 1200'),
 (29, 5, 4, 1, '2019-03-03', '2019-09-09', 'Laki-laki', 'RM 1300'),
 (30, 6, 2, 1, '2019-10-10', '2019-12-12', 'Perempuan', 'RM 1100');
@@ -304,14 +304,12 @@ CREATE TABLE `tb_pendaftar_lowongan` (
 --
 
 INSERT INTO `tb_pendaftar_lowongan` (`id_pendaftar`, `id_pelamar`, `id_lowongan`, `tanggal_pendaftaran`, `lokasi_kantor_cabang`, `status_penerimaan`) VALUES
-(1, 'TKI-1907210001', 28, '2019-07-25 14:30:56', 'Yogyakarta', 'HIRED'),
-(2, 'TKI-1907210002', 28, '2019-07-25 14:31:10', 'Yogyakarta', 'HIRED'),
+(1, 'TKI-1907210001', 28, '2019-07-25 14:30:56', 'Yogyakarta', 'KIV'),
 (4, 'TKI-1907270001', 29, '2019-07-27 21:03:06', 'Klaten', 'HIRED'),
-(5, 'TKI-1907270001', 29, '2019-07-27 21:08:49', 'Yogyakarta', 'HIRED'),
-(6, 'TKI-1907270001', 28, '2019-07-27 21:14:52', 'Magelang', ''),
-(7, 'TKI-1907210001', 29, '2019-07-27 21:19:15', 'Surabaya', 'HIRED'),
+(5, 'TKI-1907270001', 29, '2019-07-27 21:08:49', 'Yogyakarta', 'KIV'),
+(7, 'TKI-1907210001', 29, '2019-07-27 21:19:15', 'Surabaya', 'REJECT'),
 (8, 'TKI-1908070001', 30, '2019-08-07 08:55:15', 'Yogyakarta', 'HIRED'),
-(9, 'TKI-1908070001', 30, '2019-08-07 08:55:45', 'Klaten', 'KIV');
+(9, 'TKI-1907210001', 30, '2019-08-12 20:34:41', 'Yogyakarta', 'KIV');
 
 -- --------------------------------------------------------
 
@@ -330,14 +328,10 @@ CREATE TABLE `tb_pengiriman_endorsement` (
 --
 
 INSERT INTO `tb_pengiriman_endorsement` (`id_pengiriman`, `tanggal_endorsement`, `pengiriman_dokumen`) VALUES
-('201901010001', '2019-01-01', 'resi 1'),
-('201901010002', '2019-01-01', 'resi 2'),
-('201901010003', '2019-01-01', 'uwhbdbsbms-0000000'),
-('201901010004', '2019-01-01', ''),
-('201901010005', '2019-01-01', '11111111111111111111111111111111111111'),
+('201901010003', '2019-01-01', 'resi 6'),
 ('201902020001', '2019-02-02', 'resi 3'),
 ('201907310001', '2019-07-31', 'resi 4'),
-('201912250001', '2019-12-25', 'Yunika travel, resi = 2393745');
+('201908100001', '2019-08-10', 'resi 5');
 
 -- --------------------------------------------------------
 
@@ -384,7 +378,7 @@ CREATE TABLE `tb_seleksi` (
 INSERT INTO `tb_seleksi` (`id_seleksi`, `id_lowongan`, `tanggal_seleksi`, `lokasi_seleksi`, `tanggal_post`) VALUES
 ('1907270001', 29, '2019-08-08 00:00:00', 'Kantor Cabang PT SMU Jogja', '2019-07-27 15:07:25'),
 ('1907280001', 27, '2019-05-28 13:59:00', 'Kantor Cabang PT SMU Jogja', '2019-07-28 14:23:29'),
-('1908070001', 30, '2019-11-20 11:00:00', 'Kantor Cabang PT SMU Jogja', '2019-08-07 08:50:45');
+('1908100001', 30, '2019-01-16 10:05:00', 'Kantor Cabang PT SMU Jogja', '2019-08-10 14:34:50');
 
 --
 -- Indexes for dumped tables
@@ -481,7 +475,7 @@ ALTER TABLE `tb_seleksi`
 -- AUTO_INCREMENT for table `tb_admin`
 --
 ALTER TABLE `tb_admin`
-  MODIFY `id_admin` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_admin` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tb_berkas_dasar`
@@ -499,7 +493,7 @@ ALTER TABLE `tb_berkas_proses`
 -- AUTO_INCREMENT for table `tb_endorsement`
 --
 ALTER TABLE `tb_endorsement`
-  MODIFY `id_endorsement` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id_endorsement` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `tb_keberangkatan`

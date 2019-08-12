@@ -21,7 +21,7 @@
                             <!--bikin button tambah-->
                             <p>
                             <a href="<?php echo site_url("Lowongan/detail_pelamar_e/$id_lowongan"); ?>"
-                                   class="btn btn-success">Detail Seluruh Pelamar</a>
+                                   class="btn btn-info">Detail Seluruh Pelamar</a>
                             </p>
                             <table class="table table-bordered table-striped data-table">
                                 <thead>

@@ -175,4 +175,19 @@ class Lowongan extends CI_Controller {
         redirect("Lowongan/detail_pelamar_e/$id_lowongan");
     }
     
+        
+    //--> CETAK DATA PENERIMAAN RINCI
+    function detail_hired_excel($id_lowongan) {
+        $data['data'] = $this->Lowongan_m->detail_hired_pelamar($id_lowongan);
+        $this->load->view('Lowongan/detail_hired_excel', $data);
+    }
+    function detail_kiv_excel($id_lowongan) {
+        $data['data'] = $this->Lowongan_m->detail_kiv_pelamar($id_lowongan);
+        $this->load->view('Lowongan/detail_kiv_excel', $data);
+    }
+    function detail_reject_excel($id_lowongan) {
+        $data['data'] = $this->Lowongan_m->detail_reject_pelamar($id_lowongan);
+        $this->load->view('Lowongan/detail_reject_excel', $data);
+    }
+    
 }

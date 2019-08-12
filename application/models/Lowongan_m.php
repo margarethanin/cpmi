@@ -116,5 +116,22 @@ class Lowongan_m extends CI_Model {
                         JOIN tb_berkas_proses bp ON bp.id_pelamar = p.id_pelamar where pl.id_pendaftar='$id_pendaftar'");
         return $query->row();
     }
+    
+    //--> CETAK DATA PENERIMAAN RINCI
+    function detail_hired_pelamar($id_lowongan) {
+        $query = $this->db->query("SELECT * FROM tb_pendaftar_lowongan pl JOIN tb_pelamar p ON pl.id_pelamar = p.id_pelamar
+                        JOIN tb_berkas_proses bp ON bp.id_pelamar = p.id_pelamar where id_lowongan='$id_lowongan' and status_penerimaan='HIRED'");
+        return $query->result();
+    }
+    function detail_kiv_pelamar($id_lowongan) {
+        $query = $this->db->query("SELECT * FROM tb_pendaftar_lowongan pl JOIN tb_pelamar p ON pl.id_pelamar = p.id_pelamar
+                        JOIN tb_berkas_proses bp ON bp.id_pelamar = p.id_pelamar where id_lowongan='$id_lowongan' and status_penerimaan='KIV'");
+        return $query->result();
+    }
+    function detail_reject_pelamar($id_lowongan) {
+        $query = $this->db->query("SELECT * FROM tb_pendaftar_lowongan pl JOIN tb_pelamar p ON pl.id_pelamar = p.id_pelamar
+                        JOIN tb_berkas_proses bp ON bp.id_pelamar = p.id_pelamar where id_lowongan='$id_lowongan' and status_penerimaan='REJECT'");
+        return $query->result();
+    }
 
 }
