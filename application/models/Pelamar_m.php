@@ -74,6 +74,13 @@ class Pelamar_m extends CI_Model {
         $this->db->insert('tb_berkas_proses', $data);
     }
     
+    ///--->> CETAK EXCEL ID
+    function excel_id($id_pelamar) {
+        //menampilkan data dari tb_pendaftar_lowongan yang id_lowongan=$id_lowongan dan status=HIRED
+        $query = $this->db->query("SELECT * FROM tb_pelamar p JOIN tb_berkas_proses bp ON p.id_pelamar=bp.id_pelamar where p.id_pelamar='$id_pelamar'");
+        return $query->row();
+    }
+    
 
     
     

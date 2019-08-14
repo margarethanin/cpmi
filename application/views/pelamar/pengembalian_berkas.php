@@ -17,11 +17,19 @@
                         <!--content here-->
                         <form class="form-horizontal" method="post"
                               action="<?php echo site_url("Berkas/update_pengembalian"); ?>">
-                            
+
                             <input type="hidden" name="id_pelamar" value="<?php echo $berkas_dasar->id_pelamar ?>">
-                            
+
+                            <div class="control-group">
+                                <label class="control-label">Nama Perusahaan</label>
+                                <div class="controls">
+                                    <input type="text" name="kilang" placeholder="Tulis nama Perusahaan..." class="span2 m-warp">
+<!--                                    <textarea class="span8" ></textarea>-->
+                                </div>
+                            </div>
                             <div class="control-group">
                                 <label class="control-label">Berkas Dasar</label>
+
                                 <div class="controls">
 
                                     <?php
@@ -40,11 +48,12 @@
 
                                         <label>
                                             <input type="checkbox" name="dasar[]" value="<?php echo $value ?>" 
-                                                   <?php
-                                                   if ($berkas_dasar->$tgl <> "0000-00-00") {
-                                                       echo "disabled";
-                                                   } ?> />
-                                            <?php echo $key ?>
+                                            <?php
+                                            if ($berkas_dasar->$tgl <> "0000-00-00") {
+                                                echo "disabled";
+                                            }
+                                            ?> />
+                                                   <?php echo $key ?>
                                         </label>
 
                                     <?php } ?>

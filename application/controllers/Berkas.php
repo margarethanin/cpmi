@@ -118,8 +118,17 @@ class Berkas extends CI_Controller {
             $this->Berkas_m->update_berkas_dasar_db($data, $id_pelamar);
             redirect("Pelamar/detail_pelamar/$id_pelamar");
         } else {
-            $error = array('error' => $this->upload->display_errors());
-            echo json_encode($error);
+//            $error = array('error' => $this->upload->display_errors());
+//            echo json_encode($error);
+//            //            $error = array('error' => $this->upload->display_errors());
+//            echo json_encode($error);
+            $data = array(
+                "$tipe_berkas" => '',
+                "tanggal_masuk_$tipe_berkas" => '0000-00-00'
+            );
+            //query
+            $this->Berkas_m->update_berkas_dasar_db($data, $id_pelamar);
+            redirect("Pelamar/detail_pelamar/$id_pelamar");
             // echo $this->upload->display_error();
         }
     }
@@ -170,6 +179,7 @@ class Berkas extends CI_Controller {
     
     function update_pengembalian() {
         $id_pelamar = $this->input->post('id_pelamar');
+        $kilang = $this->input->post('kilang');
         $berkas = $this->input->post('dasar[]');
         foreach ($berkas as $b) {
             $data = array(
@@ -177,7 +187,15 @@ class Berkas extends CI_Controller {
             );
             $this->Berkas_m->update_berkas_dasar_db($data, $id_pelamar);
         }
-        redirect("Pelamar/detail_pelamar/$id_pelamar");
+        redirect("Berkas/bukti_ambil_berkas/$id_pelamar/$kilang");
     }
 
+    //--> BUKTI PENGEMBALIAN BERKAS
+    function bukti_ambil_berkas($id_pelamar, $kilang) {
+        $data['kilang'] = $kilang;
+        $data['data'] = $this->Berkas_m->bukti_ambil($id_pelamar);
+        $this->load->view('pelamar/bukti_ambil_berkas', $data);
+    }
+    
+    
 }

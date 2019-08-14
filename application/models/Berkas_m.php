@@ -42,4 +42,11 @@ class Berkas_m extends CI_Model{
         return $query->row();
     }
     
+    //-->QUERY BUKTI PENGAMBILAN BERKAS
+    function bukti_ambil($id_pelamar){
+        $query = $this->db->query("SELECT * FROM tb_pelamar p JOIN tb_berkas_dasar bd ON p.id_pelamar=bd.id_pelamar
+                 JOIN tb_berkas_proses bp ON p.id_pelamar=bp.id_pelamar where p.id_pelamar='$id_pelamar'");
+        return $query->row();
+    }
+    
 }

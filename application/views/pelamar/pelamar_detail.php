@@ -196,7 +196,6 @@ foreach ($detail_pelamar as $row) {
                                                     </td>
                                                     <td>
                                                         <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/surat_izin"); ?>">Edit</a>
-                                                        <button class="btn btn-danger">Hapus</button>
                                                     </td>
                                                 </tr>
                                                 <!--Buku Nikah-->
@@ -213,7 +212,7 @@ foreach ($detail_pelamar as $row) {
                                                     </td>
                                                     <td>
                                                         <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/buku_nikah"); ?>">Edit</a>
-                                                        <button class="btn btn-danger">Hapus</button>
+                                                        <!--<a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="<?php echo site_url("Lokasi/hapus_data_lokasi/$row->id_lokasi") ?>" class="btn btn-danger">Hapus</a>-->
                                                     </td>
                                                 </tr>
                                                 <!--Akta Cerai-->
@@ -230,7 +229,7 @@ foreach ($detail_pelamar as $row) {
                                                     </td>
                                                     <td>
                                                         <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_berkas/$row->id_pelamar/akta_cerai"); ?>">Edit</a>
-                                                        <button class="btn btn-danger">Hapus</button>
+                                                        <!--<a onclick="return confirm('Apakah anda yakin akan menghapus data ini?')" href="<?php echo site_url("Lokasi/hapus_data_lokasi/$row->id_lokasi") ?>" class="btn btn-danger">Hapus</a>-->
                                                     </td>
                                                 </tr>
                                             <?php } ?>
@@ -271,7 +270,7 @@ foreach ($detail_pelamar as $row) {
                                                     </td>
                                                     <td>
                                                         <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_proses/$row->id_pelamar/medical"); ?>">Edit</a>
-                                                        <button class="btn btn-danger">Hapus</button>
+<!--                                                        <button class="btn btn-danger">Hapus</button>-->
                                                     </td>
                                                 </tr>
 
@@ -289,7 +288,7 @@ foreach ($detail_pelamar as $row) {
                                                     </td>
                                                     <td>
                                                         <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_proses/$row->id_pelamar/paspor"); ?>">Edit</a>
-                                                        <button class="btn btn-danger">Hapus</button>
+                                                        <!--<button class="btn btn-danger">Hapus</button>-->
                                                     </td>
                                                 </tr>
                                                 <!--ISC-->
@@ -306,7 +305,7 @@ foreach ($detail_pelamar as $row) {
                                                     </td>
                                                     <td>
                                                         <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_proses/$row->id_pelamar/isc"); ?>">Edit</a>
-                                                        <button class="btn btn-danger">Hapus</button>
+                                                        <!--<button class="btn btn-danger">Hapus</button>-->
                                                     </td>
                                                 </tr>
                                                 <!--FWCMS-->
@@ -323,7 +322,7 @@ foreach ($detail_pelamar as $row) {
                                                     </td>
                                                     <td>
                                                         <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_proses/$row->id_pelamar/fwcms"); ?>">Edit</a>
-                                                        <button class="btn btn-danger">Hapus</button>
+                                                        <!--<button class="btn btn-danger">Hapus</button>-->
                                                     </td>
                                                 </tr>
 
@@ -333,7 +332,7 @@ foreach ($detail_pelamar as $row) {
                                                     <td><?php echo $row->nomor_paspor; ?></td>
                                                     <td rowspan="5">
                                                         <a class="btn btn-primary" href="<?php echo site_url("Berkas/update_nomor/$row->id_pelamar"); ?>">Edit</a>
-                                                        <button class="btn btn-danger">Hapus</button>
+                                                        <!--<button class="btn btn-danger">Hapus</button>-->
                                                     </td>
                                                 </tr>
                                                 <tr class="odd gradeX">

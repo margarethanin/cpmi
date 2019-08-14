@@ -27,14 +27,14 @@
                             <div class="control-group">
                                 <label class="control-label">Tanggal Pembuatan</label>
                                 <div class="controls">
-                                    <input type=text" name="tanggal_pembuatan"/>
-                                </div>
+                                    <input name="tanggal_pembuatan" type="text" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="datepicker span4">
+                                    <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Tanggal Kadaluwarsa</label>
                                 <div class="controls">
-                                    <input type=text" name="tanggal_kadaluwarsa"/>
-                                </div>
+                                    <input name="tanggal_kadaluwarsa" type="text" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="datepicker span4">
+                                    <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
                             </div>
                                 
 

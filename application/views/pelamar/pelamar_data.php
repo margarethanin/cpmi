@@ -13,21 +13,27 @@
                         <h5>Data Pelamar</h5>
                     </div>
                     <div class="widget-content">-->
-                        <!--content here-->
-                        <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
-                            <h5>Form Data Pelamar</h5>
-                        </div>
-                        <div class="widget-content">
+                    <!--content here-->
+                    <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
+                        <h5>Form Data Pelamar</h5>
+                    </div>
+                    <div class="widget-content">
 
-                            <!--bikin button tambah-->
-                            <p>
-                                <a href="<?php echo site_url('Pelamar/form_insert_pelamar'); ?>"
-                                   class="btn btn-info">Tambah Pelamar</a>
+                        <!--bikin button tambah-->
+                        <p>
+                            <a href="<?php echo site_url('Pelamar/form_insert_pelamar'); ?>"
+                               class="btn btn-info">Tambah Pelamar</a>
+                        </p>
+                        <form id="formCetak" action="<?php echo site_url('Pelamar/excel_id/'); ?>" method="post">
+
+                            <p> <button type="submit" class="btn btn-success">Cetak Excel Pembuatan ID & Paspor</button>
                             </p>
+
                             <table class="table table-bordered table-striped data-table">
                                 <thead>
                                     <tr>
                                         <th>No</th>
+                                        <th>Pilih</th>
                                         <th>Nama Pelamar</th>
 <!--                                        <th>Tanggal Seleksi</th>-->
                                         <th>Tempat Lahir</th>
@@ -46,6 +52,7 @@
                                         ?>
                                         <tr class="odd gradeX">
                                             <td><?php echo $no++; ?></td>
+                                            <td><input type="checkbox" name="id_pelamar[]" value="<?php echo $row->id_pelamar; ?>"</td>
                                             <td><?php echo $row->nama_pelamar; ?></td>
                                             <td><?php echo $row->tempat_lahir_pelamar; ?></td>
                                             <td><?php echo $row->tanggal_lahir_pelamar; ?></td>
@@ -61,12 +68,13 @@
                                     <?php } ?>
                                 </tbody>
                             </table>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 <?php $this->load->view('footer'); ?>
         
