@@ -83,9 +83,10 @@
                 <!--perusahaan-->
 <!--                <li><a href=""><i class="icon-money"></i> <span>Perusahaan</span></a></li>
                 <li><a href=""><i class="icon-map-marker"></i> <span>Lokasi Perusahaan</span></a></li>-->
-                <li class="submenu"> <a href="#"><i class="icon-money"></i> <span>Perusahaan</span> <span class="label label-important">1</span></a>
+                <li class="submenu"> <a href="#"><i class="icon-money"></i> <span>Perusahaan</span> <span class="label label-important">2</span></a>
                     <ul>
                         <li><a href="<?php echo site_url('Lokasi/data_lokasi'); ?>">Lokasi Perusahaan</a></li>
+                        <li><a href="<?php echo site_url('Perusahaan/form_insert_perusahaan'); ?>">Tambah Perusahaan</a></li>
                         <li><a href="<?php echo site_url('Perusahaan/data_perusahaan'); ?>">Data Perusahaan</a></li>
                     </ul>
                 </li>
@@ -111,10 +112,10 @@
                 <li><a href="<?php echo site_url('Pendaftar/data_pelamar'); ?>"><i class="icon-shopping-cart"></i> <span>Pendaftar Lowongan</span></a> </li>
 
                 <!--endorsment-->
-                <li><a href="<?php echo site_url('Endorsement/data_lowongan'); ?>"><i class="icon-tasks"></i> <span>Endorsment</span></a> </li>
+                <li><a href="<?php echo site_url('Endorsement/data_lowongan'); ?>"><i class="icon-tasks"></i> <span>Endorsement</span></a> </li>
 
                 <!--pengiriman endorsment-->
-                <li><a href="<?php echo site_url('Endorsement/tampilan_pengiriman'); ?>"><i class="icon-external-link"></i> <span>Pengiriman Endorsment</span></a> </li>
+                <li><a href="<?php echo site_url('Endorsement/tampilan_pengiriman'); ?>"><i class="icon-external-link"></i> <span>Pengiriman Endorsement</span></a> </li>
 
                 <!--keberangkatan-->
                 <li><a href="<?php echo site_url('Endorsement/data_keberangkatan_lowongan'); ?>"><i class="icon-plane"></i> <span>Keberangkatan</span></a> </li>

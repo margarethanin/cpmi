@@ -18,9 +18,9 @@
                             <h5>Form Data Perusahaan</h5>
                         </div>
                         <div class="widget-content">
-                            <p> <a href="<?php echo site_url('Perusahaan/form_insert_perusahaan'); ?>"
+<!--                            <p> <a href="<?php echo site_url('Perusahaan/form_insert_perusahaan'); ?>"
                                     class="btn btn-info">Tambah Perusahaan</a>
-                            </p>
+                            </p>-->
                             <table class="table table-bordered table-striped data-table">
                                 <thead>
                                     <tr>

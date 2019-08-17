@@ -20,10 +20,10 @@
                         <div class="widget-content">
 
                             <!--bikin button tambah-->
-                            <p>
+<!--                            <p>
                                 <a href="<?php echo site_url('Lowongan/form_insert_lowongan'); ?>"
                                    class="btn btn-info">Tambah Lowongan</a>
-                            </p>
+                            </p>-->
                             <table class="table table-bordered table-striped data-table">
                                 <thead>
                                     <tr>

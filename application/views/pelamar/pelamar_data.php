@@ -20,13 +20,13 @@
                     <div class="widget-content">
 
                         <!--bikin button tambah-->
-                        <p>
+<!--                        <p>
                             <a href="<?php echo site_url('Pelamar/form_insert_pelamar'); ?>"
                                class="btn btn-info">Tambah Pelamar</a>
-                        </p>
+                        </p>-->
                         <form id="formCetak" action="<?php echo site_url('Pelamar/excel_id/'); ?>" method="post">
 
-                            <p> <button type="submit" class="btn btn-success">Cetak Excel Pembuatan ID & Paspor</button>
+                            <p> <button type="submit" class="btn btn-info">Cetak Excel</button>
                             </p>
 
                             <table class="table table-bordered table-striped data-table">
