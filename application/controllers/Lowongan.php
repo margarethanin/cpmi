@@ -24,7 +24,7 @@ class Lowongan extends CI_Controller {
     function form_insert_lowongan() {
 
         $data['perusahaan'] = $this->Perusahaan_m->select_perusahaan_lowongan();
-        $data['pekerjaan'] = $this->Pekerjaan_m->select_pekerjaan();
+//        $data['pekerjaan'] = $this->Pekerjaan_m->select_pekerjaan();
         $this->load->view('lowongan/lowongan_form_insert', $data);
     }
 
@@ -55,7 +55,7 @@ class Lowongan extends CI_Controller {
             'tanggal_kontrak' => $this->input->post('tanggal_kontrak'),
             'masa_berlaku' => $this->input->post('masa_berlaku'),
             'id_perusahaan' => $this->input->post('nama_perusahaan'),
-            'id_pekerjaan' => $this->input->post('pekerjaan'),
+            'jenis_pekerjaan' => $this->input->post('jenis_pekerjaan'),
             'permintaan_lowongan' => $this->input->post('permintaan_lowongan'),
             'nominal_upah' => $this->input->post('nominal_upah'),
 //            'id_seleksi' => $id_seleksi
@@ -86,7 +86,7 @@ class Lowongan extends CI_Controller {
     function form_edit_lowongan($id_lowongan) {
         $data['data_lowongan'] = $this->Lowongan_m->select_id_lowongan($id_lowongan);
         $data['perusahaan'] = $this->Perusahaan_m->select_perusahaan();
-        $data['pekerjaan'] = $this->Pekerjaan_m->select_pekerjaan();
+//        $data['pekerjaan'] = $this->Pekerjaan_m->select_pekerjaan();
         $this->load->view('lowongan/lowongan_form_edit', $data);
     }
 
@@ -97,7 +97,7 @@ class Lowongan extends CI_Controller {
             'tanggal_kontrak' => $this->input->post('tanggal_kontrak'),
             'masa_berlaku' => $this->input->post('masa_berlaku'),
             'id_perusahaan' => $this->input->post('nama_perusahaan'),
-            'id_pekerjaan' => $this->input->post('pekerjaan'),
+            'jenis_pekerjaan' => $this->input->post('pekerjaan'),
             'permintaan_lowongan' => $this->input->post('permintaan_lowongan'),
             'nominal_upah' => $this->input->post('nominal_upah'),
 //            'id_seleksi' => $id_seleksi

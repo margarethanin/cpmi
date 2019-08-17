@@ -54,6 +54,13 @@
                                                             </div>
                                                         </div>-->
                             <div class="control-group">
+                                    <label class="control-label">Jenis Pekerjaan</label>
+                                    <div class="controls">
+                                        <input type="text" name="jenis_pekerjaan" placeholder="Tulis jenis pekerjaan..." class="span4 m-warp">
+    <!--                                    <textarea class="span8" ></textarea>-->
+                                    </div>
+                                </div>
+<!--                            <div class="control-group">
                                 <label class="control-label">Jenis Pekerjaan</label>
                                 <div class="controls">
                                     <select class="span4" name="pekerjaan">
@@ -65,7 +72,7 @@
                                         <?php } ?>
                                     </select>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="control-group">
                                 <label class="control-label">Permintaan Lowongan (L/P)</label>
                                 <div class="controls">

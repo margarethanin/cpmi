@@ -17,11 +17,17 @@ class Perusahaan_m extends CI_Model{
         $this->db->insert('tb_perusahaan',$data);
     }
     
+//    function select_perusahaan(){
+//        $query = $this->db->query("SELECT* FROM tb_perusahaan p JOIN tb_lokasi_perusahaan lp ON p.id_lokasi = lp.id_lokasi");
+//        return $query->result();
+//    }
+
+    //untuk masukin ke tb_perusahaan
     function select_perusahaan(){
-        $query = $this->db->query("SELECT* FROM tb_perusahaan p JOIN tb_lokasi_perusahaan lp ON p.id_lokasi = lp.id_lokasi");
+        $query = $this->db->query("SELECT * FROM tb_perusahaan");
         return $query->result();
     }
-
+    
 //untuk masukin ke tb_lowongan
     function select_perusahaan_lowongan(){
         $query = $this->db->query("SELECT * FROM tb_perusahaan");

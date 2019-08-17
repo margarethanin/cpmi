@@ -28,6 +28,12 @@
                                 <div class="control-group">
                                     <label class="control-label">Lokasi Perusahaan</label>
                                     <div class="controls">
+                                        <input type="text" name="lokasi_perusahaan" placeholder="Tulis lokasi perusahaan..." class="span4 m-wrap" value="<?php echo $row->lokasi_perusahaan; ?>">
+                                    </div>
+                                </div>
+<!--                                <div class="control-group">
+                                    <label class="control-label">Lokasi Perusahaan</label>
+                                    <div class="controls">
                                         <select class="span4" name="lokasi_perusahaan">
                                             <option>--Pilih Lokasi Perusahaan--</option>
                                             <?php foreach ($lokasi as $row_lokasi) { ?>
@@ -43,7 +49,7 @@
                                             <?php } ?>
                                         </select>
                                     </div>
-                                </div>
+                                </div>-->
                                 <!--<div class="control-group">
                                     <label class="control-label">Lokasi Perusahaan</label>
                                         <div class="controls">

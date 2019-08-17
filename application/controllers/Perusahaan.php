@@ -22,8 +22,8 @@ class Perusahaan extends CI_Controller {
 
     //put your code here
     function form_insert_perusahaan() {
-        $data['lokasi'] = $this->Lokasi_m->select_lokasi();
-        $this->load->view('crud/perusahaan_form_insert', $data);
+//        $data['lokasi'] = $this->Lokasi_m->select_lokasi();
+        $this->load->view('crud/perusahaan_form_insert');
     }
 
     function data_perusahaan() {
@@ -34,7 +34,8 @@ class Perusahaan extends CI_Controller {
         $data = array(
 //            'nama kolom di dalam database' => 'inputan form user',
             'nama_perusahaan' => $this->input->post('nama_perusahaan'),
-            'id_lokasi' => $this->input->post('lokasi_perusahaan'),
+//            'id_lokasi' => $this->input->post('lokasi_perusahaan'),
+            'lokasi_perusahaan' => $this->input->post('lokasi_perusahaan'),
             'alamat_perusahaan' => $this->input->post('alamat_perusahaan'),
             'profil_perusahaan' => $this->input->post('profil_perusahaan'),
         );
@@ -49,7 +50,7 @@ class Perusahaan extends CI_Controller {
 //CODING UNTUK EDIT DATA    
     function form_edit_perusahaan($id_perusahaan) {
         $data['data_perusahaan'] = $this->Perusahaan_m->select_id_perusahaan($id_perusahaan);
-        $data['lokasi'] = $this->Lokasi_m->select_lokasi();
+//        $data['lokasi'] = $this->Lokasi_m->select_lokasi();
         $this->load->view('crud/perusahaan_form_edit', $data);
     }
 
@@ -58,7 +59,8 @@ class Perusahaan extends CI_Controller {
 
         $data = array(
             'nama_perusahaan' => $this->input->post('nama_perusahaan'),
-            'id_lokasi' => $this->input->post('lokasi_perusahaan'),
+//            'id_lokasi' => $this->input->post('lokasi_perusahaan'),
+            'lokasi_perusahaan' => $this->input->post('lokasi_perusahaan'),
             'alamat_perusahaan' => $this->input->post('alamat_perusahaan'),
             'profil_perusahaan' => $this->input->post('profil_perusahaan'),
         );

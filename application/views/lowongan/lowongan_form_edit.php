@@ -66,6 +66,13 @@
                                 <div class="control-group">
                                     <label class="control-label">Jenis Pekerjaan</label>
                                     <div class="controls">
+                                        <input type="text" name="jenis_pekerjaan" value="<?php echo $row->jenis_pekerjaan; ?>" placeholder="Tulis jenis pekerjaan..." class="span4 m-warp">
+    <!--                                    <textarea class="span8" ></textarea>-->
+                                    </div>
+                                </div>
+<!--                                <div class="control-group">
+                                    <label class="control-label">Jenis Pekerjaan</label>
+                                    <div class="controls">
                                         <select class="span4" name="pekerjaan">
                                             <option>--Pilih Jenis Pekerjaan--</option>
                                             <?php foreach ($pekerjaan as $row_pekerjaan) { ?>
@@ -81,7 +88,7 @@
                                             <?php } ?>
                                         </select>
                                     </div>
-                                </div>
+                                </div>-->
 
                                 <div class="control-group">
                                     <label class="control-label">Permintaan Lowongan (L/P)</label>

@@ -41,8 +41,8 @@
                                         <tr class="odd gradeX">
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $row->nama_perusahaan; ?></td>
-                                            <td><?php echo $row->lokasi; ?></td>
-                                            <td><?php echo $row->pekerjaan; ?></td>
+                                            <td><?php echo $row->lokasi_perusahaan; ?></td>
+                                            <td><?php echo $row->jenis_pekerjaan; ?></td>
                                             <td><?php echo $row->permintaan_lowongan; ?></td>
                                             <td>
                                                 <p> <a href="<?php echo site_url("Endorsement/data_keberangkatan_pelamar/$row->id_lowongan"); ?>"

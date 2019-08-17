@@ -20,10 +20,15 @@ class Pendaftar_m extends CI_Model {
         $query = $this->db->query("SELECT * FROM tb_pelamar where nama_pelamar like '%$notelp%'");
         return $query->result();
     }
+//    //masa berlaku lowongan dan menampilkan data dari database lain
+//    function data_lowongan() {
+//        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan
+//                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan where masa_berlaku >= curdate()");
+//        return $query->result();
+//    }
     //masa berlaku lowongan dan menampilkan data dari database lain
     function data_lowongan() {
-        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan
-                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan where masa_berlaku >= curdate()");
+        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan where masa_berlaku >= curdate()");
         return $query->result();
     }
     // Update pendaftar masuk di data lowongan

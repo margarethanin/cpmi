@@ -24,18 +24,42 @@ class Lowongan_m extends CI_Model {
         $this->db->insert('tb_seleksi', $data);
     }
 
-//Untuk insert data ke dalam database
+////Untuk insert data ke dalam database
+//    function select_lowongan() {
+//        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan p ON l.id_perusahaan = p.id_perusahaan 
+//                JOIN tb_lokasi_perusahaan lp ON p.id_lokasi = lp.id_lokasi
+//                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan");
+//        return $query->result();
+//    }
+    
+//    //Untuk insert data ke dalam database
+//    function select_lowongan() {
+//        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan p ON l.id_perusahaan = p.id_perusahaan
+//                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan");
+//        return $query->result();
+//    }
+
+    
+    //Untuk insert data ke dalam database
     function select_lowongan() {
-        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan p ON l.id_perusahaan = p.id_perusahaan 
-                JOIN tb_lokasi_perusahaan lp ON p.id_lokasi = lp.id_lokasi
-                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan");
+        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan p ON l.id_perusahaan = p.id_perusahaan");
         return $query->result();
     }
-
+//    function select_lowongan_no_seleksi() {
+//        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan p ON l.id_perusahaan = p.id_perusahaan 
+//                JOIN tb_lokasi_perusahaan lp ON p.id_lokasi = lp.id_lokasi
+//                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan");
+//        return $query->result();
+//    }
+    
+//    function select_lowongan_no_seleksi() {
+//        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan p ON l.id_perusahaan = p.id_perusahaan
+//                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan");
+//        return $query->result();
+//    }
+    
     function select_lowongan_no_seleksi() {
-        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan p ON l.id_perusahaan = p.id_perusahaan 
-                JOIN tb_lokasi_perusahaan lp ON p.id_lokasi = lp.id_lokasi
-                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan");
+        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan p ON l.id_perusahaan = p.id_perusahaan");
         return $query->result();
     }
 

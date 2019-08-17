@@ -76,11 +76,21 @@ class Endorsement_m extends CI_Model {
         return $query->result();
     }
 
+//    ///---> UNTUK KEBERANGKATAN<-----///
+//    function data_keberangkatan_l() {
+//        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan
+//                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan 
+//                JOIN tb_lokasi_perusahaan lp ON pr.id_lokasi = lp.id_lokasi where masa_berlaku >= curdate()");
+//        return $query->result();
+//    }
     ///---> UNTUK KEBERANGKATAN<-----///
+//    function data_keberangkatan_l() {
+//        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan
+//                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan where masa_berlaku >= curdate()");
+//        return $query->result();
+//    }
     function data_keberangkatan_l() {
-        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan
-                JOIN tb_pekerjaan pk ON l.id_pekerjaan = pk.id_pekerjaan 
-                JOIN tb_lokasi_perusahaan lp ON pr.id_lokasi = lp.id_lokasi where masa_berlaku >= curdate()");
+        $query = $this->db->query("SELECT * FROM tb_lowongan l JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan where masa_berlaku >= curdate()");
         return $query->result();
     }
 

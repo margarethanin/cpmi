@@ -23,6 +23,12 @@
                                 </div>
                             </div>
                             <div class="control-group">
+                                    <label class="control-label">Lokasi Perusahaan</label>
+                                    <div class="controls">
+                                        <input type="text" name="lokasi_perusahaan" placeholder="Tulis lokasi perusahaan..." class="span4 m-wrap">
+                                    </div>
+                                </div>
+<!--                            <div class="control-group">
                                 <label class="control-label">Lokasi Perusahaan</label>
                                 <div class="controls">
                                     <select class="span4" name="lokasi_perusahaan">
@@ -34,7 +40,7 @@
                                         <?php }?>
                                     </select>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="control-group">
                                 <label class="control-label">Alamat Perusahaan</label>
                                 <div class="controls">

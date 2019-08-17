@@ -42,7 +42,7 @@
                                         <td><?php echo $no++; ?></td>
                                         <td><?php echo $row->nama_perusahaan; ?></td>
                                         <!--keswire-->
-                                        <td><?php echo $row->lokasi; ?></td> 
+                                        <td><?php echo $row->lokasi_perusahaan; ?></td> 
                                         <!--selangor-->
                                         <td class="center"><?php echo $row->alamat_perusahaan; ?></td>
                                         <!--Jalan satu dua tiga nomor 123, Selangor, Malaysia-->

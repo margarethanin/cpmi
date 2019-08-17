@@ -51,8 +51,8 @@
                                             <td><?php echo $row->tanggal_kontrak; ?></td>
                                             <td><?php echo $row->masa_berlaku; ?></td>
                                             <td><?php echo $row->nama_perusahaan; ?></td>
-                                            <td><?php echo $row->lokasi; ?></td>
-                                            <td><?php echo $row->pekerjaan; ?></td>
+                                            <td><?php echo $row->lokasi_perusahaan; ?></td>
+                                            <td><?php echo $row->jenis_pekerjaan; ?></td>
                                             <td><?php echo $row->permintaan_lowongan; ?></td>
                                             <td>
                                                 <?php 

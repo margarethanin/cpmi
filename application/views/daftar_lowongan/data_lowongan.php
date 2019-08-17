@@ -33,7 +33,7 @@
                                         <tr class="odd gradeX">
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $row->nama_perusahaan; ?></td>
-                                            <td><?php echo $row->pekerjaan; ?></td>
+                                            <td><?php echo $row->jenis_pekerjaan; ?></td>
                                             <td class="center"><?php echo $row->permintaan_lowongan; ?></td>
                                             <td class="center">
                                                 <a class="btn btn-primary" onclick="showModal('<?php echo $row->id_lowongan; ?>', '<?php echo $id_pelamar; ?>')">Pilih</a>

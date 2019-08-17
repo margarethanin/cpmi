@@ -85,7 +85,7 @@
                 <li><a href=""><i class="icon-map-marker"></i> <span>Lokasi Perusahaan</span></a></li>-->
                 <li class="submenu"> <a href="#"><i class="icon-money"></i> <span>Perusahaan</span> <span class="label label-important">2</span></a>
                     <ul>
-                        <li><a href="<?php echo site_url('Lokasi/data_lokasi'); ?>">Lokasi Perusahaan</a></li>
+                        <!--<li><a href="<?php echo site_url('Lokasi/data_lokasi'); ?>">Lokasi Perusahaan</a></li>-->
                         <li><a href="<?php echo site_url('Perusahaan/form_insert_perusahaan'); ?>">Tambah Perusahaan</a></li>
                         <li><a href="<?php echo site_url('Perusahaan/data_perusahaan'); ?>">Data Perusahaan</a></li>
                     </ul>
@@ -94,7 +94,7 @@
                 <!--lowongan-->
                 <li class="submenu"> <a href="#"><i class="icon-briefcase"></i> <span>Informasi Lowongan</span> <span class="label label-important">2</span></a>
                     <ul>
-                        <li><a href="<?php echo site_url('Pekerjaan/data_pekerjaan'); ?>">Jenis Pekerjaan</a></li>
+                        <!--<li><a href="<?php echo site_url('Pekerjaan/data_pekerjaan'); ?>">Jenis Pekerjaan</a></li>-->
                         <li><a href="<?php echo site_url('Lowongan/form_insert_lowongan'); ?>">Tambah Lowongan</a></li>
                         <li><a href="<?php echo site_url('Lowongan/data_lowongan'); ?>">Data Lowongan</a></li>
                     </ul>

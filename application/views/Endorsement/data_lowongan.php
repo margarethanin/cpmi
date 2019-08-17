@@ -33,7 +33,7 @@
                                         <tr class="odd gradeX">
                                             <td><?php echo $no++; ?></td>
                                             <td><?php echo $row->nama_perusahaan; ?></td>
-                                            <td><?php echo $row->pekerjaan; ?></td>
+                                            <td><?php echo $row->jenis_pekerjaan; ?></td>
                                             <td class="center"><?php echo $row->permintaan_lowongan; ?></td>
                                             <td class="center">
                                                 <a class="btn btn-primary" href="<?php echo site_url("Endorsement/data_cpmi_hired/$row->id_lowongan") ?>"> Data Harus Endosh </a>
