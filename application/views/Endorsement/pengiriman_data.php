@@ -9,26 +9,27 @@
         <div class="row-fluid">
             <div class="span12">
                 <div class="widget-box">
-<!--                    <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
+                    <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
                         <h5>Data Pengiriman Endorsement</h5>
                     </div>
-                    <div class="widget-content">-->
+                    <div class="widget-content">
 
-                        <!--content here-->
+<!--                        content here
                         <div class="widget-content nopadding">
                             <form action="<?php echo site_url('Endorsement/simpan_lowongan');?>" method="post">
                                 <p> <button type="submit" class="btn btn-info">Simpan Data Pengiriman</button> </p>
                                 <input type="hidden" name="id_pengiriman" value="<?php echo $id_pengiriman?>">
+                                <input type="hidden" name="id_pengiriman">-->
                                 
                             <table class="table table-bordered table-striped data-table">
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>Pilih</th>
+<!--                                        <th>Pilih</th>-->
                                         <th>Perusahaan</th>
                                         <th>Jenis Pekerjaan</th>
                                         <th>Permintaan Lowongan</th>
-<!--                                        <th>Aksi</th>-->
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -38,10 +39,13 @@
                                         ?>
                                         <tr class="odd gradeX">
                                             <td><?php echo $no++; ?></td>
-                                            <td><input type="checkbox" name="id_lowongan[]" value="<?php echo $row->id_lowongan ?>"</td>
+                                            <!--<td><input type="checkbox" name="id_lowongan[]" value="<?php echo $row->id_lowongan ?>"</td>-->
                                             <td><?php echo $row->nama_perusahaan; ?></td>
-                                            <td><?php echo $row->pekerjaan; ?></td>
+                                            <td><?php echo $row->jenis_pekerjaan; ?></td>
                                             <td class="center"><?php echo $row->permintaan_lowongan; ?></td>
+                                            <td class="center">
+                                                    <a onclick="return" href="<?php echo site_url("Endorsement/pengiriman/$row->id_lowongan"); ?>" class="btn btn-success">Tambah Pengiriman</a>
+                                                </td>
                                     
                                     </tr>
                                 <?php } ?>

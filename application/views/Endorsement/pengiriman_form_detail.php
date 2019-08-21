@@ -14,8 +14,10 @@
                     </div>
                     <div class="widget-content">
                         <!--content here-->
-                        <form class="form-horizontal" method="post" action="<?php echo site_url('Endorsement/proses_insert_pengiriman'); ?>" name="basic_validate" id="basic_validate" novalidate="novalidate">
+                        <form class="form-horizontal" method="post" action="<?php echo site_url("Endorsement/update_pengiriman_e/"); ?>" name="basic_validate" id="basic_validate" novalidate="novalidate">
 
+                            <input type="hidden" name="id_lowongan" value="<?php echo $id_lowongan?>">
+                                
                             <div class="control-group">
                                 <label class="control-label">Tanggal Pengiriman</label>
                                 <div class="controls">

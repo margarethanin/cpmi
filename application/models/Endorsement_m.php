@@ -39,12 +39,27 @@ class Endorsement_m extends CI_Model {
 
     //Insert ke database pengiriman endorsement
     function insert_pengiriman($data) {
-        $this->db->insert('tb_pengiriman_endorsement', $data);
+        $this->db->insert('tb_endorsement', $data);
     }
 
+//    function id_pengiriman($tgl) {
+////       urutan pembuatan kodenya => tanggalhariininourut-
+//        $q = $this->db->query("SELECT MAX(RIGHT(id_pengiriman,4)) AS kd_max FROM tb_pengiriman_endorsement WHERE DATE(tanggal_endorsement)='$tgl'");
+//        $kd = "";
+//        if ($q->num_rows() > 0) {
+//            foreach ($q->result() as $k) {
+//                $tmp = ((int) $k->kd_max) + 1;
+//                $kd = sprintf("%04s", $tmp);
+//            }
+//        } else {
+//            $kd = "0001";
+//        }
+//        $tgl_code = date_format(date_create($tgl), "Ymd");
+//        return $tgl_code . $kd;
+//    }
     function id_pengiriman($tgl) {
 //       urutan pembuatan kodenya => tanggalhariininourut-
-        $q = $this->db->query("SELECT MAX(RIGHT(id_pengiriman,4)) AS kd_max FROM tb_pengiriman_endorsement WHERE DATE(tanggal_endorsement)='$tgl'");
+        $q = $this->db->query("SELECT MAX(RIGHT(id_endorsement,4)) AS kd_max FROM tb_endorsement WHERE DATE(tanggal_endorsement)='$tgl'");
         $kd = "";
         if ($q->num_rows() > 0) {
             foreach ($q->result() as $k) {
@@ -58,22 +73,38 @@ class Endorsement_m extends CI_Model {
         return $tgl_code . $kd;
     }
 
-    function update_endorsement($id_pengiriman,$id_lowongan) {
-//        $this->db->where('nomor_calling_visa <>', "");
-//        $this->db->update('tb_endorsement', $data);
+//    function update_endorsement($id_pengiriman,$id_lowongan) {
+////        $this->db->where('nomor_calling_visa <>', "");
+////        $this->db->update('tb_endorsement', $data);
+//        $this->db->query("update tb_endorsement e JOIN tb_pendaftar_lowongan p
+//                 ON e.id_pendaftar=p.id_pendaftar set id_endorsement='$id_pengiriman' where id_lowongan='$id_lowongan'");
+//    }
+    function update_endorsement($tgl,$ket,$id_lowongan) {
         $this->db->query("update tb_endorsement e JOIN tb_pendaftar_lowongan p
-                 ON e.id_pendaftar=p.id_pendaftar set id_pengiriman='$id_pengiriman' where id_lowongan='$id_lowongan'");
+                 ON e.id_pendaftar=p.id_pendaftar set tanggal_pengiriman='$tgl', pengiriman_dokumen='$ket' where p.id_lowongan='$id_lowongan'");
+//        $this->db->set($data);
+//        $this->db->where("tb_pendaftar_lowongan.id_lowongan", $id_lowongan);
+//        $this->db->update('tb_endorsement JOIN tb_pendaftar_lowongan ON tb_endorsement.id_pendaftar=tb_pendaftar_lowongan.id_pendaftar');
+        
     }
 
+//    //Tabel Excel Turun Visa
+//    function data_pengiriman_e($id_pengiriman) {
+//        $query = $this->db->query("SELECT * FROM tb_endorsement e JOIN tb_pengiriman_endorsement pe ON e.id_pengiriman = pe.id_pengiriman
+//            JOIN tb_pendaftar_lowongan pl ON e.id_pendaftar = pl.id_pendaftar 
+//            JOIN tb_pelamar p ON pl.id_pelamar = p.id_pelamar 
+//            JOIN tb_lowongan l ON pl.id_lowongan = l.id_lowongan 
+//            JOIN tb_berkas_proses bp ON p.id_pelamar = bp.id_pelamar 
+//            JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan where pe.id_pengiriman = '$id_pengiriman'");
+//        return $query->result();
+//    }
     //Tabel Excel Turun Visa
-    function data_pengiriman_e($id_pengiriman) {
-        $query = $this->db->query("SELECT * FROM tb_endorsement e JOIN tb_pengiriman_endorsement pe ON e.id_pengiriman = pe.id_pengiriman
-            JOIN tb_pendaftar_lowongan pl ON e.id_pendaftar = pl.id_pendaftar 
+    function data_pengiriman_e($id_lowongan) {
+        $query = $this->db->query("SELECT * FROM tb_endorsement e JOIN tb_pendaftar_lowongan pl ON e.id_pendaftar = pl.id_pendaftar 
             JOIN tb_pelamar p ON pl.id_pelamar = p.id_pelamar 
             JOIN tb_lowongan l ON pl.id_lowongan = l.id_lowongan 
             JOIN tb_berkas_proses bp ON p.id_pelamar = bp.id_pelamar 
-            JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan where pe.id_pengiriman = '$id_pengiriman'");
-        return $query->result();
+            JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan where l.id_lowongan = '$id_lowongan'");
     }
 
 //    ///---> UNTUK KEBERANGKATAN<-----///
@@ -113,16 +144,29 @@ class Endorsement_m extends CI_Model {
         $this->db->update('tb_endorsement', $data);
     }
     
+//    //__-->TAMPILAN AWAL DATA PENGIRIMAN
+//    function pengiriman(){
+//        $query= $this->db->query("SELECT * FROM tb_pengiriman_endorsement");
+//        return $query->result();
+//    }
     //__-->TAMPILAN AWAL DATA PENGIRIMAN
     function pengiriman(){
-        $query= $this->db->query("SELECT * FROM tb_pengiriman_endorsement");
+        $query= $this->db->query("SELECT * FROM tb_endorsement");
         return $query->result();
     }
-    
+//    //Tabel Excel Pengiriman
+//    function pengiriman_e_check($id_endorsement) {
+//        $query = $this->db->query("SELECT * FROM tb_endorsement e JOIN tb_pengiriman_endorsement pe ON e.id_pengiriman = pe.id_pengiriman
+//            JOIN tb_pendaftar_lowongan pl ON e.id_pendaftar = pl.id_pendaftar 
+//            JOIN tb_pelamar p ON pl.id_pelamar = p.id_pelamar 
+//            JOIN tb_lowongan l ON pl.id_lowongan = l.id_lowongan 
+//            JOIN tb_berkas_proses bp ON p.id_pelamar = bp.id_pelamar 
+//            JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan where e.id_endorsement = '$id_endorsement'");
+//        return $query->row();
+//    }
     //Tabel Excel Pengiriman
     function pengiriman_e_check($id_endorsement) {
-        $query = $this->db->query("SELECT * FROM tb_endorsement e JOIN tb_pengiriman_endorsement pe ON e.id_pengiriman = pe.id_pengiriman
-            JOIN tb_pendaftar_lowongan pl ON e.id_pendaftar = pl.id_pendaftar 
+        $query = $this->db->query("SELECT * FROM tb_endorsement e JOIN tb_pendaftar_lowongan pl ON e.id_pendaftar = pl.id_pendaftar 
             JOIN tb_pelamar p ON pl.id_pelamar = p.id_pelamar 
             JOIN tb_lowongan l ON pl.id_lowongan = l.id_lowongan 
             JOIN tb_berkas_proses bp ON p.id_pelamar = bp.id_pelamar 
@@ -142,8 +186,8 @@ class Endorsement_m extends CI_Model {
     //CODING UNTUK HAPUS DATA      
     function hapus_pengiriman($id_pengiriman) {
         //delete from tb_admin where id_admin = '$id_pekerjaan'
-        $this->db->where('id_pengiriman', $id_pengiriman);
-        $this->db->delete('tb_pengiriman_endorsement');
+        $this->db->where('id_endorsement', $id_pengiriman);
+        $this->db->delete('tb_endorsement');
     }
 
 //    function detail_data_pelamar($id_lowongan) {

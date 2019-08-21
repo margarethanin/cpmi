@@ -115,7 +115,7 @@
                 <li><a href="<?php echo site_url('Endorsement/data_lowongan'); ?>"><i class="icon-tasks"></i> <span>Endorsement</span></a> </li>
 
                 <!--pengiriman endorsment-->
-                <li><a href="<?php echo site_url('Endorsement/tampilan_pengiriman'); ?>"><i class="icon-external-link"></i> <span>Pengiriman Endorsement</span></a> </li>
+                <li><a href="<?php echo site_url('Endorsement/data_pengiriman'); ?>"><i class="icon-external-link"></i> <span>Pengiriman Endorsement</span></a> </li>
 
                 <!--keberangkatan-->
                 <li><a href="<?php echo site_url('Endorsement/data_keberangkatan_lowongan'); ?>"><i class="icon-plane"></i> <span>Keberangkatan</span></a> </li>
