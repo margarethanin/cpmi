@@ -97,7 +97,7 @@ class Lowongan extends CI_Controller {
             'tanggal_kontrak' => $this->input->post('tanggal_kontrak'),
             'masa_berlaku' => $this->input->post('masa_berlaku'),
             'id_perusahaan' => $this->input->post('nama_perusahaan'),
-            'jenis_pekerjaan' => $this->input->post('pekerjaan'),
+            'jenis_pekerjaan' => $this->input->post('jenis_pekerjaan'),
             'permintaan_lowongan' => $this->input->post('permintaan_lowongan'),
             'nominal_upah' => $this->input->post('nominal_upah'),
 //            'id_seleksi' => $id_seleksi

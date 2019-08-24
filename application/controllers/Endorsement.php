@@ -79,7 +79,7 @@ class Endorsement extends CI_Controller {
             $ket=$this->input->post('ket_pengiriman');
         
         $this->Endorsement_m->update_endorsement($tgl,$ket, $id_lowongan);
-//        redirect("Endorsement/data_pengiriman_e");
+        redirect("Endorsement/data_pengiriman_e");
     }
 
     function pengiriman($id_lowongan) {
@@ -98,14 +98,14 @@ class Endorsement extends CI_Controller {
         redirect("Endorsement/data_pengiriman_e/$id_pengiriman");
     }
 
-    function data_pengiriman_e($id_pengiriman) {
-        $data['id_pengiriman'] = $id_pengiriman;
-        $data['data'] = $this->Endorsement_m->data_pengiriman_e($id_pengiriman);
+    function data_pengiriman_e() {
+//        $data['id_lowongan'] = $id_lowongan;
+        $data['data'] = $this->Endorsement_m->data_pengiriman_e($id_lowongan);
         $this->load->view('endorsement/data_pengiriman_e', $data);
     }
 
-    function data_pengiriman_excel($id_pengiriman) {
-        $data['data'] = $this->Endorsement_m->data_pengiriman_e($id_pengiriman);
+    function data_pengiriman_excel($id_lowongan) {
+        $data['data'] = $this->Endorsement_m->data_pengiriman_e($id_lowongan);
         $this->load->view('Endorsement/data_pengiriman_excel', $data);
     }
 

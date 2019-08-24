@@ -105,6 +105,7 @@ class Endorsement_m extends CI_Model {
             JOIN tb_lowongan l ON pl.id_lowongan = l.id_lowongan 
             JOIN tb_berkas_proses bp ON p.id_pelamar = bp.id_pelamar 
             JOIN tb_perusahaan pr ON l.id_perusahaan = pr.id_perusahaan where l.id_lowongan = '$id_lowongan'");
+        return $query->result();
     }
 
 //    ///---> UNTUK KEBERANGKATAN<-----///

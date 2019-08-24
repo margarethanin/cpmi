@@ -134,6 +134,12 @@ class Pelamar extends CI_Controller {
         $this->load->view("Pelamar/pelamar_id", $data);
     }
     
+    ////////////////////-->>//-->> CETAK EXCEL BAYAR FWCMS & ISC
+    function excel_fwcms(){
+        $data['data'] = $this->input->post('id_pelamar[]'); //name checkbox
+        $this->load->view("Pelamar/pelamar_fwcms", $data);
+    }
+    
     
 ////    function data_cpmi_hired($id_lowongan) {
 //        $data['id_lowongan'] = $id_lowongan;

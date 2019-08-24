@@ -105,7 +105,7 @@
                     <div class="control-group">
                         <label class="control-label">Tanggal Keluar Visa</label>
                         <div class="controls">
-                            <input name="tanggal_visa" type="date" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="datepicker span4">
+                            <input name="tanggal_visa" type="text" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="datepicker span4">
                             <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
                     </div>
                     <div class="control-group">

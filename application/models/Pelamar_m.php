@@ -81,6 +81,14 @@ class Pelamar_m extends CI_Model {
         return $query->row();
     }
     
+    ////////////////////////////////////////--->> CETAK EXCEL FWCMS
+    function excel_fwcms($id_lowongan) {
+        //menampilkan data dari tb_pendaftar_lowongan yang id_lowongan=$id_lowongan dan status=HIRED
+        $query = $this->db->query("SELECT * FROM tb_pendaftar_lowongan pl JOIN tb_pelamar p ON pl.id_pelamar = p.id_pelamar
+                        JOIN tb_berkas_proses bp ON bp.id_pelamar = p.id_pelamar
+                        JOIN tb_lowongan l ON l.id_lowongan = pl.id_lowongan where l.id_lowongan='$id_lowongan'");
+        return $query->row();
+    }
 
     
     
