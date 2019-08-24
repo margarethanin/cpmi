@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 17, 2019 at 07:28 AM
+-- Generation Time: Aug 24, 2019 at 04:02 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.40
 
@@ -42,7 +42,8 @@ CREATE TABLE `tb_admin` (
 
 INSERT INTO `tb_admin` (`id_admin`, `user_name`, `nama_admin`, `password`, `level`) VALUES
 (4, 'budi1', 'Budi', '12345', 1),
-(5, 'anin', 'Anin', '12345', 0);
+(5, 'anin', 'Anin', '12345', 0),
+(6, 'admin', 'admin', 'admin', 0);
 
 -- --------------------------------------------------------
 
@@ -76,22 +77,23 @@ CREATE TABLE `tb_berkas_dasar` (
   `tanggal_keluar_buku_nikah` date NOT NULL,
   `akta_cerai` text NOT NULL,
   `tanggal_masuk_akta_cerai` date NOT NULL,
-  `tanggal_keluar_akta_cerai` date NOT NULL
+  `tanggal_keluar_akta_cerai` date NOT NULL,
+  `pengambil_berkas` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_berkas_dasar`
 --
 
-INSERT INTO `tb_berkas_dasar` (`id_berkas_dasar`, `id_pelamar`, `foto`, `tanggal_masuk_foto`, `tanggal_keluar_foto`, `ktp`, `tanggal_masuk_ktp`, `tanggal_keluar_ktp`, `kartu_keluarga`, `tanggal_masuk_kartu_keluarga`, `tanggal_keluar_kartu_keluarga`, `ijazah`, `tanggal_masuk_ijazah`, `tanggal_keluar_ijazah`, `akta_lahir`, `tanggal_masuk_akta_lahir`, `tanggal_keluar_akta_lahir`, `surat_izin`, `tanggal_masuk_surat_izin`, `tanggal_keluar_surat_izin`, `buku_nikah`, `tanggal_masuk_buku_nikah`, `tanggal_keluar_buku_nikah`, `akta_cerai`, `tanggal_masuk_akta_cerai`, `tanggal_keluar_akta_cerai`) VALUES
-(4, 'TKI-1907210001', 'TKI-1907210001-foto.jpg', '2019-08-13', '2019-08-14', 'TKI-1907210001-ktp.jpg', '2019-08-13', '2019-08-14', 'TKI-1907210001-kartu_keluarga.jpg', '2019-07-28', '2019-08-07', 'TKI-1907210001-ijazah.jpg', '2019-08-13', '2019-08-07', 'TKI-1907210001-akta_lahir.jpg', '2019-07-23', '2019-08-07', 'TKI-1907210001-surat_izin.jpg', '2019-08-13', '2019-08-06', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '2019-08-12'),
-(8, 'TKI-1907210002', 'TKI-1907210002-foto.jpg', '2019-08-13', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '2019-08-14', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00'),
-(9, 'TKI-1907250001', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00'),
-(10, 'TKI-1907270001', 'TKI-1907270001-foto.jpg', '2019-08-13', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00'),
-(11, 'TKI-1908070001', 'TKI-1908070001-foto.jpg', '2019-08-07', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00'),
-(12, 'TKI-1908130001', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00'),
-(13, 'TKI-1908130002', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00'),
-(14, 'TKI-1908130003', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00');
+INSERT INTO `tb_berkas_dasar` (`id_berkas_dasar`, `id_pelamar`, `foto`, `tanggal_masuk_foto`, `tanggal_keluar_foto`, `ktp`, `tanggal_masuk_ktp`, `tanggal_keluar_ktp`, `kartu_keluarga`, `tanggal_masuk_kartu_keluarga`, `tanggal_keluar_kartu_keluarga`, `ijazah`, `tanggal_masuk_ijazah`, `tanggal_keluar_ijazah`, `akta_lahir`, `tanggal_masuk_akta_lahir`, `tanggal_keluar_akta_lahir`, `surat_izin`, `tanggal_masuk_surat_izin`, `tanggal_keluar_surat_izin`, `buku_nikah`, `tanggal_masuk_buku_nikah`, `tanggal_keluar_buku_nikah`, `akta_cerai`, `tanggal_masuk_akta_cerai`, `tanggal_keluar_akta_cerai`, `pengambil_berkas`) VALUES
+(4, 'TKI-1907210001', 'TKI-1907210001-foto.jpg', '2019-08-13', '2019-08-14', 'TKI-1907210001-ktp.jpg', '2019-08-13', '2019-08-14', 'TKI-1907210001-kartu_keluarga.jpg', '2019-07-28', '2019-08-07', 'TKI-1907210001-ijazah.jpg', '2019-08-13', '2019-08-07', 'TKI-1907210001-akta_lahir.jpg', '2019-07-23', '2019-08-07', 'TKI-1907210001-surat_izin.jpg', '2019-08-13', '2019-08-06', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '2019-08-12', ''),
+(8, 'TKI-1907210002', 'TKI-1907210002-foto.jpg', '2019-08-13', '0000-00-00', '', '0000-00-00', '2019-08-23', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '2019-08-23', '', '0000-00-00', '2019-08-14', '', '0000-00-00', '2019-08-23', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '2019-08-23', ''),
+(9, 'TKI-1907250001', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', ''),
+(10, 'TKI-1907270001', 'TKI-1907270001-foto.jpg', '2019-08-13', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', ''),
+(11, 'TKI-1908070001', 'TKI-1908070001-foto.jpg', '2019-08-07', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', ''),
+(12, 'TKI-1908130001', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', ''),
+(13, 'TKI-1908130002', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', ''),
+(14, 'TKI-1908130003', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '', '0000-00-00', '0000-00-00', '');
 
 -- --------------------------------------------------------
 
@@ -144,9 +146,10 @@ INSERT INTO `tb_berkas_proses` (`id_berkas_proses`, `id_pelamar`, `medical`, `ta
 CREATE TABLE `tb_endorsement` (
   `id_endorsement` int(11) NOT NULL,
   `id_pendaftar` int(11) NOT NULL,
-  `id_pengiriman` varchar(100) NOT NULL,
   `tanggal_visa` date NOT NULL,
   `nomor_calling_visa` text NOT NULL,
+  `tanggal_pengiriman` date NOT NULL,
+  `pengiriman_dokumen` text NOT NULL,
   `tanggal_keberangkatan` date NOT NULL,
   `keterangan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -155,48 +158,11 @@ CREATE TABLE `tb_endorsement` (
 -- Dumping data for table `tb_endorsement`
 --
 
-INSERT INTO `tb_endorsement` (`id_endorsement`, `id_pendaftar`, `id_pengiriman`, `tanggal_visa`, `nomor_calling_visa`, `tanggal_keberangkatan`, `keterangan`) VALUES
-(22, 5, '201901010003', '2019-08-08', '34125123333', '2019-10-05', 'berangkat dengan travel yunika, masih kurang pembayaran'),
-(23, 4, '201901010003', '2019-01-01', '341251254555555', '2019-10-11', 'gghjhgj'),
-(25, 0, '', '0000-00-00', '', '2019-01-18', 'Berangkat dengan travel pak usman'),
-(26, 0, '', '0000-00-00', '', '2019-09-09', 'Batal berangkat karena hamil'),
-(27, 0, '', '0000-00-00', '', '2019-09-09', 'Batal berangkat karena hamil'),
-(29, 0, '', '0000-00-00', '', '2019-01-01', 'Berangkat dengan travel pak usman'),
-(30, 0, '', '0000-00-00', '', '2019-01-01', 'Berangkat dengan travel pak usman'),
-(31, 0, '', '0000-00-00', '', '2019-09-21', 'Berangkat dengan travel pak usman'),
-(32, 0, '', '0000-00-00', '', '2019-09-30', 'Berangkat dengan travel yunika dengan kekurangan pembayaran medical'),
-(33, 0, '', '0000-00-00', '', '2019-01-01', 'Berangkat dengan travel yunika dengan kekurangan pembayaran medical'),
-(34, 0, '', '0000-00-00', '', '2019-01-01', 'Berangkat dengan travel yunika dengan kekurangan pembayaran medical'),
-(36, 7, '201901010003', '2019-01-01', '777777777777777777777', '2019-12-28', ''),
-(37, 8, '201901010003', '2019-01-01', '34125123333', '2019-08-12', 'jakarta');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tb_lokasi_perusahaan`
---
-
-CREATE TABLE `tb_lokasi_perusahaan` (
-  `id_lokasi` int(11) NOT NULL,
-  `lokasi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_lokasi_perusahaan`
---
-
-INSERT INTO `tb_lokasi_perusahaan` (`id_lokasi`, `lokasi`) VALUES
-(2, 'Selangor, Malaysia'),
-(3, 'Johor Baru, Malaysia'),
-(4, 'Kuala Lumpur, Malaysia'),
-(5, 'Sabah, Malaysia'),
-(6, 'Ipoh Perak, Malaysia'),
-(7, 'Pulau Pinang, Malaysia'),
-(8, 'Perak, Malaysia'),
-(9, 'Penang, Malaysia'),
-(10, 'Serawak, Malaysia'),
-(11, 'Singapura'),
-(12, 'Taiwan');
+INSERT INTO `tb_endorsement` (`id_endorsement`, `id_pendaftar`, `tanggal_visa`, `nomor_calling_visa`, `tanggal_pengiriman`, `pengiriman_dokumen`, `tanggal_keberangkatan`, `keterangan`) VALUES
+(1, 4, '2019-01-01', '341251254555555', '2019-01-01', 'k', '2019-10-11', 'gghjhgj'),
+(22, 14, '2019-08-08', '34125123333', '2019-01-01', '', '2019-10-05', 'berangkat dengan travel yunika, masih kurang pembayaran'),
+(36, 13, '2019-01-01', '', '2019-01-01', '', '2019-12-28', 'okeeeeeeeeeeee'),
+(37, 8, '2019-01-01', '34125123333', '0000-00-00', '', '2019-08-12', 'jakarta');
 
 -- --------------------------------------------------------
 
@@ -207,7 +173,7 @@ INSERT INTO `tb_lokasi_perusahaan` (`id_lokasi`, `lokasi`) VALUES
 CREATE TABLE `tb_lowongan` (
   `id_lowongan` int(11) NOT NULL,
   `id_perusahaan` int(11) NOT NULL,
-  `id_pekerjaan` int(11) NOT NULL,
+  `jenis_pekerjaan` text NOT NULL,
   `status_seleksi` int(11) NOT NULL,
   `tanggal_kontrak` date NOT NULL,
   `masa_berlaku` date NOT NULL,
@@ -219,33 +185,13 @@ CREATE TABLE `tb_lowongan` (
 -- Dumping data for table `tb_lowongan`
 --
 
-INSERT INTO `tb_lowongan` (`id_lowongan`, `id_perusahaan`, `id_pekerjaan`, `status_seleksi`, `tanggal_kontrak`, `masa_berlaku`, `permintaan_lowongan`, `nominal_upah`) VALUES
-(28, 1, 1, 0, '2019-03-03', '2019-07-30', 'Perempuan', 'RM 1200'),
-(29, 5, 4, 1, '2019-03-03', '2019-09-09', 'Laki-laki', 'RM 1300'),
-(30, 6, 2, 1, '2019-10-10', '2019-12-12', 'Perempuan', 'RM 1100'),
-(31, 9, 2, 1, '2019-08-01', '2019-11-01', 'Perempuan', 'RM 1100'),
-(32, 7, 2, 0, '2019-07-03', '2019-10-10', 'Perempuan', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tb_pekerjaan`
---
-
-CREATE TABLE `tb_pekerjaan` (
-  `id_pekerjaan` int(11) NOT NULL,
-  `pekerjaan` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_pekerjaan`
---
-
-INSERT INTO `tb_pekerjaan` (`id_pekerjaan`, `pekerjaan`) VALUES
-(1, 'Pekerja Konstruksi'),
-(2, 'Operator Produksi'),
-(3, 'Pekerja Kantoran'),
-(4, 'Perakitan Mesin');
+INSERT INTO `tb_lowongan` (`id_lowongan`, `id_perusahaan`, `jenis_pekerjaan`, `status_seleksi`, `tanggal_kontrak`, `masa_berlaku`, `permintaan_lowongan`, `nominal_upah`) VALUES
+(28, 1, '', 0, '2019-03-03', '2019-07-30', 'Perempuan', 'RM 1200'),
+(29, 5, 'Operator Produksi', 1, '2019-03-03', '2019-09-09', 'Laki-laki', 'RM 1300'),
+(30, 6, '', 1, '2019-10-10', '2019-12-12', 'Perempuan', 'RM 1100'),
+(31, 9, 'Operator Produksi', 1, '2019-08-01', '2019-11-01', 'Perempuan', 'RM 1100'),
+(32, 7, 'Operator Produksi', 0, '2019-07-03', '2019-10-10', 'Perempuan', 'RM 1200'),
+(33, 13, 'Operator Produksi', 1, '2019-10-10', '2019-12-12', 'Perempuan', 'RM 1200');
 
 -- --------------------------------------------------------
 
@@ -310,32 +256,14 @@ CREATE TABLE `tb_pendaftar_lowongan` (
 
 INSERT INTO `tb_pendaftar_lowongan` (`id_pendaftar`, `id_pelamar`, `id_lowongan`, `tanggal_pendaftaran`, `lokasi_kantor_cabang`, `status_penerimaan`) VALUES
 (1, 'TKI-1907210001', 28, '2019-07-25 14:30:56', 'Yogyakarta', 'KIV'),
-(4, 'TKI-1907270001', 29, '2019-07-27 21:03:06', 'Klaten', 'HIRED'),
+(4, 'TKI-1907270001', 33, '2019-07-27 21:03:06', 'Klaten', 'HIRED'),
 (8, 'TKI-1908070001', 30, '2019-08-07 08:55:15', 'Yogyakarta', 'HIRED'),
 (9, 'TKI-1907210001', 30, '2019-08-12 20:34:41', 'Yogyakarta', 'KIV'),
 (10, 'TKI-1908130001', 31, '2019-08-13 12:34:15', 'Yogyakarta', 'HIRED'),
 (11, 'TKI-1908130002', 31, '2019-08-13 12:34:28', 'Yogyakarta', 'HIRED'),
 (12, 'TKI-1908130003', 31, '2019-08-13 12:34:42', 'Klaten', 'REJECT'),
-(13, 'TKI-1907210001', 31, '2019-08-16 13:38:38', 'Yogyakarta', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tb_pengiriman_endorsement`
---
-
-CREATE TABLE `tb_pengiriman_endorsement` (
-  `id_pengiriman` varchar(100) NOT NULL,
-  `tanggal_endorsement` date NOT NULL,
-  `pengiriman_dokumen` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tb_pengiriman_endorsement`
---
-
-INSERT INTO `tb_pengiriman_endorsement` (`id_pengiriman`, `tanggal_endorsement`, `pengiriman_dokumen`) VALUES
-('201901010003', '2019-01-01', 'resi 6');
+(13, 'TKI-1907210001', 31, '2019-08-16 13:38:38', 'Yogyakarta', 'HIRED'),
+(14, 'TKI-1908070001', 31, '2019-08-21 20:35:00', 'Yogyakarta', 'HIRED');
 
 -- --------------------------------------------------------
 
@@ -345,8 +273,8 @@ INSERT INTO `tb_pengiriman_endorsement` (`id_pengiriman`, `tanggal_endorsement`,
 
 CREATE TABLE `tb_perusahaan` (
   `id_perusahaan` int(11) NOT NULL,
-  `id_lokasi` int(11) NOT NULL,
   `nama_perusahaan` text NOT NULL,
+  `lokasi_perusahaan` text NOT NULL,
   `alamat_perusahaan` text NOT NULL,
   `profil_perusahaan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -355,14 +283,14 @@ CREATE TABLE `tb_perusahaan` (
 -- Dumping data for table `tb_perusahaan`
 --
 
-INSERT INTO `tb_perusahaan` (`id_perusahaan`, `id_lokasi`, `nama_perusahaan`, `alamat_perusahaan`, `profil_perusahaan`) VALUES
-(5, 5, 'Daikin SDN. BHD.', ' Jl. Indah Barat Laut 37 ', ' Perusahaan Mesin Berat '),
-(7, 6, 'Yamaha Electronics Manufacturing SDN BHD', 'Plot 7, Kinta Free Industrial Zone', 'Perusahaan elektronik produksi mesin '),
-(8, 8, 'Bayu Kreasi SDN BHD', '73A, Laluan Rasi Jaya 4, Taman Rasi Jaya, 31450 Menglembu, Perak', 'Others'),
-(9, 7, 'Jabil Circuit SDN BHD', 'Phase 4, 56, Hilir Sungai Kluang 1, Bayan Lepas Industrial Park, 11900 Bayan Lepas, Pulau Pinang, Malaysia', 'Perusahaan Elektronik'),
-(10, 7, 'Reaplite Industry SDN BHD', '31, Jalan Setia Tropika 1/8, Taman Setia Tropika, 81200 Johor Bahru, Johor, Malaysia', 'Perusahaan Konstruksi'),
-(11, 9, 'Sony EMCS (Malaysia) SDN BHD', 'Free Trade Zone, Prao Industrial Estate 13600 Penang, Malaysia', 'Perusahaan Elektronik'),
-(12, 0, '', '', '');
+INSERT INTO `tb_perusahaan` (`id_perusahaan`, `nama_perusahaan`, `lokasi_perusahaan`, `alamat_perusahaan`, `profil_perusahaan`) VALUES
+(5, 'Daikin SDN. BHD.', 'Johor Baru, Malaysia', '  Jl. Indah Barat Laut 37  ', '  Perusahaan Mesin Berat  '),
+(7, 'Yamaha Electronics Manufacturing SDN BHD', 'Johor Baru, Malaysia', '  Plot 7, Kinta Free Industrial Zone  ', '  Perusahaan elektronik produksi mesin   '),
+(8, 'Bayu Kreasi SDN BHD', 'Perak, Malaysia', '  73A, Laluan Rasi Jaya 4, Taman Rasi Jaya, 31450 Menglembu, Perak  ', '  Others  '),
+(9, 'Jabil Circuit SDN BHD', 'Pulau Pinang, Malaysia  ', '  Phase 4, 56, Hilir Sungai Kluang 1, Bayan Lepas Industrial Park, 11900 Bayan Lepas, Pulau Pinang, Malaysia  ', '  Perusahaan Elektronik  '),
+(10, 'Reaplite Industry SDN BHD', 'Johor Baru, Malaysia', ' 31, Jalan Setia Tropika 1/8, Taman Setia Tropika, 81200 Johor Bahru, Johor, Malaysia ', ' Perusahaan Konstruksi '),
+(11, 'Sony EMCS (Malaysia) SDN BHD', 'Penang, Malaysia ', ' Free Trade Zone, Prao Industrial Estate 13600 Penang, Malaysia ', ' Perusahaan Elektronik '),
+(13, 'aaaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaaaa');
 
 -- --------------------------------------------------------
 
@@ -385,7 +313,9 @@ CREATE TABLE `tb_seleksi` (
 INSERT INTO `tb_seleksi` (`id_seleksi`, `id_lowongan`, `tanggal_seleksi`, `lokasi_seleksi`, `tanggal_post`) VALUES
 ('1907270001', 29, '2019-08-08 00:00:00', 'Kantor Cabang PT SMU Jogja', '2019-07-27 15:07:25'),
 ('1907280001', 27, '2019-05-28 13:59:00', 'Kantor Cabang PT SMU Jogja', '2019-07-28 14:23:29'),
-('1908100001', 30, '2019-01-16 10:05:00', 'Kantor Cabang PT SMU Jogja', '2019-08-10 14:34:50');
+('1908100001', 30, '2019-01-16 10:05:00', 'Kantor Cabang PT SMU Jogja', '2019-08-10 14:34:50'),
+('1908170001', 33, '2019-11-11 13:00:00', 'Kantor Cabang PT SMU Jogja', '2019-08-17 16:10:05'),
+('1908210001', 31, '2019-01-01 00:00:00', 'Kantor Cabang PT SMU Jogja', '2019-08-21 21:09:07');
 
 --
 -- Indexes for dumped tables
@@ -414,28 +344,14 @@ ALTER TABLE `tb_berkas_proses`
 --
 ALTER TABLE `tb_endorsement`
   ADD PRIMARY KEY (`id_endorsement`),
-  ADD KEY `tb_endorsement_ibfk_1` (`id_pendaftar`),
-  ADD KEY `tb_endorsement_ibfk_2` (`id_pengiriman`);
-
---
--- Indexes for table `tb_lokasi_perusahaan`
---
-ALTER TABLE `tb_lokasi_perusahaan`
-  ADD PRIMARY KEY (`id_lokasi`);
+  ADD KEY `tb_endorsement_ibfk_1` (`id_pendaftar`);
 
 --
 -- Indexes for table `tb_lowongan`
 --
 ALTER TABLE `tb_lowongan`
   ADD PRIMARY KEY (`id_lowongan`),
-  ADD KEY `id_perusahaan` (`id_perusahaan`),
-  ADD KEY `id_pekerjaan` (`id_pekerjaan`);
-
---
--- Indexes for table `tb_pekerjaan`
---
-ALTER TABLE `tb_pekerjaan`
-  ADD PRIMARY KEY (`id_pekerjaan`);
+  ADD KEY `id_perusahaan` (`id_perusahaan`);
 
 --
 -- Indexes for table `tb_pelamar`
@@ -448,12 +364,6 @@ ALTER TABLE `tb_pelamar`
 --
 ALTER TABLE `tb_pendaftar_lowongan`
   ADD PRIMARY KEY (`id_pendaftar`);
-
---
--- Indexes for table `tb_pengiriman_endorsement`
---
-ALTER TABLE `tb_pengiriman_endorsement`
-  ADD PRIMARY KEY (`id_pengiriman`);
 
 --
 -- Indexes for table `tb_perusahaan`
@@ -475,7 +385,7 @@ ALTER TABLE `tb_seleksi`
 -- AUTO_INCREMENT for table `tb_admin`
 --
 ALTER TABLE `tb_admin`
-  MODIFY `id_admin` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_admin` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tb_berkas_dasar`
@@ -496,34 +406,22 @@ ALTER TABLE `tb_endorsement`
   MODIFY `id_endorsement` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
--- AUTO_INCREMENT for table `tb_lokasi_perusahaan`
---
-ALTER TABLE `tb_lokasi_perusahaan`
-  MODIFY `id_lokasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
 -- AUTO_INCREMENT for table `tb_lowongan`
 --
 ALTER TABLE `tb_lowongan`
-  MODIFY `id_lowongan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
-
---
--- AUTO_INCREMENT for table `tb_pekerjaan`
---
-ALTER TABLE `tb_pekerjaan`
-  MODIFY `id_pekerjaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_lowongan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `tb_pendaftar_lowongan`
 --
 ALTER TABLE `tb_pendaftar_lowongan`
-  MODIFY `id_pendaftar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_pendaftar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tb_perusahaan`
 --
 ALTER TABLE `tb_perusahaan`
-  MODIFY `id_perusahaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_perusahaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
