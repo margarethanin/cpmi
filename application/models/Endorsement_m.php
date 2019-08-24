@@ -196,5 +196,21 @@ class Endorsement_m extends CI_Model {
 //                        JOIN tb_berkas_proses bp ON bp.id_pelamar = p.id_pelamar where id_lowongan='$id_lowongan'");
 //        return $query->result();
 //    }
+    //-->QUERY BUKTI PENGIRIMAN
+    function laporan_pengiriman1($id_lowongan){
+        $query = $this->db->query("SELECT * FROM tb_endorsement e
+                 JOIN tb_pendaftar_lowongan pl ON e.id_pendaftar=pl.id_pendaftar
+                 JOIN tb_lowongan l ON l.id_lowongan=pl.id_lowongan
+                 JOIN tb_perusahaan pr ON pr.id_perusahaan=l.id_perusahaan where l.id_lowongan='$id_lowongan' group by l.id_lowongan");
+        return $query->result();
+    }
+    function laporan_pengiriman2($id_lowongan){
+        $query = $this->db->query("SELECT * FROM tb_endorsement e
+                 JOIN tb_pendaftar_lowongan pl ON e.id_pendaftar=pl.id_pendaftar
+                 JOIN tb_pelamar p ON pl.id_pelamar=p.id_pelamar
+                 JOIN tb_lowongan l ON l.id_lowongan=pl.id_lowongan
+                 JOIN tb_berkas_proses bp ON p.id_pelamar=bp.id_pelamar where l.id_lowongan='$id_lowongan'");
+        return $query->result();
+    }
     
 }

@@ -139,7 +139,12 @@ class Pelamar extends CI_Controller {
         $data['data'] = $this->input->post('id_pelamar[]'); //name checkbox
         $this->load->view("Pelamar/pelamar_fwcms", $data);
     }
-    
+    //--> LAPORAN PDF
+    function laporan() {
+//        $data['kilang'] = $kilang;
+//        $data['data'] = $this->Pelamar_m->laporan($id_pelamar);
+        $this->load->view('pelamar/laporan_pengajuan');
+    }
     
 ////    function data_cpmi_hired($id_lowongan) {
 //        $data['id_lowongan'] = $id_lowongan;

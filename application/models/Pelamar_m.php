@@ -89,7 +89,11 @@ class Pelamar_m extends CI_Model {
                         JOIN tb_lowongan l ON l.id_lowongan = pl.id_lowongan where l.id_lowongan='$id_lowongan'");
         return $query->row();
     }
-
+    //-->QUERY LAPORAN
+    function laporan($id_pelamar){
+        $query = $this->db->query("SELECT * FROM tb_pelamar where id_pelamar='$id_pelamar'");
+        return $query->row();
+    }
     
     
 }

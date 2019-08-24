@@ -48,12 +48,12 @@
                                             <td class="center"><?php echo $row->alamat_pelamar; ?></td>
                                             <td class="center">
                                                 <?php
-                                                $visa = $this->Endorsement_m->visa($row->id_pendaftar);
-                                                if (empty($visa->tanggal_visa)) {
+                                                $tanggal_visa = $this->Endorsement_m->visa($row->id_pendaftar);
+                                                if (empty($tanggal_visa->tanggal_visa)) {
                                                     ?>
                                                     <?php
                                                 } else {
-                                                    echo $visa->tanggal_visa;
+                                                    echo $tanggal_visa->tanggal_visa;
                                                 }
                                                 ?>
                                             </td>
@@ -101,11 +101,11 @@
                             <input type="text" name="id_pendaftar" readonly="">
                         </div>
                     </div>
-                    <input type="hidden" name="id_lowongan" readonly="">
+                    <input type="hidden" name="id_lowongan" value="<?php echo $id_lowongan?>">
                     <div class="control-group">
                         <label class="control-label">Tanggal Keluar Visa</label>
                         <div class="controls">
-                            <input name="tanggal_visa" type="text" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="datepicker span4">
+                            <input name="tanggal_visa" type="date" data-date="2019-01-01" value="2019-01-01" data-date-format="yyyy-mm-dd" class="span4">
                             <span class="help-block">Format Tanggal (tahun-bulan-tanggal)</span> </div>
                     </div>
                     <div class="control-group">

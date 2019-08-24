@@ -23,8 +23,7 @@
                             <form id="formCetak" action="<?php echo site_url("Endorsement/pengiriman_e_check/"); ?>" method="post">
 
                                 <p> <button type="submit" class="btn btn-info">Cetak Excel</button></p>
-<!--                                <p><strong>Tanggal Pengiriman : <?php echo $row->tanggal_pengiriman; ?></strong></p>
-                                <p><strong>Keterangan Pengiriman: <?php echo $row->pengiriman_dokumen; ?></strong></p>-->
+
 
                                 <table class="table table-bordered table-striped data-table"> 
 

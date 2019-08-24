@@ -79,7 +79,7 @@ class Endorsement extends CI_Controller {
             $ket=$this->input->post('ket_pengiriman');
         
         $this->Endorsement_m->update_endorsement($tgl,$ket, $id_lowongan);
-        redirect("Endorsement/data_pengiriman_e");
+        redirect("Endorsement/laporan_pengiriman/$id_lowongan");
     }
 
     function pengiriman($id_lowongan) {
@@ -98,7 +98,7 @@ class Endorsement extends CI_Controller {
         redirect("Endorsement/data_pengiriman_e/$id_pengiriman");
     }
 
-    function data_pengiriman_e() {
+    function data_pengiriman_e($id_lowongan) {
 //        $data['id_lowongan'] = $id_lowongan;
         $data['data'] = $this->Endorsement_m->data_pengiriman_e($id_lowongan);
         $this->load->view('endorsement/data_pengiriman_e', $data);
@@ -152,7 +152,7 @@ class Endorsement extends CI_Controller {
         $data['id_endors'] = $this->input->post('id_endors[]'); //name checkbox
         $this->load->view("Endorsement/pengiriman_check", $data);
     }
-
+    
     function excel_hired() {
         $data['data'] = $this->input->post('id_daftar[]'); //name checkbox
         $this->load->view("Endorsement/cpmi_hired_excel", $data);
@@ -162,6 +162,17 @@ class Endorsement extends CI_Controller {
     function hapus_data_pengiriman($id_pengiriman) {
         $this->Endorsement_m->hapus_pengiriman($id_pengiriman);
         redirect('Endorsement/tampilan_pengiriman');
+    }
+    //--> BUKTI PENGIRIMAN
+    function laporan_pengiriman($id_lowongan) {
+        $data['detail'] = $this->Endorsement_m->laporan_pengiriman1($id_lowongan);
+        $data['pelamar'] = $this->Endorsement_m->laporan_pengiriman2($id_lowongan);
+        $this->load->view('Endorsement/pengiriman_laporan', $data);
+    }
+    function pengiriman_excel($id_lowongan) {
+        $data['detail'] = $this->Endorsement_m->laporan_pengiriman1($id_lowongan);
+        $data['pelamar'] = $this->Endorsement_m->laporan_pengiriman2($id_lowongan);
+        $this->load->view('Endorsement/pengiriman_excel', $data);
     }
 
 }
