@@ -18,9 +18,9 @@
                             <h5>Form Data Admin</h5>
                         </div>
                         <div class="widget-content">
-                            <p> <a href="<?php echo site_url('Admin/form_insert_admin'); ?>"
+<!--                            <p> <a href="<?php echo site_url('Admin/form_insert_admin'); ?>"
                                    class="btn btn-info">Tambah Admin</a>
-                            </p>
+                            </p>-->
                             <table class="table table-bordered table-striped data-table">
                                 <thead>
                                     <tr>

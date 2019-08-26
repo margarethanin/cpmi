@@ -12,16 +12,16 @@
             <div class="text-center">
                 <h3>SELAMAT DATANG di Sistem Informasi PT SUKSES MANDIRI UTAMA YOGYAKARTA!</h3>
             </div>
-            <div class="span4">
+            <div>
                 <!--<a href="<?php echo base_url() ?>/assets/img/logosmu.png"><a/>-->
                 <img class="img-responsive" src="<?php echo base_url('assets/img/gallery/pic.png'); ?>">
             </div>
-            <div class="span3">
+<!--            <div class="span3">
                 <img class="img-responsive" src="<?php echo base_url('assets/img/gallery/pic3.png'); ?>">
             </div>
             <div class="span4">
                 <img class="img-responsive" src="<?php echo base_url('assets/img/gallery/pic2.png'); ?>">
-            </div>
+            </div>-->
         </div>
     </div>
 </div>

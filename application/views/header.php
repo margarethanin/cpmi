@@ -78,8 +78,14 @@
                 <li><a href="<?php echo site_url('Welcome/index'); ?>"><i class="icon icon-home"></i> <span>Halaman Awal</span></a> </li>
 
                 <!--admin-->
-                <li><a href="<?php echo site_url('Admin/data_admin'); ?>"><i class="icon icon-user"></i> <span>Admin</span></a> </li>
-
+                <!--<li><a href="<?php echo site_url('Admin/data_admin'); ?>"><i class="icon icon-user"></i> <span>Admin</span></a> </li>-->
+                <li class="submenu"> <a href="#"><i class="icon-user"></i> <span>Admin</span> <span class="label label-important">2</span></a>
+                    <ul>
+                        <li><a href="<?php echo site_url('Admin/form_insert_admin'); ?>">Tambah Admin</a></li>
+                        <li><a href="<?php echo site_url('Admin/data_admin'); ?>">Data Admin</a></li>
+                    </ul>
+                </li>
+                
                 <!--perusahaan-->
 <!--                <li><a href=""><i class="icon-money"></i> <span>Perusahaan</span></a></li>
                 <li><a href=""><i class="icon-map-marker"></i> <span>Lokasi Perusahaan</span></a></li>-->

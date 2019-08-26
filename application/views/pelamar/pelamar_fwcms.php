@@ -38,7 +38,7 @@ header("Expires: 0");
         <?php
         $no = 1;
         foreach ($data as $r) {
-            $row = $this->Pelamar_m->excel_fwcms($r);
+            $row = $this->Pelamar_m->excel_id($r);
             ?>
             <tr>
                 <td><?php echo $no++; ?></td>
@@ -64,7 +64,7 @@ header("Expires: 0");
                 <td class="center"><?php echo $row->hubungan_keluarga_lain; ?></td>
                 <td class="center"><?php echo $row->alamat_keluarga_lain; ?></td>
                 <td class="center"><?php echo $row->nomor_hp_keluarga_lain; ?></td>
-               
+
             </tr>
         <?php } ?>
     </tbody>
