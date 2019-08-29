@@ -48,5 +48,9 @@ class Berkas_m extends CI_Model{
                  JOIN tb_berkas_proses bp ON p.id_pelamar=bp.id_pelamar where p.id_pelamar='$id_pelamar'");
         return $query->row();
     }
+    function kilang($id){
+        $query = $this->db->query("SELECT * FROM tb_perusahaan where id_perusahaan = '$id'");
+        return $query->row();
+    }
     
 }

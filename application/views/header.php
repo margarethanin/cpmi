@@ -115,7 +115,7 @@
                 </li>
 
                 <!--pendaftar lowongan-->
-                <li><a href="<?php echo site_url('Pendaftar/data_pelamar'); ?>"><i class="icon-shopping-cart"></i> <span>Pendaftar Lowongan</span></a> </li>
+                <li><a href="<?php echo site_url('Pendaftar/data_pelamar'); ?>"><i class="icon-shopping-cart"></i> <span>Pendaftaran Lowongan</span></a> </li>
 
                 <!--endorsment-->
                 <li><a href="<?php echo site_url('Endorsement/data_lowongan'); ?>"><i class="icon-tasks"></i> <span>Endorsement</span></a> </li>

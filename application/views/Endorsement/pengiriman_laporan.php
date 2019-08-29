@@ -24,7 +24,7 @@
                             foreach ($detail as $a) {
                                 ?>
                     <div class="widget-content">
-                        <p><a href="<?php echo site_url("Endorsement/pengiriman_excel/$a->id_lowongan"); ?>" class="btn btn-success">Cetak Excel</a></p>
+                        <p><a href="<?php echo site_url("Endorsement/pengiriman_excel/$a->id_lowongan"); ?>" class="btn btn-info">Cetak Excel</a></p>
 
                             
                                 <!--content here-->

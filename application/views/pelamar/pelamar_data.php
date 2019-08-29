@@ -24,13 +24,13 @@
                             <a href="<?php echo site_url('Pelamar/form_insert_pelamar'); ?>"
                                class="btn btn-info">Tambah Pelamar</a>
                         </p>-->
-                        <form id="formCetak" action="<?php echo site_url('Pelamar/excel_fwcms/'); ?>" method="post">
+                        <form id="formCetak" action="<?php echo site_url('Pelamar/excel_id/'); ?>" method="post">
 
                             <p> <button type="submit" class="btn btn-info">Cetak Excel</button></p>
 
-                        <form id="formCetak" action="<?php echo site_url('Pelamar/excel_fwcms/'); ?>" method="post">
+<!--                        <form id="formCetak" action="<?php echo site_url('Pelamar/excel_fwcms/'); ?>" method="post">
 
-                            <p> <button type="submit" class="btn btn-info">Cetak FWCMS</button></p>
+                            <p> <button type="submit" class="btn btn-info">Cetak FWCMS</button></p>-->
 
                                 <table class="table table-bordered table-striped data-table">
                                     <thead>

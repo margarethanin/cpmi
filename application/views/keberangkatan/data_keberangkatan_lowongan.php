@@ -46,7 +46,7 @@
                                             <td><?php echo $row->permintaan_lowongan; ?></td>
                                             <td>
                                                 <p> <a href="<?php echo site_url("Endorsement/data_keberangkatan_pelamar/$row->id_lowongan"); ?>"
-                                                       class="btn btn-success">Daftar Pelamar Berangkat</a>
+                                                       class="btn btn-success">Daftar Calon Pekerja yang Berangkat</a>
                                                 </p>
                                             </td>
                                         </tr>

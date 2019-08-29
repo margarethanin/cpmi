@@ -44,7 +44,8 @@
                                             <td><?php echo $row->jenis_pekerjaan; ?></td>
                                             <td class="center"><?php echo $row->permintaan_lowongan; ?></td>
                                             <td class="center">
-                                                    <a onclick="return" href="<?php echo site_url("Endorsement/pengiriman/$row->id_lowongan"); ?>" class="btn btn-success">Tambah Pengiriman</a>
+                                                    <a onclick="return" href="<?php echo site_url("Endorsement/pengiriman/$row->id_lowongan"); ?>" class="btn btn-info">Tambah Pengiriman</a>
+                                                    <a onclick="return" href="<?php echo site_url("Endorsement/laporan_pengiriman/$row->id_lowongan"); ?>" class="btn btn-success">Lihat Pengiriman</a>
                                                 </td>
                                     
                                     </tr>
