@@ -25,6 +25,7 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
+                                        <th>Tanggal Kontrak</th>
                                         <th>Nama Perusahaan</th>
                                         <th>Lokasi Perusahaan</th>
                                         <th>Jenis Pekerjaan</th>
@@ -40,6 +41,7 @@
                                         ?>
                                         <tr class="odd gradeX">
                                             <td><?php echo $no++; ?></td>
+                                            <td><?php echo $row->tanggal_kontrak; ?></td>
                                             <td><?php echo $row->nama_perusahaan; ?></td>
                                             <td><?php echo $row->lokasi_perusahaan; ?></td>
                                             <td><?php echo $row->jenis_pekerjaan; ?></td>
